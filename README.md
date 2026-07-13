@@ -89,7 +89,7 @@
 ## 3. Proposed Method
 ### 3.1 Architecture
 flowchart LR
-
+```mermaid
     crawler["크롤러"]
     noise["노이즈 제거"]
     parser["파서"]
@@ -151,6 +151,7 @@ flowchart LR
 
     cache -. "구조화된 뉴스 데이터" .-> sourceRecheck
     cache -. "구조화된 뉴스 데이터" .-> numericRecheck
+```
 
 ### 3.2 Baseline 대비 무엇이 다른가
 | 구분 | Baseline (기존 Agent 및 RAG) | Proposed Method (이번 프로젝트) |
