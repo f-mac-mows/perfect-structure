@@ -88,8 +88,8 @@
 
 ## 3. Proposed Method
 ### 3.1 Architecture
-flowchart LR
 ```mermaid
+flowchart LR
     crawler["크롤러"]
     noise["노이즈 제거"]
     parser["파서"]
