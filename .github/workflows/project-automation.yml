@@ -15,30 +15,80 @@ jobs:
     steps:
       - name: Move Issue to In Progress Column
         env:
+          # 🔒 반드시 사전에 등록하신 PAT 토큰(ACTION_TOKEN)이어야 프라이빗 보드가 뚫립니다!
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
-          OWNER_NAME: "f-mac-mows"
-          PROJECT_NUMBER: "3" 
+          OWNER_NAME: "f-mac-mows" 
+          PROJECT_NUMBER: 3 # 💡 숫자로 명시
           COLUMN_NAME: "In Progress"
         run: |
-          echo "🔍 프로젝트 정보 조회를 시작합니다... (Target: #$PROJECT_NUMBER)"
+          echo "🔍 [1단계] 개인 계정($OWNER_NAME)의 3번 Private 프로젝트 ID 조회 중..."
+          
+          # GraphQL로 유저와 프로젝트 번호를 정확히 타겟팅합니다.
+          RESPONSE=$(gh api graphql -f query='
+            query($owner: String!, $number: Int!) {
+              user(login: $owner) {
+                projectV2(number: $number) { id }
+              }
+            }' -F owner="$OWNER_NAME" -F number=$PROJECT_NUMBER)
 
-          # 1. gh 내장 명령어로 프로젝트의 글로벌 ID를 안전하게 추출합니다. (User/Org 자동 판별)
-          PROJECT_ID=$(gh project list --owner "$OWNER_NAME" --format json | jq -r --argjson num "$PROJECT_NUMBER" '.projects[] | select(.number == $num) | .id')
+          # 에러 체크
+          HAS_ERRORS=$(echo "$RESPONSE" | jq '.errors')
+          if [ "$HAS_ERRORS" != "null" ]; then
+            echo "❌ GitHub API 조회 실패!"
+            echo "상세 에러 내용: $RESPONSE"
+            exit 1
+          fi
 
-          if [ -z "$PROJECT_ID" ] || [ "$PROJECT_ID" == "null" ]; then
-            echo "❌ 프로젝트 ID를 찾지 못했습니다. f-mac-mows 계정에 3번 프로젝트가 비공개(Private) 상태이거나"
-            echo "리포지토리 Settings -> Actions -> General에서 Workflow permissions가 'Read and write'로 되어있는지 다시 확인해주세요!"
+          PROJECT_ID=$(echo "$RESPONSE" | jq -r '.data.user.projectV2.id')
+          if [ "$PROJECT_ID" == "null" ] || [ -z "$PROJECT_ID" ]; then
+            echo "❌ 프로젝트 ID를 가져오지 못했습니다. 보드가 존재하지 않거나 토큰 권한이 부족합니다."
             exit 1
           fi
           echo "🎯 찾은 프로젝트 ID: $PROJECT_ID"
 
-          # 2. 이슈를 프로젝트 보드에 아이템으로 추가하고 해당 아이템 ID를 가져옵니다.
-          echo "➕ 이슈를 프로젝트 보드에 추가하는 중..."
-          ITEM_ID=$(gh project item-add "$PROJECT_NUMBER" --owner "$OWNER_NAME" --url "${{ github.event.issue.html_url }}" --format json | jq -r '.id')
-          echo "📦 생성된 아이템 ID: $ITEM_ID"
 
-          # 3. gh project 내장 필드 편집 명령어로 수동 GraphQL 없이 깔끔하게 'Status'를 'In Progress'로 변경합니다.
-          echo "🚀 상태를 '$COLUMN_NAME'으로 변경합니다..."
-          gh project item-edit --id "$ITEM_ID" --field "Status" --project-id "$PROJECT_ID" --single-select-option "$COLUMN_NAME"
+          echo "🔍 [2단계] 프로젝트 보드에 현재 이슈 추가 중..."
+          ITEM_RESPONSE=$(gh api graphql -f query='
+            mutation($project: ID!, $content: ID!) {
+              addProjectV2ItemById(input: {projectId: $project, contentId: $content}) {
+                item { id }
+              }
+            }' -F project="$PROJECT_ID" -F content="${{ github.event.issue.node_id }}")
+
+          ITEM_ID=$(echo "$ITEM_RESPONSE" | jq -r '.data.addProjectV2ItemById.item.id')
+          echo "📦 생성된 보드 아이템 ID: $ITEM_ID"
+
+
+          echo "🔍 [3단계] 'Status' 필드 및 '$COLUMN_NAME' 옵션 ID 조회 중..."
+          FIELDS=$(gh api graphql -f query='
+            query($project: ID!) {
+              node(id: $project) {
+                ... on ProjectV2 {
+                  fields(first: 20) {
+                    nodes {
+                      ... on ProjectV2FieldCommon { id name }
+                      ... on ProjectV2SingleSelectField {
+                        options { id name }
+                      }
+                    }
+                  }
+                }
+              }
+            }' -F project="$PROJECT_ID")
+
+          STATUS_FIELD_ID=$(echo "$FIELDS" | jq -r '.data.node.fields.nodes[] | select(.name == "Status") | .id')
+          OPTION_ID=$(echo "$FIELDS" | jq -r --arg col "$COLUMN_NAME" '.data.node.fields.nodes[] | select(.name == "Status") | .options[] | select(.name == $col) | .id')
+
+
+          echo "🔍 [4단계] 카드 상태를 '$COLUMN_NAME'으로 이동 중..."
+          gh api graphql -f query='
+            mutation($project: ID!, $item: ID!, $field: ID!, $value: String!) {
+              updateProjectV2ItemFieldValue(input: {
+                projectId: $project,
+                itemId: $item,
+                fieldId: $field,
+                value: { singleSelectOptionId: $value }
+              }) { clientMutationId }
+            }' -F project="$PROJECT_ID" -F item="$ITEM_ID" -F field="$STATUS_FIELD_ID" -F value="$OPTION_ID"
           
-          echo "✅ 모든 자동화 프로세스가 성공적으로 완료되었습니다!"
+          echo "✅ [성공] 이슈가 완전히 '$COLUMN_NAME' 컬럼으로 배치되었습니다!"
