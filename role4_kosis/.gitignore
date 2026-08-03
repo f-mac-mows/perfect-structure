@@ -1,0 +1,11 @@
+# Python 실행 환경과 테스트 캐시
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# 저작권이 있는 뉴스 원문 및 뉴스에서 파생된 검토·추출 결과
+data/Final_news.csv
+data/claim_candidates_review.csv
+data/claim_candidates_with_keywords.csv
+data/initial_keyword_extraction.json

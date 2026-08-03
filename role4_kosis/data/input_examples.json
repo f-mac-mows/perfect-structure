@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "T01",
+    "input": {
+      "claim_id": "C001",
+      "original_claim": "지난달 취업자 수는 2804만1000명으로 감소했다."
+    },
+    "expected_normalized": {
+      "claim_id": "C001",
+      "original_claim": "지난달 취업자 수는 2804만1000명으로 감소했다."
+    },
+    "expected_keyword_output": {
+      "claim_id": "C001",
+      "original_claim": "지난달 취업자 수는 2804만1000명으로 감소했다.",
+      "primary_keyword": "취업자 수",
+      "expanded_keywords": [
+        "취업자",
+        "경제활동인구 취업자"
+      ]
+    }
+  }
+]
