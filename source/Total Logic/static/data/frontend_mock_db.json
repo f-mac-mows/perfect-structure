@@ -1,0 +1,1024 @@
+{
+  "schema_version": "frontend-mock-db-v1",
+  "generated_at": "2026-08-25T06:18:58.244304+00:00",
+  "articles": [
+    {
+      "article_id": "A272c31f6",
+      "input_type": "STORED_ARTICLE",
+      "url": "https://www.chosun.com/economy/economy_general/2025/07/11/LFBUMYUIJFG5BL7EQTTR2YOBKE",
+      "title": "올해 나랏빚 증가 폭 126조 ‘역대 최대’",
+      "publisher": "조선일보",
+      "published_at": "2025-07-11T00:00:00+09:00",
+      "content": "13조8000억원 규모의 1차 추가경정예산(추경)이 국회를 통과한 지난 5월 우리나라 중앙정부 채무가 처음으로 1200조원을 넘어섰다. 이달 초 31조8000억원의 2차 추경 편성까지 가세, 지방정부 채무를 포함한 국가 채무는 올해 말 1300조원을 넘어설 것으로 정부는 보고 있다.\n경기 부진 장기화로 3년 연속 세수 결손이 유력해지는 가운데 올 들어 추경 편성이 연거푸 이어지면서 나랏빚 증가 속도가 빨라지고 있다. 경기 부양을 이유로 나랏빚을 끌어 씀씀이만 늘리는 일이 반복될 경우 국가 신용 등급 하락으로까지 이어질 수 있다고 전문가들은 경고한다.\n10일 기획재정부는 ‘월간 재정 동향 7월호’에서 5월 말 중앙정부 채무는 1217조8000억원이라고 밝혔다. 작년 말(1141조2000억원)보다 76조6000억원이나 늘어났다. 추경 편성이 없었던 2023년·2024년 중앙정부 채무는 각각 59조1000억원, 48조7000억원 불어나는 데 그쳤는데, 올 들어 5개월 동안 늘어난 나랏빚이 이보다 많았다.\n◇나랏빚 증가 폭 126조 ‘역대 최대’\n이달 초 국회를 통과한 2차 추경까지 감안한 올해 말 중앙정부 채무는 1267조2000억원에 달할 것으로 정부는 보고 있다. 1년간 늘어나는 나랏빚 증가 폭이 역대 최대인 126조원에 달해, 코로나 팬데믹으로 중앙정부 채무가 120조2000억원 늘어난 2020년 수준을 넘어서게 됐다.\n지방정부 채무를 합친 국가 채무는 1301조9000억원으로 처음으로 1300조원을 넘어설 것으로 전망된다. 코로나 팬데믹을 거치며 2022년 1000조원대로 불어난 국가 채무가 2023~2024년 1100조원대가 됐고, 1년 만에 1300조원대로 뛰게 됐다.\n이처럼 나랏빚이 빠른 속도로 불어나는 이유는 100조원대로 전망되는 올해 나라 살림 적자를 국채 발행으로 메울 수밖에 없기 때문이다. 정부가 전망하는 올해 말 재정 적자(국민연금 등 사회보장성 기금 흑자분을 제외한 관리재정수지 기준)는 111조6000억원으로 국내총생산(GDP)의 4.2%에 달한다. 재정 적자를 GDP의 3% 이내로 관리해야 한다는 정부의 재정 준칙을 2020년부터 6년 연속 위반하게 된다.\n◇전문가들 “신용 등급 하락 우려”\n전문가들은 전 세계적인 경기 부진과 통상 불확실성으로 ‘급한 불’을 끄기 위한 경기 부양 조치는 불가피하지만, 나랏빚 증가세는 적절히 제동을 걸 때가 됐다고 지적한다. 세수 확보 조치 없는 재정 중독이 반복될 경우 국가 신용 등급이 하락할 수 있기 때문이다. 김정식 연세대 경제학부 명예교수는 “국가 부채가 늘어나면 국가 대외 신인도가 떨어진다”며 “기축통화국인 미국·일본과 달리 우리나라의 경우 자본 유출에 따른 외환 위기 가능성도 있다”고 했다. 1차 추경안을 반영하지 않은 국제통화기금(IMF)의 지난 4월 보고서에 따르면, 올해 말 한국의 GDP 대비 일반 정부 부채 비율(국제 비교 지표로 국가 채무에 비영리 공공기관 부채를 합친 것)은 54.5%로, 비(非)기축통화국으로 선진국인 11국 평균(54.3%)을 처음으로 넘어선다.\n우리나라뿐 아니라 미국·유로존·중국 등 주요국도 경기 부진과 트럼프발 관세 충격 등의 여파로 나랏빚이 불어날 수 있다는 우려가 나온다. 3대 국제 신용 평가사인 무디스는 지난 5월 재정 적자 장기화를 들어 세계 1위 경제 대국 미국의 국가 신용 등급을 최고 등급인 ‘Aaa’에서 ‘Aa1’으로 한 단계 낮췄다. 3대 신용 평가사가 미국 신용 등급을 내린 것은 1년 9개월 만이었다. 고금리에 따른 이자 부담 가능성도 전문가들은 경고한다. 특히 지난 4월 미국의 상호 관세 발효 직후 국채를 되팔아 미 국채 가격을 폭락(국채 금리 급등)시켰던 이른바 ‘채권 자경단(bond vigilantes)’ 사례가 나타날 수 있다는 것이다. 국채 금리가 오르면 재정의 이자 부담은 커지게 된다.\n전문가들은 현금을 뿌리는 단기 부양 조치보다 사회간접자본(SOC) 투자와 세수 확보 조치에 나설 때라고 했다. 석병훈 이화여대 교수는 “경기를 부양하려면 지역 화폐(지역사랑상품권) 대신 건설 투자 등을 늘려야 한다”며 “부가가치세 등 증세 논의에도 나설 때”라고 했다.",
+      "paragraphs": [
+        "13조8000억원 규모의 1차 추가경정예산(추경)이 국회를 통과한 지난 5월 우리나라 중앙정부 채무가 처음으로 1200조원을 넘어섰다. 이달 초 31조8000억원의 2차 추경 편성까지 가세, 지방정부 채무를 포함한 국가 채무는 올해 말 1300조원을 넘어설 것으로 정부는 보고 있다.",
+        "경기 부진 장기화로 3년 연속 세수 결손이 유력해지는 가운데 올 들어 추경 편성이 연거푸 이어지면서 나랏빚 증가 속도가 빨라지고 있다. 경기 부양을 이유로 나랏빚을 끌어 씀씀이만 늘리는 일이 반복될 경우 국가 신용 등급 하락으로까지 이어질 수 있다고 전문가들은 경고한다.",
+        "10일 기획재정부는 ‘월간 재정 동향 7월호’에서 5월 말 중앙정부 채무는 1217조8000억원이라고 밝혔다. 작년 말(1141조2000억원)보다 76조6000억원이나 늘어났다. 추경 편성이 없었던 2023년·2024년 중앙정부 채무는 각각 59조1000억원, 48조7000억원 불어나는 데 그쳤는데, 올 들어 5개월 동안 늘어난 나랏빚이 이보다 많았다.",
+        "◇나랏빚 증가 폭 126조 ‘역대 최대’",
+        "이달 초 국회를 통과한 2차 추경까지 감안한 올해 말 중앙정부 채무는 1267조2000억원에 달할 것으로 정부는 보고 있다. 1년간 늘어나는 나랏빚 증가 폭이 역대 최대인 126조원에 달해, 코로나 팬데믹으로 중앙정부 채무가 120조2000억원 늘어난 2020년 수준을 넘어서게 됐다.",
+        "지방정부 채무를 합친 국가 채무는 1301조9000억원으로 처음으로 1300조원을 넘어설 것으로 전망된다. 코로나 팬데믹을 거치며 2022년 1000조원대로 불어난 국가 채무가 2023~2024년 1100조원대가 됐고, 1년 만에 1300조원대로 뛰게 됐다.",
+        "이처럼 나랏빚이 빠른 속도로 불어나는 이유는 100조원대로 전망되는 올해 나라 살림 적자를 국채 발행으로 메울 수밖에 없기 때문이다. 정부가 전망하는 올해 말 재정 적자(국민연금 등 사회보장성 기금 흑자분을 제외한 관리재정수지 기준)는 111조6000억원으로 국내총생산(GDP)의 4.2%에 달한다. 재정 적자를 GDP의 3% 이내로 관리해야 한다는 정부의 재정 준칙을 2020년부터 6년 연속 위반하게 된다.",
+        "◇전문가들 “신용 등급 하락 우려”",
+        "전문가들은 전 세계적인 경기 부진과 통상 불확실성으로 ‘급한 불’을 끄기 위한 경기 부양 조치는 불가피하지만, 나랏빚 증가세는 적절히 제동을 걸 때가 됐다고 지적한다. 세수 확보 조치 없는 재정 중독이 반복될 경우 국가 신용 등급이 하락할 수 있기 때문이다. 김정식 연세대 경제학부 명예교수는 “국가 부채가 늘어나면 국가 대외 신인도가 떨어진다”며 “기축통화국인 미국·일본과 달리 우리나라의 경우 자본 유출에 따른 외환 위기 가능성도 있다”고 했다. 1차 추경안을 반영하지 않은 국제통화기금(IMF)의 지난 4월 보고서에 따르면, 올해 말 한국의 GDP 대비 일반 정부 부채 비율(국제 비교 지표로 국가 채무에 비영리 공공기관 부채를 합친 것)은 54.5%로, 비(非)기축통화국으로 선진국인 11국 평균(54.3%)을 처음으로 넘어선다.",
+        "우리나라뿐 아니라 미국·유로존·중국 등 주요국도 경기 부진과 트럼프발 관세 충격 등의 여파로 나랏빚이 불어날 수 있다는 우려가 나온다. 3대 국제 신용 평가사인 무디스는 지난 5월 재정 적자 장기화를 들어 세계 1위 경제 대국 미국의 국가 신용 등급을 최고 등급인 ‘Aaa’에서 ‘Aa1’으로 한 단계 낮췄다. 3대 신용 평가사가 미국 신용 등급을 내린 것은 1년 9개월 만이었다. 고금리에 따른 이자 부담 가능성도 전문가들은 경고한다. 특히 지난 4월 미국의 상호 관세 발효 직후 국채를 되팔아 미 국채 가격을 폭락(국채 금리 급등)시켰던 이른바 ‘채권 자경단(bond vigilantes)’ 사례가 나타날 수 있다는 것이다. 국채 금리가 오르면 재정의 이자 부담은 커지게 된다.",
+        "전문가들은 현금을 뿌리는 단기 부양 조치보다 사회간접자본(SOC) 투자와 세수 확보 조치에 나설 때라고 했다. 석병훈 이화여대 교수는 “경기를 부양하려면 지역 화폐(지역사랑상품권) 대신 건설 투자 등을 늘려야 한다”며 “부가가치세 등 증세 논의에도 나설 때”라고 했다."
+      ],
+      "status": "COMPLETED",
+      "claims": [
+        {
+          "claim_id": "A272c31f6-C010",
+          "article_id": "A272c31f6",
+          "sent_id": "s009",
+          "claim": "코로나 팬데믹을 거치며 2022년 1000조원대로 불어난 국가 채무가 2023~2024년 1100조원대가 됐고, 1년 만에 1300조원대로 뛰게 됐다.",
+          "raw_verdict": "UNVERIFIED_UNRESOLVED",
+          "ui_verdict": "UNVERIFIED",
+          "verdict_label": "판단 불가",
+          "verdict_group": "unverified",
+          "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+          "metric": "중앙정부 채무",
+          "metric_normalized": "중앙정부 채무",
+          "value": "1267조2000억",
+          "value_num": 1267200000000000,
+          "unit": "원",
+          "period": "2025",
+          "kosis_eligible": false,
+          "exclusion_code": "FORECAST",
+          "raw_backend": {
+            "claim_id": "A272c31f6-C010",
+            "claim": "코로나 팬데믹을 거치며 2022년 1000조원대로 불어난 국가 채무가 2023~2024년 1100조원대가 됐고, 1년 만에 1300조원대로 뛰게 됐다.",
+            "modes": {
+              "strict": {
+                "verdict": "UNVERIFIED_UNRESOLVED",
+                "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+                "claimed_value": 1000000000000000.0,
+                "actual_value": 1067400000000000.1,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "UNVERIFIED_UNRESOLVED",
+                "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+                "claimed_value": 1000000000000000.0,
+                "actual_value": 1067400000000000.1,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "UNVERIFIED_UNRESOLVED",
+                "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+                "claimed_value": 1000000000000000.0,
+                "actual_value": 1067400000000000.1,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "184",
+              "table_tbl_id": "DT_102006_001",
+              "table_nm": "국가채무(D1)",
+              "retrieval_status": "RESOLVED"
+            }
+          },
+          "claimed_value": 1000000000000000.0,
+          "actual_value": 1067400000000000.1,
+          "hedge_type": null,
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "184",
+            "table_tbl_id": "DT_102006_001",
+            "table_nm": "국가채무(D1)",
+            "retrieval_status": "RESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "UNVERIFIED_UNRESOLVED",
+              "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+              "claimed_value": 1000000000000000.0,
+              "actual_value": 1067400000000000.1,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "UNVERIFIED_UNRESOLVED",
+              "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+              "claimed_value": 1000000000000000.0,
+              "actual_value": 1067400000000000.1,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "UNVERIFIED_UNRESOLVED",
+              "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 국가채무(D1) 국가채무, 국가채무(D1) 국가채무 GDP 대비",
+              "claimed_value": 1000000000000000.0,
+              "actual_value": 1067400000000000.1,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": 753,
+          "end_offset": 837
+        },
+        {
+          "claim_id": "A272c31f6-C007",
+          "article_id": "A272c31f6",
+          "sent_id": "s007",
+          "claim": "◇나랏빚 증가 폭 126조 '역대 최대' 이달 초 국회를 통과한 2차 추경까지 감안한 올해 말 중앙정부 채무는 1267조2000억원에 달할 것으로 정부는 보고 있다.",
+          "raw_verdict": "UNVERIFIED_UNRESOLVED",
+          "ui_verdict": "UNVERIFIED",
+          "verdict_label": "판단 불가",
+          "verdict_group": "unverified",
+          "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+          "metric": "중앙정부 채무",
+          "metric_normalized": "중앙정부 채무",
+          "value": "59조1000억",
+          "value_num": 59100000000000,
+          "unit": "원",
+          "period": "2023",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A272c31f6-C007",
+            "claim": "◇나랏빚 증가 폭 126조 '역대 최대' 이달 초 국회를 통과한 2차 추경까지 감안한 올해 말 중앙정부 채무는 1267조2000억원에 달할 것으로 정부는 보고 있다.",
+            "modes": {
+              "strict": {
+                "verdict": "UNVERIFIED_UNRESOLVED",
+                "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+                "claimed_value": 1267200000000000.0,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "UNVERIFIED_UNRESOLVED",
+                "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+                "claimed_value": 1267200000000000.0,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "UNVERIFIED_UNRESOLVED",
+                "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+                "claimed_value": 1267200000000000.0,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "184",
+              "table_tbl_id": "DT_102006_001",
+              "table_nm": "국가채무(D1)",
+              "retrieval_status": "UNRESOLVED"
+            }
+          },
+          "claimed_value": 1267200000000000.0,
+          "actual_value": null,
+          "hedge_type": null,
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "184",
+            "table_tbl_id": "DT_102006_001",
+            "table_nm": "국가채무(D1)",
+            "retrieval_status": "UNRESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "UNVERIFIED_UNRESOLVED",
+              "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+              "claimed_value": 1267200000000000.0,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "UNVERIFIED_UNRESOLVED",
+              "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+              "claimed_value": 1267200000000000.0,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "UNVERIFIED_UNRESOLVED",
+              "explanation": "관련 통계표는 찾았지만(국가채무(D1)), 확정하지 못했습니다: 항목/분류값(국가채무(D1))은 확정했지만 해당 시점(2025)의 데이터가 로컬 DB에 없음 - 추측으로 대체하지 않음.",
+              "claimed_value": 1267200000000000.0,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": null,
+          "end_offset": null
+        }
+      ],
+      "summary": {
+        "total_claims": 2,
+        "verified_count": 0,
+        "mismatch_count": 0,
+        "unverified_count": 2,
+        "not_eligible_count": 0,
+        "error_count": 0,
+        "raw_only_count": 0
+      }
+    },
+    {
+      "article_id": "A82ae9f41",
+      "input_type": "STORED_ARTICLE",
+      "url": "https://www.chosun.com/economy/economy_general/2025/07/16/JJGWFZ2EF5BPZPOLN4O4NQHNLU",
+      "title": "제조업 취업자 1년째 내리막에...‘쉬었음’ 20대 5년 만 최대",
+      "publisher": "조선일보",
+      "published_at": "2025-07-16T00:00:00+09:00",
+      "content": "제조업 취업자 수가 1년째 내리막을 이어가고 있는 것으로 파악됐다. 중국의 거센 추격 속에 산업 경쟁력이 떨어지고 있고, 미국발 관세 전쟁으로 수출이 위축된 영향이다. 건설업도 경기 부진으로 14개월째 고용 감소세다. 제조업과 제조업에서 고용이 위축되면서, 일자리를 구하지 않고 ‘그냥 쉰다’는 이들이 늘어나고 있다.\n16일 통계청이 발표한 ‘2025년 6월 고용동향’에 따르면, 지난달 15세 이상 취업자는 2909만1000명으로 전년 동월 대비 18만3000명 늘었다. 전체 인구 중 취업자 비율을 뜻하는 고용률은 63.6%로 전년 동월 대비 0.1%포인트 증가하며, 지난 1982년 관련 통계 작성 이래 최고치를 새로 썼다. 국제 비교 기준인 15~64세 고용률은 70.3%로 마찬가지로 6월 기준 역대 최대치를 보였다.\n그러나 업종별로는 고용시장에서 희비가 갈렸다. 고령 돌봄 수요 확대 등에 따라 지난달 보건·사회복지서비스업 취업자 수는 323만4000명으로 전년 동월 대비 21만6000명 증가했다. 전문·과학기술서비스업(10만2000명)과 교육서비스업(7만2000명)도 마찬가지로 증가세를 보였다.\n반면 국내 산업 중 가장 많은 인력을 고용하는 제조업은 지난달 취업자 수가 441만4000명으로 전년 동월 대비 8만3000명 줄었다. 제조업 취업자 수는 작년 7월(-1만1000명)부터 1년 연속으로 감소세를 이어가고 있다. 이는 코로나가 번진 2020년 3월부터 2021년 3월까지 이후로 4년 만이다. 지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다. 건설업 취업자는 14개월째 감소세를 이어가고 있다.\n청년층 고용이 활발한 업종인 제조업과 건설업에서 고용 시장이 위축되면서, 청년 취업난은 더욱 커지고 있다. 지난달 15~29세 고용률은 45.6%로 전년 동월 대비 1%포인트 하락했다. 청년층 고용률은 작년 5월(-0.7%포인트)부터 1년 넘게 감소세를 이어가고 있다. 20대만 떼어놓고 봐도 고용률은 61로 전년 동월 대비 0.5%포인트 떨어졌다.\n특히 구직 활동조차 하지 않은 채 ‘그냥 쉬었다’는 20대는 계속 늘어나는 모습이다. 지난달 비경제활동인구 중 활동 상태를 ‘쉬었음’이라고 응답한 20대는 39만6000명으로 전년 동월 대비 2000명 늘었다. 이는 같은 6월 기준으로 코로나가 시작된 지난 2020년 6월(41만5000명) 이후 5년 만에 최대 규모다.",
+      "paragraphs": [
+        "제조업 취업자 수가 1년째 내리막을 이어가고 있는 것으로 파악됐다. 중국의 거센 추격 속에 산업 경쟁력이 떨어지고 있고, 미국발 관세 전쟁으로 수출이 위축된 영향이다. 건설업도 경기 부진으로 14개월째 고용 감소세다. 제조업과 제조업에서 고용이 위축되면서, 일자리를 구하지 않고 ‘그냥 쉰다’는 이들이 늘어나고 있다.",
+        "16일 통계청이 발표한 ‘2025년 6월 고용동향’에 따르면, 지난달 15세 이상 취업자는 2909만1000명으로 전년 동월 대비 18만3000명 늘었다. 전체 인구 중 취업자 비율을 뜻하는 고용률은 63.6%로 전년 동월 대비 0.1%포인트 증가하며, 지난 1982년 관련 통계 작성 이래 최고치를 새로 썼다. 국제 비교 기준인 15~64세 고용률은 70.3%로 마찬가지로 6월 기준 역대 최대치를 보였다.",
+        "그러나 업종별로는 고용시장에서 희비가 갈렸다. 고령 돌봄 수요 확대 등에 따라 지난달 보건·사회복지서비스업 취업자 수는 323만4000명으로 전년 동월 대비 21만6000명 증가했다. 전문·과학기술서비스업(10만2000명)과 교육서비스업(7만2000명)도 마찬가지로 증가세를 보였다.",
+        "반면 국내 산업 중 가장 많은 인력을 고용하는 제조업은 지난달 취업자 수가 441만4000명으로 전년 동월 대비 8만3000명 줄었다. 제조업 취업자 수는 작년 7월(-1만1000명)부터 1년 연속으로 감소세를 이어가고 있다. 이는 코로나가 번진 2020년 3월부터 2021년 3월까지 이후로 4년 만이다. 지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다. 건설업 취업자는 14개월째 감소세를 이어가고 있다.",
+        "청년층 고용이 활발한 업종인 제조업과 건설업에서 고용 시장이 위축되면서, 청년 취업난은 더욱 커지고 있다. 지난달 15~29세 고용률은 45.6%로 전년 동월 대비 1%포인트 하락했다. 청년층 고용률은 작년 5월(-0.7%포인트)부터 1년 넘게 감소세를 이어가고 있다. 20대만 떼어놓고 봐도 고용률은 61로 전년 동월 대비 0.5%포인트 떨어졌다.",
+        "특히 구직 활동조차 하지 않은 채 ‘그냥 쉬었다’는 20대는 계속 늘어나는 모습이다. 지난달 비경제활동인구 중 활동 상태를 ‘쉬었음’이라고 응답한 20대는 39만6000명으로 전년 동월 대비 2000명 늘었다. 이는 같은 6월 기준으로 코로나가 시작된 지난 2020년 6월(41만5000명) 이후 5년 만에 최대 규모다."
+      ],
+      "status": "COMPLETED",
+      "claims": [
+        {
+          "claim_id": "A82ae9f41-C002",
+          "article_id": "A82ae9f41",
+          "sent_id": "s005",
+          "claim": "전체 인구 중 취업자 비율을 뜻하는 고용률은 63.6%로 전년 동월 대비 0.1%포인트 증가하며, 지난 1982년 관련 통계 작성 이래 최고치를 새로 썼다.",
+          "raw_verdict": "UNVERIFIED_NOT_FOUND",
+          "ui_verdict": "UNVERIFIED",
+          "verdict_label": "판단 불가",
+          "verdict_group": "unverified",
+          "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+          "metric": "15세 이상 취업자 수",
+          "metric_normalized": "15세 이상 취업자 수",
+          "value": "18만3000",
+          "value_num": 183000,
+          "unit": "명",
+          "period": "2025-06",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A82ae9f41-C002",
+            "claim": "전체 인구 중 취업자 비율을 뜻하는 고용률은 63.6%로 전년 동월 대비 0.1%포인트 증가하며, 지난 1982년 관련 통계 작성 이래 최고치를 새로 썼다.",
+            "modes": {
+              "strict": {
+                "verdict": "UNVERIFIED_NOT_FOUND",
+                "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+                "claimed_value": 63.6,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "UNVERIFIED_NOT_FOUND",
+                "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+                "claimed_value": 63.6,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "UNVERIFIED_NOT_FOUND",
+                "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+                "claimed_value": 63.6,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": null,
+              "table_tbl_id": null,
+              "table_nm": null,
+              "retrieval_status": "NOT_FOUND"
+            }
+          },
+          "claimed_value": 63.6,
+          "actual_value": null,
+          "hedge_type": null,
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": null,
+            "table_tbl_id": null,
+            "table_nm": null,
+            "retrieval_status": "NOT_FOUND"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "UNVERIFIED_NOT_FOUND",
+              "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+              "claimed_value": 63.6,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "UNVERIFIED_NOT_FOUND",
+              "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+              "claimed_value": 63.6,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "UNVERIFIED_NOT_FOUND",
+              "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+              "claimed_value": 63.6,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": 265,
+          "end_offset": 352
+        },
+        {
+          "claim_id": "A82ae9f41-C005",
+          "article_id": "A82ae9f41",
+          "sent_id": "s007",
+          "claim": "국제 비교 기준인 15~64세 고용률은 70.3%로 마찬가지로 6월 기준 역대 최대치를 보였다.",
+          "raw_verdict": "UNVERIFIED_RECORD_CLAIM",
+          "ui_verdict": "UNVERIFIED",
+          "verdict_label": "판단 불가",
+          "verdict_group": "unverified",
+          "explanation": "이 주장은 \"역대/사상 최고·최저\"처럼 과거 전체 기록과의 비교를 전제로 합니다. 이 계열의 전체 기간 최댓값 기록 요약이 로컬 웨어하우스(records 테이블)에 아직 없어(그 표/항목이 역대 기록 계산 대상으로 적재되지 않았을 수 있음) 대조하지 못했습니다.",
+          "metric": "15~64세 고용률",
+          "metric_normalized": "15~64세 고용률",
+          "value": "70.3",
+          "value_num": 70.3,
+          "unit": "%",
+          "period": "",
+          "kosis_eligible": false,
+          "exclusion_code": "AMBIGUOUS_METRIC",
+          "raw_backend": {
+            "claim_id": "A82ae9f41-C005",
+            "claim": "국제 비교 기준인 15~64세 고용률은 70.3%로 마찬가지로 6월 기준 역대 최대치를 보였다.",
+            "modes": {
+              "strict": {
+                "verdict": "UNVERIFIED_RECORD_CLAIM",
+                "explanation": "이 주장은 \"역대/사상 최고·최저\"처럼 과거 전체 기록과의 비교를 전제로 합니다. 이 계열의 전체 기간 최댓값 기록 요약이 로컬 웨어하우스(records 테이블)에 아직 없어(그 표/항목이 역대 기록 계산 대상으로 적재되지 않았을 수 있음) 대조하지 못했습니다.",
+                "claimed_value": 70.3,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "UNVERIFIED_RECORD_CLAIM",
+                "explanation": "이 주장은 \"역대/사상 최고·최저\"처럼 과거 전체 기록과의 비교를 전제로 합니다. 이 계열의 전체 기간 최댓값 기록 요약이 로컬 웨어하우스(records 테이블)에 아직 없어(그 표/항목이 역대 기록 계산 대상으로 적재되지 않았을 수 있음) 대조하지 못했습니다.",
+                "claimed_value": 70.3,
+                "actual_value": null,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "RAW_ONLY",
+                "explanation": "[성/연령별 경제활동인구] 주장값 70.3% / 조회값 70.3% - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+                "claimed_value": 70.3,
+                "actual_value": 70.3,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "101",
+              "table_tbl_id": "DT_1DA7012S",
+              "table_nm": "성/연령별 경제활동인구",
+              "retrieval_status": "RESOLVED"
+            }
+          },
+          "claimed_value": 70.3,
+          "actual_value": null,
+          "hedge_type": null,
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "101",
+            "table_tbl_id": "DT_1DA7012S",
+            "table_nm": "성/연령별 경제활동인구",
+            "retrieval_status": "RESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "UNVERIFIED_RECORD_CLAIM",
+              "explanation": "이 주장은 \"역대/사상 최고·최저\"처럼 과거 전체 기록과의 비교를 전제로 합니다. 이 계열의 전체 기간 최댓값 기록 요약이 로컬 웨어하우스(records 테이블)에 아직 없어(그 표/항목이 역대 기록 계산 대상으로 적재되지 않았을 수 있음) 대조하지 못했습니다.",
+              "claimed_value": 70.3,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "UNVERIFIED_RECORD_CLAIM",
+              "explanation": "이 주장은 \"역대/사상 최고·최저\"처럼 과거 전체 기록과의 비교를 전제로 합니다. 이 계열의 전체 기간 최댓값 기록 요약이 로컬 웨어하우스(records 테이블)에 아직 없어(그 표/항목이 역대 기록 계산 대상으로 적재되지 않았을 수 있음) 대조하지 못했습니다.",
+              "claimed_value": 70.3,
+              "actual_value": null,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "RAW_ONLY",
+              "explanation": "[성/연령별 경제활동인구] 주장값 70.3% / 조회값 70.3% - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+              "claimed_value": 70.3,
+              "actual_value": 70.3,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": 353,
+          "end_offset": 406
+        },
+        {
+          "claim_id": "A82ae9f41-C008",
+          "article_id": "A82ae9f41",
+          "sent_id": "s010",
+          "claim": "전문·과학기술서비스업(10만2000명)과 교육서비스업(7만2000명)도 마찬가지로 증가세를 보였다.",
+          "raw_verdict": "UNVERIFIED_DERIVED_NEEDED",
+          "ui_verdict": "UNVERIFIED",
+          "verdict_label": "판단 불가",
+          "verdict_group": "unverified",
+          "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+          "metric": "전문·과학기술서비스업 취업자 수",
+          "metric_normalized": "전문·과학기술서비스업 취업자 수",
+          "value": "10만2000",
+          "value_num": 102000,
+          "unit": "명",
+          "period": "2025-06",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A82ae9f41-C008",
+            "claim": "전문·과학기술서비스업(10만2000명)과 교육서비스업(7만2000명)도 마찬가지로 증가세를 보였다.",
+            "modes": {
+              "strict": {
+                "verdict": "UNVERIFIED_DERIVED_NEEDED",
+                "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+                "claimed_value": 102000.0,
+                "actual_value": 102200.0,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "UNVERIFIED_DERIVED_NEEDED",
+                "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+                "claimed_value": 102000.0,
+                "actual_value": 102200.0,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "UNVERIFIED_DERIVED_NEEDED",
+                "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+                "claimed_value": 102000.0,
+                "actual_value": 102200.0,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "101",
+              "table_tbl_id": "DT_1DA7E33S_NEW",
+              "table_nm": "행정구역(시도)/산업별 취업자",
+              "retrieval_status": "RESOLVED"
+            }
+          },
+          "claimed_value": 102000.0,
+          "actual_value": 102200.0,
+          "hedge_type": null,
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "101",
+            "table_tbl_id": "DT_1DA7E33S_NEW",
+            "table_nm": "행정구역(시도)/산업별 취업자",
+            "retrieval_status": "RESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "UNVERIFIED_DERIVED_NEEDED",
+              "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+              "claimed_value": 102000.0,
+              "actual_value": 102200.0,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "UNVERIFIED_DERIVED_NEEDED",
+              "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+              "claimed_value": 102000.0,
+              "actual_value": 102200.0,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "UNVERIFIED_DERIVED_NEEDED",
+              "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 5개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+              "claimed_value": 102000.0,
+              "actual_value": 102200.0,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": 510,
+          "end_offset": 565
+        },
+        {
+          "claim_id": "A82ae9f41-C009",
+          "article_id": "A82ae9f41",
+          "sent_id": "s010",
+          "claim": "지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다.",
+          "raw_verdict": "VERIFIED",
+          "ui_verdict": "MATCH",
+          "verdict_label": "일치",
+          "verdict_group": "verified",
+          "explanation": "[행정구역(시도)/산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+          "metric": "교육서비스업 취업자 수",
+          "metric_normalized": "교육서비스업 취업자 수",
+          "value": "7만2000",
+          "value_num": 72000,
+          "unit": "명",
+          "period": "2025-06",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A82ae9f41-C009",
+            "claim": "지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다.",
+            "modes": {
+              "strict": {
+                "verdict": "VERIFIED",
+                "explanation": "[행정구역(시도)/산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - strict 기준 허용 오차 이내로 일치합니다.",
+                "claimed_value": 1960000.0,
+                "actual_value": 1959700.0,
+                "hedge_type": "at_most",
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "VERIFIED",
+                "explanation": "[행정구역(시도)/산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+                "claimed_value": 1960000.0,
+                "actual_value": 1959700.0,
+                "hedge_type": "at_most",
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "RAW_ONLY",
+                "explanation": "[행정구역(시도)/산업별 취업자] 주장값 1960000.0명 / 조회값 1959700.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+                "claimed_value": 1960000.0,
+                "actual_value": 1959700.0,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "101",
+              "table_tbl_id": "DT_1DA7E33S_NEW",
+              "table_nm": "행정구역(시도)/산업별 취업자",
+              "retrieval_status": "RESOLVED"
+            }
+          },
+          "claimed_value": 1960000.0,
+          "actual_value": 1959700.0,
+          "hedge_type": "at_most",
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "101",
+            "table_tbl_id": "DT_1DA7E33S_NEW",
+            "table_nm": "행정구역(시도)/산업별 취업자",
+            "retrieval_status": "RESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "VERIFIED",
+              "explanation": "[행정구역(시도)/산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - strict 기준 허용 오차 이내로 일치합니다.",
+              "claimed_value": 1960000.0,
+              "actual_value": 1959700.0,
+              "hedge_type": "at_most",
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "VERIFIED",
+              "explanation": "[행정구역(시도)/산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+              "claimed_value": 1960000.0,
+              "actual_value": 1959700.0,
+              "hedge_type": "at_most",
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "RAW_ONLY",
+              "explanation": "[행정구역(시도)/산업별 취업자] 주장값 1960000.0명 / 조회값 1959700.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+              "claimed_value": 1960000.0,
+              "actual_value": 1959700.0,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": 738,
+          "end_offset": 795
+        },
+        {
+          "claim_id": "A82ae9f41-C010",
+          "article_id": "A82ae9f41",
+          "sent_id": "s011",
+          "claim": "지난달 15~29세 고용률은 45.6%로 전년 동월 대비 1%포인트 하락했다.",
+          "raw_verdict": "VERIFIED",
+          "ui_verdict": "MATCH",
+          "verdict_label": "일치",
+          "verdict_group": "verified",
+          "explanation": "[성/연령별 경제활동인구] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 45.6% vs 조회값 45.6% (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+          "metric": "제조업 취업자 수",
+          "metric_normalized": "제조업 취업자 수",
+          "value": "441만4000",
+          "value_num": 4414000,
+          "unit": "명",
+          "period": "2025-06",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A82ae9f41-C010",
+            "claim": "지난달 15~29세 고용률은 45.6%로 전년 동월 대비 1%포인트 하락했다.",
+            "modes": {
+              "strict": {
+                "verdict": "VERIFIED",
+                "explanation": "[성/연령별 경제활동인구] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 45.6% vs 조회값 45.6% (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+                "claimed_value": 45.6,
+                "actual_value": 45.6,
+                "hedge_type": "exact",
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "VERIFIED",
+                "explanation": "[성/연령별 경제활동인구] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 45.6% vs 조회값 45.6% (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+                "claimed_value": 45.6,
+                "actual_value": 45.6,
+                "hedge_type": "exact",
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "RAW_ONLY",
+                "explanation": "[성/연령별 경제활동인구] 주장값 45.6% / 조회값 45.6% - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+                "claimed_value": 45.6,
+                "actual_value": 45.6,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "101",
+              "table_tbl_id": "DT_1DA7012S",
+              "table_nm": "성/연령별 경제활동인구",
+              "retrieval_status": "RESOLVED"
+            }
+          },
+          "claimed_value": 45.6,
+          "actual_value": 45.6,
+          "hedge_type": "exact",
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "101",
+            "table_tbl_id": "DT_1DA7012S",
+            "table_nm": "성/연령별 경제활동인구",
+            "retrieval_status": "RESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "VERIFIED",
+              "explanation": "[성/연령별 경제활동인구] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 45.6% vs 조회값 45.6% (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+              "claimed_value": 45.6,
+              "actual_value": 45.6,
+              "hedge_type": "exact",
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "VERIFIED",
+              "explanation": "[성/연령별 경제활동인구] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 45.6% vs 조회값 45.6% (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+              "claimed_value": 45.6,
+              "actual_value": 45.6,
+              "hedge_type": "exact",
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "RAW_ONLY",
+              "explanation": "[성/연령별 경제활동인구] 주장값 45.6% / 조회값 45.6% - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+              "claimed_value": 45.6,
+              "actual_value": 45.6,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": 885,
+          "end_offset": 928
+        },
+        {
+          "claim_id": "A82ae9f41-C001",
+          "article_id": "A82ae9f41",
+          "sent_id": "s005",
+          "claim": "16일 통계청이 발표한 '2025년 6월 고용동향'에 따르면, 지난달 15세 이상 취업자는 2909만1000명으로 전년 동월 대비 18만3000명 늘었다.",
+          "raw_verdict": "MISMATCH",
+          "ui_verdict": "MISMATCH",
+          "verdict_label": "불일치",
+          "verdict_group": "mismatch",
+          "explanation": "[성/연령별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29091000.0명 vs 조회값 24797100.0명 (차이 -4293900.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+          "metric": "15세 이상 취업자 수",
+          "metric_normalized": "15세 이상 취업자 수",
+          "value": "2909만1000",
+          "value_num": 29091000,
+          "unit": "명",
+          "period": "2025-06",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A82ae9f41-C001",
+            "claim": "16일 통계청이 발표한 '2025년 6월 고용동향'에 따르면, 지난달 15세 이상 취업자는 2909만1000명으로 전년 동월 대비 18만3000명 늘었다.",
+            "modes": {
+              "strict": {
+                "verdict": "MISMATCH",
+                "explanation": "[성/연령별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29091000.0명 vs 조회값 24797100.0명 (차이 -4293900.000) - strict 기준 허용 오차를 벗어났습니다.",
+                "claimed_value": 29091000.0,
+                "actual_value": 24797100.0,
+                "hedge_type": "exact",
+                "ai_used": false,
+                "ai_note": null
+              },
+              "tolerance": {
+                "verdict": "MISMATCH",
+                "explanation": "[성/연령별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29091000.0명 vs 조회값 24797100.0명 (차이 -4293900.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+                "claimed_value": 29091000.0,
+                "actual_value": 24797100.0,
+                "hedge_type": "exact",
+                "ai_used": false,
+                "ai_note": null
+              },
+              "raw_only": {
+                "verdict": "RAW_ONLY",
+                "explanation": "[성/연령별 취업자] 주장값 29091000.0명 / 조회값 24797100.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+                "claimed_value": 29091000.0,
+                "actual_value": 24797100.0,
+                "hedge_type": null,
+                "ai_used": false,
+                "ai_note": null
+              }
+            },
+            "evidence": {
+              "table_org_id": "101",
+              "table_tbl_id": "DT_1DA7024S",
+              "table_nm": "성/연령별 취업자",
+              "retrieval_status": "RESOLVED"
+            }
+          },
+          "claimed_value": 29091000.0,
+          "actual_value": 24797100.0,
+          "hedge_type": "exact",
+          "mode": "tolerance",
+          "ai_used": false,
+          "ai_note": null,
+          "evidence": {
+            "table_org_id": "101",
+            "table_tbl_id": "DT_1DA7024S",
+            "table_nm": "성/연령별 취업자",
+            "retrieval_status": "RESOLVED"
+          },
+          "backend_modes": {
+            "strict": {
+              "verdict": "MISMATCH",
+              "explanation": "[성/연령별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29091000.0명 vs 조회값 24797100.0명 (차이 -4293900.000) - strict 기준 허용 오차를 벗어났습니다.",
+              "claimed_value": 29091000.0,
+              "actual_value": 24797100.0,
+              "hedge_type": "exact",
+              "ai_used": false,
+              "ai_note": null
+            },
+            "tolerance": {
+              "verdict": "MISMATCH",
+              "explanation": "[성/연령별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29091000.0명 vs 조회값 24797100.0명 (차이 -4293900.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+              "claimed_value": 29091000.0,
+              "actual_value": 24797100.0,
+              "hedge_type": "exact",
+              "ai_used": false,
+              "ai_note": null
+            },
+            "raw_only": {
+              "verdict": "RAW_ONLY",
+              "explanation": "[성/연령별 취업자] 주장값 29091000.0명 / 조회값 24797100.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+              "claimed_value": 29091000.0,
+              "actual_value": 24797100.0,
+              "hedge_type": null,
+              "ai_used": false,
+              "ai_note": null
+            }
+          },
+          "start_offset": null,
+          "end_offset": null
+        }
+      ],
+      "summary": {
+        "total_claims": 6,
+        "verified_count": 2,
+        "mismatch_count": 1,
+        "unverified_count": 3,
+        "not_eligible_count": 0,
+        "error_count": 0,
+        "raw_only_count": 0
+      }
+    },
+    {
+      "article_id": "A93bfa851",
+      "input_type": "STORED_ARTICLE",
+      "url": "https://biz.chosun.com/distribution/food/2025/10/08/RXZHN5KKIVDYDBTMMCPVRSVQUE/",
+      "title": "5년간 먹거리 물가 20% 이상 상승… 과일·빵 상승률 40% 수준",
+      "publisher": "조선비즈",
+      "published_at": "2025-10-08T00:00:00+09:00",
+      "content": "5년간 먹거리 물가가 20% 넘게 상승한 것으로 분석됐다.\n8일 국가데이터처에 따르면 지난달 ‘식료품 및 비주류 음료’ 물가지수는 2020년 9월에 비해 22.9% 올랐다. 같은 기간 전체 소비자 물가지수 상승률(16.2%)보다 7%포인트 가까이 높은 수치다.\n과일(35.2%)과 우유·치즈 및 계란(30.7%) 등은 5년 전에 비해 30% 넘게 급등했다. 빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다. 과자, 빙과류 및 당류도 27.8% 올랐다.\n고춧가루, 참깨 등이 포함된 기타 식료품(21.4%), 육류(21.1%), 어류 및 수산(20.0%)은 먹거리 평균보다는 조금 낮았지만 상승률이 20%를 넘겼다. 비주류 음료 중에 커피·차 및 코코아가 38.2% 치솟았고, 생수·청량음료·과일주스 및 채소주스도 22.7% 상승했다. 주류 및 담배는 상승률이 5.0%에 그쳤지만 이 중 주류만 보면 13.1%였다.\n식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.\n이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.\n지난 5년간 생활에 밀접한 품목들의 물가도 수준이 크게 상승했다. ‘음식 및 숙박’은 24.8%로 가장 크게 상승했고 이 중 외식 비용을 뜻하는 ‘음식 서비스’는 상승률이 25.1%로 더 높았다. 식료품 등 원재료 가격이 상승한 영향이 그대로 반영된 것으로 보인다.\n비누·샴푸·미용료 등이 포함된 ‘기타 상품 및 서비스’는 24.1% 올랐다. 세제, 청소용품 등 살림에 필요한 물품과 세탁·청소 같은 가사 서비스를 포함한 ‘가정용품 및 가사서비스’ 물가는 19.4% 상승했다.\n전월세를 포함한 주거비와 각종 공공요금 등이 포함된 ‘주택, 수도, 전기 및 연료’ 물가는 16.7%, ‘의류 및 신발’은 16.2%로 평균 상승률과 거의 유사했다.\n다만 연료비, 차량 유지비, 대중교통 요금 등을 포함한 ‘교통’ 물가는 15.9%로 평균을 하회했다. 오락 및 문화(9.5%), 교육(8.8%), 보건(6.2%)도 상승 폭이 작은 편이었고 통신비는 0.2% 내렸다.",
+      "paragraphs": [
+        "5년간 먹거리 물가가 20% 넘게 상승한 것으로 분석됐다.",
+        "8일 국가데이터처에 따르면 지난달 ‘식료품 및 비주류 음료’ 물가지수는 2020년 9월에 비해 22.9% 올랐다. 같은 기간 전체 소비자 물가지수 상승률(16.2%)보다 7%포인트 가까이 높은 수치다.",
+        "과일(35.2%)과 우유·치즈 및 계란(30.7%) 등은 5년 전에 비해 30% 넘게 급등했다. 빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다. 과자, 빙과류 및 당류도 27.8% 올랐다.",
+        "고춧가루, 참깨 등이 포함된 기타 식료품(21.4%), 육류(21.1%), 어류 및 수산(20.0%)은 먹거리 평균보다는 조금 낮았지만 상승률이 20%를 넘겼다. 비주류 음료 중에 커피·차 및 코코아가 38.2% 치솟았고, 생수·청량음료·과일주스 및 채소주스도 22.7% 상승했다. 주류 및 담배는 상승률이 5.0%에 그쳤지만 이 중 주류만 보면 13.1%였다.",
+        "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+        "이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.",
+        "지난 5년간 생활에 밀접한 품목들의 물가도 수준이 크게 상승했다. ‘음식 및 숙박’은 24.8%로 가장 크게 상승했고 이 중 외식 비용을 뜻하는 ‘음식 서비스’는 상승률이 25.1%로 더 높았다. 식료품 등 원재료 가격이 상승한 영향이 그대로 반영된 것으로 보인다.",
+        "비누·샴푸·미용료 등이 포함된 ‘기타 상품 및 서비스’는 24.1% 올랐다. 세제, 청소용품 등 살림에 필요한 물품과 세탁·청소 같은 가사 서비스를 포함한 ‘가정용품 및 가사서비스’ 물가는 19.4% 상승했다.",
+        "전월세를 포함한 주거비와 각종 공공요금 등이 포함된 ‘주택, 수도, 전기 및 연료’ 물가는 16.7%, ‘의류 및 신발’은 16.2%로 평균 상승률과 거의 유사했다.",
+        "다만 연료비, 차량 유지비, 대중교통 요금 등을 포함한 ‘교통’ 물가는 15.9%로 평균을 하회했다. 오락 및 문화(9.5%), 교육(8.8%), 보건(6.2%)도 상승 폭이 작은 편이었고 통신비는 0.2% 내렸다."
+      ],
+      "status": "COMPLETED",
+      "claims": [
+        {
+          "claim_id": "A93bfa851-C020",
+          "article_id": "A93bfa851",
+          "sent_id": "s010",
+          "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+          "raw_verdict": "ERROR",
+          "ui_verdict": "ERROR",
+          "verdict_label": "검증 오류",
+          "verdict_group": "error",
+          "explanation": "판정 중 예외 발생: value에 연도 라벨이 여러 개 섞인 시계열 문자열입니다(단일 수치로 파싱 불가 - claim_id를 연도별로 분리해야 함): '2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3'",
+          "metric": "식료품 및 비주류 음료 물가 상승률",
+          "metric_normalized": "식료품 및 비주류 음료 물가 상승률",
+          "value": "4.4",
+          "value_num": 4.4,
+          "unit": "%",
+          "period": "2020",
+          "kosis_eligible": true,
+          "exclusion_code": "",
+          "raw_backend": {
+            "claim_id": "A93bfa851-C020",
+            "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+            "verdict": "ERROR",
+            "explanation": "판정 중 예외 발생: value에 연도 라벨이 여러 개 섞인 시계열 문자열입니다(단일 수치로 파싱 불가 - claim_id를 연도별로 분리해야 함): '2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3'"
+          },
+          "start_offset": 506,
+          "end_offset": 608
+        }
+      ],
+      "summary": {
+        "total_claims": 1,
+        "verified_count": 0,
+        "mismatch_count": 0,
+        "unverified_count": 0,
+        "not_eligible_count": 0,
+        "error_count": 1,
+        "raw_only_count": 0
+      }
+    },
+    {
+      "article_id": "Ae21581c3",
+      "input_type": "STORED_ARTICLE",
+      "url": "https://www.chosun.com/economy/economy_general/2025/06/23/VRSULF3KLRDCXJYUXRMNW45AIY",
+      "title": "6월 1~20일 수출 8.3% 증가... 반도체 21.8%↑ 車 9.2%↑",
+      "publisher": "조선일보",
+      "published_at": "2025-06-23T00:00:00+09:00",
+      "content": "반도체와 자동차 등 주력 품목 수출이 크게 늘면서 올 들어 지난 20일까지 우리나라 수출이 8% 넘게 증가했다고 관세청이 23일 밝혔다. 관세청에 따르면 지난 1~20일 수출액은 386억7200만달러로 전년 동기 대비 8.3% 증가했다. 휴일을 제외한 조업 일수 하루 평균 수출액도 이 기간 27억6000달러로 전년 동기 대비 12.2% 증가했다.\n반도체와 승용차 등 주력 수출 품목이 각각 21.8%, 9.2% 늘어난 영향이 컸다. 최근 상호 관세 부과 영향에도 주력 품목 수출이 늘면서 미국 수출도 4.3% 증가했다. 관세청 관계자는 “반도체 단가 상승 등 영향으로 반도체 수출이 큰 폭으로 늘었고 승용차도 유럽을 중심으로 늘었다”라며 “반도체는 아직 미국 관세 부과가 본격화하지 않아 증가세가 이어지는 것으로 보인다”라고 말했다. 유럽연합과 대만 수출도 각각 23.5%, 46.3% 늘었고, 중국과 베트남은 수출이 1%, 4.3% 줄었다.\n이 기간 수입액은 360억6100만달러로 1년 전 대비 5.3% 증가했다. 수출액이 수입액을 웃돌아 26억2100만달러의 무역 흑자가 발생했다. 올 들어 지난 20일까지 무역수지 흑자는 213억1400만달러로 전년 동기(161조6400만달러) 대비 31.9% 늘었다.\n20일간 수출 호조세가 이달말까지 이어질지는 미지수다. 선적이 몰리는 이달 하순(21~30일) 수출 결과에 따라 최근 수출 부진세가 반복될 가능성이 있다. 최근 격화된 중동 전쟁에 따른 해상 무역 위축 가능성도 변수다.\n도널드 트럼프 미국 행정부의 무차별 관세 정책으로 지난달 우리나라 수출은 1.3% 감소, 수출 증가율이 4개월 만에 마이너스로 떨어졌다. 양대 수출국인 미국과 중국에서 수출이 각각 8.1%, 8.4% 줄면서 미국의 무차별 관세정책 영향이 본격화하고 있다는 분석이 나왔었다.\n한국무역협회는 22일 ‘2025년 상반기 수출입 평가 및 하반기 전망’ 보고서에서 “자동차, 일반기계, 철강 등 대부분의 주력 품목에서 미국발 관세 영향이 가시화될 것”이라며 연간 전체 수출이 작년보다 2.2% 감소할 것이라고 전망했다. 올해 수출이 1.8% 늘어날 것이라는 작년 11월 보고서보다 상황을 더 어둡게 전망한 것이다.",
+      "paragraphs": [
+        "반도체와 자동차 등 주력 품목 수출이 크게 늘면서 올 들어 지난 20일까지 우리나라 수출이 8% 넘게 증가했다고 관세청이 23일 밝혔다. 관세청에 따르면 지난 1~20일 수출액은 386억7200만달러로 전년 동기 대비 8.3% 증가했다. 휴일을 제외한 조업 일수 하루 평균 수출액도 이 기간 27억6000달러로 전년 동기 대비 12.2% 증가했다.",
+        "반도체와 승용차 등 주력 수출 품목이 각각 21.8%, 9.2% 늘어난 영향이 컸다. 최근 상호 관세 부과 영향에도 주력 품목 수출이 늘면서 미국 수출도 4.3% 증가했다. 관세청 관계자는 “반도체 단가 상승 등 영향으로 반도체 수출이 큰 폭으로 늘었고 승용차도 유럽을 중심으로 늘었다”라며 “반도체는 아직 미국 관세 부과가 본격화하지 않아 증가세가 이어지는 것으로 보인다”라고 말했다. 유럽연합과 대만 수출도 각각 23.5%, 46.3% 늘었고, 중국과 베트남은 수출이 1%, 4.3% 줄었다.",
+        "이 기간 수입액은 360억6100만달러로 1년 전 대비 5.3% 증가했다. 수출액이 수입액을 웃돌아 26억2100만달러의 무역 흑자가 발생했다. 올 들어 지난 20일까지 무역수지 흑자는 213억1400만달러로 전년 동기(161조6400만달러) 대비 31.9% 늘었다.",
+        "20일간 수출 호조세가 이달말까지 이어질지는 미지수다. 선적이 몰리는 이달 하순(21~30일) 수출 결과에 따라 최근 수출 부진세가 반복될 가능성이 있다. 최근 격화된 중동 전쟁에 따른 해상 무역 위축 가능성도 변수다.",
+        "도널드 트럼프 미국 행정부의 무차별 관세 정책으로 지난달 우리나라 수출은 1.3% 감소, 수출 증가율이 4개월 만에 마이너스로 떨어졌다. 양대 수출국인 미국과 중국에서 수출이 각각 8.1%, 8.4% 줄면서 미국의 무차별 관세정책 영향이 본격화하고 있다는 분석이 나왔었다.",
+        "한국무역협회는 22일 ‘2025년 상반기 수출입 평가 및 하반기 전망’ 보고서에서 “자동차, 일반기계, 철강 등 대부분의 주력 품목에서 미국발 관세 영향이 가시화될 것”이라며 연간 전체 수출이 작년보다 2.2% 감소할 것이라고 전망했다. 올해 수출이 1.8% 늘어날 것이라는 작년 11월 보고서보다 상황을 더 어둡게 전망한 것이다."
+      ],
+      "status": "COMPLETED",
+      "claims": [
+        {
+          "claim_id": "Ae21581c3-C001",
+          "article_id": "Ae21581c3",
+          "sent_id": "s001",
+          "claim": "반도체와 자동차 등 주력 품목 수출이 크게 늘면서 올 들어 지난 20일까지 우리나라 수출이 8% 넘게 증가했다고 관세청이 23일 밝혔다.",
+          "raw_verdict": "NOT_ELIGIBLE",
+          "ui_verdict": "NOT_ELIGIBLE",
+          "verdict_label": "검증 대상 아님",
+          "verdict_group": "notEligible",
+          "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: PARTIAL_PERIOD.",
+          "metric": "수출",
+          "metric_normalized": "수출",
+          "value": "8",
+          "value_num": 8,
+          "unit": "%",
+          "period": "",
+          "kosis_eligible": false,
+          "exclusion_code": "PARTIAL_PERIOD",
+          "raw_backend": {
+            "claim_id": "Ae21581c3-C001",
+            "claim": "반도체와 자동차 등 주력 품목 수출이 크게 늘면서 올 들어 지난 20일까지 우리나라 수출이 8% 넘게 증가했다고 관세청이 23일 밝혔다.",
+            "verdict": "NOT_ELIGIBLE",
+            "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: PARTIAL_PERIOD."
+          },
+          "start_offset": 0,
+          "end_offset": 76
+        }
+      ],
+      "summary": {
+        "total_claims": 1,
+        "verified_count": 0,
+        "mismatch_count": 0,
+        "unverified_count": 0,
+        "not_eligible_count": 1,
+        "error_count": 0,
+        "raw_only_count": 0
+      }
+    }
+  ],
+  "diagnostics": {
+    "articles": 4,
+    "claims": 10,
+    "verdict_counts": {
+      "ERROR": 1,
+      "MISMATCH": 1,
+      "NOT_ELIGIBLE": 1,
+      "UNVERIFIED_DERIVED_NEEDED": 1,
+      "UNVERIFIED_NOT_FOUND": 1,
+      "UNVERIFIED_RECORD_CLAIM": 1,
+      "UNVERIFIED_UNRESOLVED": 2,
+      "VERIFIED": 2
+    },
+    "ui_counts": {
+      "verified": 2,
+      "mismatch": 1,
+      "unverified": 5,
+      "not_eligible": 1,
+      "error": 1,
+      "raw_only": 0
+    },
+    "unmatched_articles": [],
+    "unmatched_claims": [],
+    "unmatched_highlights": [
+      "A272c31f6-C007",
+      "A82ae9f41-C001"
+    ],
+    "duplicate_run01_claim_ids": [],
+    "duplicate_verdict_claim_ids": [],
+    "article_id_conflicts": []
+  }
+}

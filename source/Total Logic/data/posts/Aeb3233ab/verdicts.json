@@ -1,0 +1,983 @@
+[
+  {
+    "claim_id": "Aeb3233ab-C022",
+    "claim": "1~11월 누계 혼인 건수는 19만9903건으로 20만 건에 육박했다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "Aeb3233ab-C001",
+    "claim": "작년 11월 출생아 수가 1년 전에 비해 14.6% 늘어나며 14년 만에 가장 높은 증가율을 기록했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 14.6,
+        "actual_value": 14.563605248146036,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 14.6,
+        "actual_value": 14.563605248146036,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 14.6,
+        "actual_value": 14.563605248146036,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C002",
+    "claim": "22일 통계청이 22일 발표한 ‘2024년 11월 인구동향’에 따르면, 작년 11월 출생아 수는 1년 전에 비해 14.6% 늘어난 2만95명으로 집계됐다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 14.6,
+        "actual_value": 14.563605248146036,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 14.6,
+        "actual_value": 14.563605248146036,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 14.6,
+        "actual_value": 14.563605248146036,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C003",
+    "claim": "22일 통계청이 22일 발표한 ‘2024년 11월 인구동향’에 따르면, 작년 11월 출생아 수는 1년 전에 비해 14.6% 늘어난 2만95명으로 집계됐다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 20095.0명 vs 조회값 20083.0명 건 (차이 -12.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 20095.0,
+        "actual_value": 20083.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 20095.0명 vs 조회값 20083.0명 건 (차이 -12.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 20095.0,
+        "actual_value": 20083.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 주장값 20095.0명 / 조회값 20083.0명 건 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 20095.0,
+        "actual_value": 20083.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C004",
+    "claim": "이는 지난 2010년 11월(17.5%) 이후 가장 높은 증가율이다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 17.5,
+        "actual_value": 17.474127146593883,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 17.5,
+        "actual_value": 17.474127146593883,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 17.5,
+        "actual_value": 17.474127146593883,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C005",
+    "claim": "작년 1월부터 11월까지 출생아 수 22만94명으로 전년에 비해 3% 늘어났다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202401202411)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 220094.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202401202411)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 220094.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202401202411)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 220094.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C006",
+    "claim": "작년 1월부터 11월까지 출생아 수 22만94명으로 전년에 비해 3% 늘어났다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202401202411)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 3.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202401202411)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 3.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202401202411)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 3.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C007",
+    "claim": "출생아 수는 2015년 0.7% 증가했다가 2016년(-7.3%)부터 2023년(-7.7%)까지 8년 연속 감소했었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 0.7,
+        "actual_value": 0.6855213751765477,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 0.7,
+        "actual_value": 0.6855213751765477,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 0.7,
+        "actual_value": 0.6855213751765477,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C008",
+    "claim": "출생아 수는 2015년 0.7% 증가했다가 2016년(-7.3%)부터 2023년(-7.7%)까지 8년 연속 감소했었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": -7.3,
+        "actual_value": -7.339309338077643,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": -7.3,
+        "actual_value": -7.339309338077643,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": -7.3,
+        "actual_value": -7.339309338077643,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C009",
+    "claim": "출생아 수는 2015년 0.7% 증가했다가 2016년(-7.3%)부터 2023년(-7.7%)까지 8년 연속 감소했었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": -7.7,
+        "actual_value": -7.68823288627772,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": -7.7,
+        "actual_value": -7.68823288627772,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": -7.7,
+        "actual_value": -7.68823288627772,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C010",
+    "claim": "그러나 지난해 7월(7.9%)부터 5개월 연속 출생아 수가 늘어나는 등 아이 울음소리가 커지는 분위기다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 7.9,
+        "actual_value": 7.8333769976421275,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 7.9,
+        "actual_value": 7.8333769976421275,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 출생아수(명), 출생사망혼인이혼 서울특별시 출생아수(명), 출생사망혼인이혼 부산광역시 출생아수(명), 출생사망혼인이혼 대구광역시 출생아수(명), 출생사망혼인이혼 인천광역시 출생아수(명)",
+        "claimed_value": 7.9,
+        "actual_value": 7.8333769976421275,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C011",
+    "claim": "12월까지 같은 추세가 이어질 경우 작년 한해 출생아 수는 2023년(23만28명) 수준을 넘어서 2015년 이후 9년 만에 출생아 수가 반등하게 된다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"이 값 이상이라고 주장(이상/초과 판정)\"으로 해석됩니다. 주장값 230028.0명 vs 조회값 230028.0명 건 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 230028.0,
+        "actual_value": 230028.0,
+        "hedge_type": "at_least",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"이 값 이상이라고 주장(이상/초과 판정)\"으로 해석됩니다. 주장값 230028.0명 vs 조회값 230028.0명 건 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 230028.0,
+        "actual_value": 230028.0,
+        "hedge_type": "at_least",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 주장값 230028.0명 / 조회값 230028.0명 건 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 230028.0,
+        "actual_value": 230028.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C012",
+    "claim": "지역별로는 대구(25.3%)와 전남(25%), 울산(24.5%) 등 전국 17개 시도에서 예외 없이 출생아 수가 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시군구/성/출산순위별 출생), 확정하지 못했습니다: 항목/분류값(계)은 확정했지만 해당 시점(202411)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 25.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시군구/성/출산순위별 출생), 확정하지 못했습니다: 항목/분류값(계)은 확정했지만 해당 시점(202411)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 25.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시군구/성/출산순위별 출생), 확정하지 못했습니다: 항목/분류값(계)은 확정했지만 해당 시점(202411)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 25.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B81A03",
+      "table_nm": "시군구/성/출산순위별 출생",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C013",
+    "claim": "지역별로는 대구(25.3%)와 전남(25%), 울산(24.5%) 등 전국 17개 시도에서 예외 없이 출생아 수가 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 고기 및 실용석육염장염수장건조 또는 훈제한 것, 수출액 식품 및 산동물 고기및 고기 조제품 고기 및 실용석육염장염수장건조 또는 훈제한 것 돼지고기 이외의 고기 및 식용설육염장염수장건조 훈제한 것, 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스, 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스 기타(고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스), 수출액 식품 및 산동물 물고기갑각류연체동물 및 수생무척추동물",
+        "claimed_value": 25.0,
+        "actual_value": -81.57894736842105,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 고기 및 실용석육염장염수장건조 또는 훈제한 것, 수출액 식품 및 산동물 고기및 고기 조제품 고기 및 실용석육염장염수장건조 또는 훈제한 것 돼지고기 이외의 고기 및 식용설육염장염수장건조 훈제한 것, 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스, 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스 기타(고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스), 수출액 식품 및 산동물 물고기갑각류연체동물 및 수생무척추동물",
+        "claimed_value": 25.0,
+        "actual_value": -81.57894736842105,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 고기 및 실용석육염장염수장건조 또는 훈제한 것, 수출액 식품 및 산동물 고기및 고기 조제품 고기 및 실용석육염장염수장건조 또는 훈제한 것 돼지고기 이외의 고기 및 식용설육염장염수장건조 훈제한 것, 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스, 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스 기타(고기물고기류갑각류연체동물 또는   기타 수생무척추동물의 추출물과 주스), 수출액 식품 및 산동물 물고기갑각류연체동물 및 수생무척추동물",
+        "claimed_value": 25.0,
+        "actual_value": -81.57894736842105,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C014",
+    "claim": "지역별로는 대구(25.3%)와 전남(25%), 울산(24.5%) 등 전국 17개 시도에서 예외 없이 출생아 수가 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시군구/성/출산순위별 출생), 확정하지 못했습니다: 항목/분류값(계)은 확정했지만 해당 시점(202411)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 24.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시군구/성/출산순위별 출생), 확정하지 못했습니다: 항목/분류값(계)은 확정했지만 해당 시점(202411)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 24.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시군구/성/출산순위별 출생), 확정하지 못했습니다: 항목/분류값(계)은 확정했지만 해당 시점(202411)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 24.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B81A03",
+      "table_nm": "시군구/성/출산순위별 출생",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C015",
+    "claim": "다만 작년 11월 사망자 수는 2만9219명으로 전년 동월 대비 3.8% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29219.0명 vs 조회값 29232.0명 건 (차이 +13.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 29219.0,
+        "actual_value": 29232.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 29219.0명 vs 조회값 29232.0명 건 (차이 +13.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 29219.0,
+        "actual_value": 29232.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 주장값 29219.0명 / 조회값 29232.0명 건 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 29219.0,
+        "actual_value": 29232.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C016",
+    "claim": "다만 작년 11월 사망자 수는 2만9219명으로 전년 동월 대비 3.8% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 사망자수(명), 출생사망혼인이혼 서울특별시 사망자수(명), 출생사망혼인이혼 부산광역시 사망자수(명), 출생사망혼인이혼 대구광역시 사망자수(명), 출생사망혼인이혼 인천광역시 사망자수(명)",
+        "claimed_value": 3.8,
+        "actual_value": -3.7280990646818597,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 사망자수(명), 출생사망혼인이혼 서울특별시 사망자수(명), 출생사망혼인이혼 부산광역시 사망자수(명), 출생사망혼인이혼 대구광역시 사망자수(명), 출생사망혼인이혼 인천광역시 사망자수(명)",
+        "claimed_value": 3.8,
+        "actual_value": -3.7280990646818597,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 사망자수(명), 출생사망혼인이혼 서울특별시 사망자수(명), 출생사망혼인이혼 부산광역시 사망자수(명), 출생사망혼인이혼 대구광역시 사망자수(명), 출생사망혼인이혼 인천광역시 사망자수(명)",
+        "claimed_value": 3.8,
+        "actual_value": -3.7280990646818597,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C017",
+    "claim": "사망자 수가 출생아 수를 웃돌아 인구는 9124명 자연 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 자연증가건수(명), 출생사망혼인이혼 서울특별시 자연증가건수(명), 출생사망혼인이혼 부산광역시 자연증가건수(명), 출생사망혼인이혼 대구광역시 자연증가건수(명), 출생사망혼인이혼 인천광역시 자연증가건수(명)",
+        "claimed_value": 9124.0,
+        "actual_value": -9149.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 자연증가건수(명), 출생사망혼인이혼 서울특별시 자연증가건수(명), 출생사망혼인이혼 부산광역시 자연증가건수(명), 출생사망혼인이혼 대구광역시 자연증가건수(명), 출생사망혼인이혼 인천광역시 자연증가건수(명)",
+        "claimed_value": 9124.0,
+        "actual_value": -9149.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 자연증가건수(명), 출생사망혼인이혼 서울특별시 자연증가건수(명), 출생사망혼인이혼 부산광역시 자연증가건수(명), 출생사망혼인이혼 대구광역시 자연증가건수(명), 출생사망혼인이혼 인천광역시 자연증가건수(명)",
+        "claimed_value": 9124.0,
+        "actual_value": -9149.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C018",
+    "claim": "향후 혼인 추이가 현재의 출생 증가세 유지를 결정하는 주요 변수로 지목되는 가운데, 작년 11월 혼인 건수는 1만8581건으로 1년 전 대비 11.3% 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 18581.0건 vs 조회값 18581.0명 건 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 18581.0,
+        "actual_value": 18581.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 18581.0건 vs 조회값 18581.0명 건 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 18581.0,
+        "actual_value": 18581.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 주장값 18581.0건 / 조회값 18581.0명 건 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 18581.0,
+        "actual_value": 18581.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C019",
+    "claim": "향후 혼인 추이가 현재의 출생 증가세 유지를 결정하는 주요 변수로 지목되는 가운데, 작년 11월 혼인 건수는 1만8581건으로 1년 전 대비 11.3% 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 11.3,
+        "actual_value": 11.303462321792262,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 11.3,
+        "actual_value": 11.303462321792262,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 11.3,
+        "actual_value": 11.303462321792262,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C020",
+    "claim": "혼인 건수는 작년 4월(24.6%)부터 8개월째 늘고 있다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 24.6,
+        "actual_value": 24.61655382064391,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 24.6,
+        "actual_value": 24.61655382064391,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 24.6,
+        "actual_value": 24.61655382064391,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C021",
+    "claim": "1~11월 누계 혼인 건수는 19만9903건으로 20만 건에 육박했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202501202511)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 199903.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202501202511)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 199903.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 항목/분류값(출생사망혼인이혼)은 확정했지만 해당 시점(202501202511)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 199903.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C023",
+    "claim": "2023년 1년 혼인 건수(19만3657건)를 11개월 만에 넘어선 것이다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 193657.0건 vs 조회값 193657.0명 건 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 193657.0,
+        "actual_value": 193657.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 193657.0건 vs 조회값 193657.0명 건 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 193657.0,
+        "actual_value": 193657.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월.분기.연간 인구동향(출생,사망,혼인,이혼)] 주장값 193657.0건 / 조회값 193657.0명 건 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 193657.0,
+        "actual_value": 193657.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C024",
+    "claim": "혼인은 2012년(-0.6%)부터 2022년(-0.4%)까지 11년 연속 감소하다가 엔데믹 결혼 붐으로 2023년 1% 반등했었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": -0.4,
+        "actual_value": -0.424400151682796,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": -0.4,
+        "actual_value": -0.424400151682796,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": -0.4,
+        "actual_value": -0.424400151682796,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C025",
+    "claim": "혼인은 2012년(-0.6%)부터 2022년(-0.4%)까지 11년 연속 감소하다가 엔데믹 결혼 붐으로 2023년 1% 반등했었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 1.0,
+        "actual_value": 1.0261359486671187,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 1.0,
+        "actual_value": 1.0261359486671187,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 출생사망혼인이혼 전국 혼인건수(건), 출생사망혼인이혼 서울특별시 혼인건수(건), 출생사망혼인이혼 부산광역시 혼인건수(건), 출생사망혼인이혼 대구광역시 혼인건수(건), 출생사망혼인이혼 인천광역시 혼인건수(건)",
+        "claimed_value": 1.0,
+        "actual_value": 1.0261359486671187,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "Aeb3233ab-C026",
+    "claim": "혼인은 2012년(-0.6%)부터 2022년(-0.4%)까지 11년 연속 감소하다가 엔데믹 결혼 붐으로 2023년 1% 반등했었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2012, reference=2011) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -0.6,
+        "actual_value": -0.6119962198446004,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2012, reference=2011) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -0.6,
+        "actual_value": -0.6119962198446004,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2012, reference=2011) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -0.6,
+        "actual_value": -0.6119962198446004,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "RESOLVED"
+    }
+  }
+]

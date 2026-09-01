@@ -1,0 +1,25 @@
+# 비밀값/환경변수 - 절대 커밋 금지
+.env
+*.env
+
+# DB 파일 - CLAUDE.md 규칙(이 세션에서 쓰기/삭제 금지)과 별개로,
+# 용량이 크고 사용자가 로컬에서 직접 관리하는 대상이라 git 추적 대상에서 제외
+kosis_warehouse.db
+kosis_warehouse.db-journal
+kosis_warehouse.db-wal
+kosis_warehouse.db-shm
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# 캐시/임시 산출물
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.log
+*.zip
+
+# macOS
+*.DS_Store

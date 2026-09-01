@@ -1,0 +1,860 @@
+[
+  {
+    "claim_id": "A1193d6ae-C001",
+    "claim": "우리나라에서 거주 중인 외국인 주민 수가 사상 최대 규모인 258만명을 기록했다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2580000.0명 vs 조회값 2578999.0명 (차이 -1001.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2580000.0,
+        "actual_value": 2578999.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2580000.0명 vs 조회값 2578999.0명 (차이 -1001.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2580000.0,
+        "actual_value": 2578999.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 2580000.0명 / 조회값 2578999.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2580000.0,
+        "actual_value": 2578999.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C002",
+    "claim": "전체 인구의 5%를 차지한다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 5.0% vs 조회값 2583626.0명 (차이 +2583621.000) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 5.0,
+        "actual_value": 2583626.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 5.0% vs 조회값 2583626.0명 (차이 +2583621.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 5.0,
+        "actual_value": 2583626.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 5.0% / 조회값 2583626.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 5.0,
+        "actual_value": 2583626.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C003",
+    "claim": "외국인 주민 수는 총 258만3626명으로 집계됐다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2583626.0명 vs 조회값 2583626.0명 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2583626.0,
+        "actual_value": 2583626.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2583626.0명 vs 조회값 2583626.0명 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2583626.0,
+        "actual_value": 2583626.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 2583626.0명 / 조회값 2583626.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2583626.0,
+        "actual_value": 2583626.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C004",
+    "claim": "인구주택총조사 기준 우리나라 총인구인 5180만5547명의 5%다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 5.0% vs 조회값 51805547.0명 (차이 +51805542.000) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 5.0,
+        "actual_value": 51805547.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 5.0% vs 조회값 51805547.0명 (차이 +51805542.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 5.0,
+        "actual_value": 51805547.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 5.0% / 조회값 51805547.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 5.0,
+        "actual_value": 51805547.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C005",
+    "claim": "인구주택총조사 기준 우리나라 총인구인 5180만5547명의 5%다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 51805547.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 51805547.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 51805547.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C006",
+    "claim": "특히 지난해 통계 대비 유학생(+2만6908명·13%↑)의 증가 추세가 두드러졌다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 26908.0명 vs 조회값 233237.0 (차이 +206329.000) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 26908.0,
+        "actual_value": 233237.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 26908.0명 vs 조회값 233237.0 (차이 +206329.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 26908.0,
+        "actual_value": 233237.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 26908.0명 / 조회값 233237.0 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 26908.0,
+        "actual_value": 233237.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C007",
+    "claim": "특히 지난해 통계 대비 유학생(+2만6908명·13%↑)의 증가 추세가 두드러졌다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 13.0,
+        "actual_value": 13.041307814219039,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 13.0,
+        "actual_value": 13.041307814219039,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 13.0,
+        "actual_value": 13.041307814219039,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C008",
+    "claim": "이어 외국인근로자(+3만2384명·6.9%↑), 결혼이민자(+1만1767명·6.5%↑) 순으로 증가 폭이 컸다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 32384.0명 vs 조회값 502634.0 (차이 +470250.000) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 32384.0,
+        "actual_value": 502634.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 32384.0명 vs 조회값 502634.0 (차이 +470250.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 32384.0,
+        "actual_value": 502634.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 32384.0명 / 조회값 502634.0 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 32384.0,
+        "actual_value": 502634.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C009",
+    "claim": "이어 외국인근로자(+3만2384명·6.9%↑), 결혼이민자(+1만1767명·6.5%↑) 순으로 증가 폭이 컸다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 6.9,
+        "actual_value": 6.886549707602339,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 6.9,
+        "actual_value": 6.886549707602339,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 6.9,
+        "actual_value": 6.886549707602339,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C010",
+    "claim": "이어 외국인근로자(+3만2384명·6.9%↑), 결혼이민자(+1만1767명·6.5%↑) 순으로 증가 폭이 컸다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 11767.0명 vs 조회값 191839.0 (차이 +180072.000) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 11767.0,
+        "actual_value": 191839.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 11767.0명 vs 조회값 191839.0 (차이 +180072.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 11767.0,
+        "actual_value": 191839.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 11767.0명 / 조회값 191839.0 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 11767.0,
+        "actual_value": 191839.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C011",
+    "claim": "이어 외국인근로자(+3만2384명·6.9%↑), 결혼이민자(+1만1767명·6.5%↑) 순으로 증가 폭이 컸다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 6.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 6.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월.분기.연간 인구동향(출생,사망,혼인,이혼)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 6.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1B8000G",
+      "table_nm": "월.분기.연간 인구동향(출생,사망,혼인,이혼)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C012",
+    "claim": "외국인주민은 17개 모든 시·도에서 지속적으로 증가하고 있으며, 전년 대비 증가율이 높은 시·도는 전남(10.5%↑), 울산(8.9%↑), 경북·충남(8.8%↑), 충북(8.4%↑) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 10.5,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 10.5,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 10.5,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C013",
+    "claim": "외국인주민은 17개 모든 시·도에서 지속적으로 증가하고 있으며, 전년 대비 증가율이 높은 시·도는 전남(10.5%↑), 울산(8.9%↑), 경북·충남(8.8%↑), 충북(8.4%↑) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.9,
+        "actual_value": 8.85893807856492,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.9,
+        "actual_value": 8.85893807856492,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.9,
+        "actual_value": 8.85893807856492,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C014",
+    "claim": "외국인주민은 17개 모든 시·도에서 지속적으로 증가하고 있으며, 전년 대비 증가율이 높은 시·도는 전남(10.5%↑), 울산(8.9%↑), 경북·충남(8.8%↑), 충북(8.4%↑) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.8,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.8,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.8,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C015",
+    "claim": "외국인주민은 17개 모든 시·도에서 지속적으로 증가하고 있으며, 전년 대비 증가율이 높은 시·도는 전남(10.5%↑), 울산(8.9%↑), 경북·충남(8.8%↑), 충북(8.4%↑) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.8,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.8,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.8,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C016",
+    "claim": "외국인주민은 17개 모든 시·도에서 지속적으로 증가하고 있으며, 전년 대비 증가율이 높은 시·도는 전남(10.5%↑), 울산(8.9%↑), 경북·충남(8.8%↑), 충북(8.4%↑) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.4,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.4,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=2024, reference=2023) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 8.4,
+        "actual_value": 5.045004313811271,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C017",
+    "claim": "외국인주민이 가장 많이 거주하는 시·도는 경기(84만5074명), 서울(45만888명), 충남(16만9245명), 인천(16만9219명), 경남(16만2714명) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 845074.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 845074.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 845074.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C018",
+    "claim": "외국인주민이 가장 많이 거주하는 시·도는 경기(84만5074명), 서울(45만888명), 충남(16만9245명), 인천(16만9219명), 경남(16만2714명) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 450888.0명 vs 조회값 450888.0명 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 450888.0,
+        "actual_value": 450888.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 450888.0명 vs 조회값 450888.0명 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 450888.0,
+        "actual_value": 450888.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 450888.0명 / 조회값 450888.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 450888.0,
+        "actual_value": 450888.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C019",
+    "claim": "외국인주민이 가장 많이 거주하는 시·도는 경기(84만5074명), 서울(45만888명), 충남(16만9245명), 인천(16만9219명), 경남(16만2714명) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 169245.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 169245.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 169245.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C020",
+    "claim": "외국인주민이 가장 많이 거주하는 시·도는 경기(84만5074명), 서울(45만888명), 충남(16만9245명), 인천(16만9219명), 경남(16만2714명) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 169219.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 169219.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 169219.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C021",
+    "claim": "외국인주민이 가장 많이 거주하는 시·도는 경기(84만5074명), 서울(45만888명), 충남(16만9245명), 인천(16만9219명), 경남(16만2714명) 순이었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 162714.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 162714.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(시도별 외국인주민 현황), 확정하지 못했습니다: 항목/분류값(시도별 외국인주민 현황)은 확정했지만 해당 시점(2024)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 162714.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A1193d6ae-C022",
+    "claim": "전체 외국인주민의 56.7%가 수도권에 거주하고 있었다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 56.7% vs 조회값 2583626.0명 (차이 +2583569.300) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 56.7,
+        "actual_value": 2583626.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[시도별 외국인주민 현황] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 56.7% vs 조회값 2583626.0명 (차이 +2583569.300) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 56.7,
+        "actual_value": 2583626.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[시도별 외국인주민 현황] 주장값 56.7% / 조회값 2583626.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 56.7,
+        "actual_value": 2583626.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "110",
+      "table_tbl_id": "TX_11025_A000_A",
+      "table_nm": "시도별 외국인주민 현황",
+      "retrieval_status": "RESOLVED"
+    }
+  }
+]

@@ -1,0 +1,53 @@
+[
+ {
+  "article_id": "A2e46e4ac",
+  "title": "물가 상승률 두 달 연속 2%대...치솟은 기름값, 물가 끌어 올려",
+  "posted_date": "2025-03-06",
+  "publisher": "조선일보",
+  "url": "https://www.chosun.com/economy/economy_general/2025/03/06/IXLFBAQ5RFD7HKWH6T3LQXPQWA",
+  "n_claims": 27,
+  "n_eligible": 26,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "NOT_ELIGIBLE": 1,
+   "VERIFIED": 7,
+   "UNVERIFIED_UNRESOLVED": 5,
+   "UNVERIFIED_NOT_FOUND": 5,
+   "MISMATCH": 1,
+   "UNVERIFIED_DERIVED_NEEDED": 8
+  },
+  "analyzed_at": "2026-08-26T10:00:08"
+ },
+ {
+  "article_id": "Ac4b206ec",
+  "title": "최저임금 1만30원으로 인상… 육아휴직 급여 최대 월 250만원",
+  "posted_date": "2025-01-01",
+  "publisher": "조선일보",
+  "url": "https://www.chosun.com/economy/economy_general/2025/01/01/ADO7O3Q4WJBCJAX6UUEY4MSBV4",
+  "n_claims": 62,
+  "n_eligible": 0,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "NOT_ELIGIBLE": 62
+  },
+  "analyzed_at": "2026-08-26T06:40:58"
+ },
+ {
+  "article_id": "A82ae9f41",
+  "title": "제조업 취업자 1년째 내리막에...‘쉬었음’ 20대 5년 만 최대",
+  "posted_date": "2025-07-16",
+  "publisher": "조선일보",
+  "url": "https://www.chosun.com/economy/economy_general/2025/07/16/JJGWFZ2EF5BPZPOLN4O4NQHNLU",
+  "n_claims": 23,
+  "n_eligible": 23,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "UNVERIFIED_UNRESOLVED": 11,
+   "MISMATCH": 2,
+   "UNVERIFIED_NOT_FOUND": 1,
+   "VERIFIED": 4,
+   "UNVERIFIED_DERIVED_NEEDED": 5
+  },
+  "analyzed_at": "2026-08-26T06:39:51"
+ }
+]

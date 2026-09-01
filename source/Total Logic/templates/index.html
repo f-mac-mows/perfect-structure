@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}FactQ · 기사 통계 검수{% endblock %}
+{% block content %}
+<section class="dashboard-home">
+  <section class="verification-workspace">
+    <div class="workspace-copy">
+      <div class="eyebrow">KOSIS 기반 기사 통계 검수</div>
+      <h1>팩트체크가 필요한 순간,<br><em>FACTQ로.</em></h1>
+      <p>뉴스 URL 또는 기사 제목을 입력하세요.</p>
+    </div>
+    <form class="url-form workspace-form" id="url-form" novalidate>
+      <div class="workspace-form-heading"><label for="news-url" id="workspace-form-label">기사 검색 및 검증</label><span class="workspace-status-badge" id="workspace-status-badge" hidden></span></div>
+      <section class="workspace-completed-result" id="workspace-completed-result" hidden aria-live="polite">
+        <div><span>✓ 검증 완료</span><strong id="completed-article-title"></strong><small id="completed-result-summary"></small></div>
+        <a id="completed-result-link">결과 보기 <b>→</b></a>
+      </section>
+      <section class="workspace-processing-result" id="workspace-processing-result" hidden aria-live="polite">
+        <div><span><i></i> 검증 중</span><strong id="processing-article-title"></strong><small>요청한 기사를 분석하고 있습니다. 다른 페이지에서도 진행 상태를 확인할 수 있습니다.</small></div>
+        <a id="processing-result-link">진행 상태 보기 <b>→</b></a>
+      </section>
+      <div><input id="news-url" type="text" autocomplete="off" placeholder="뉴스 URL 또는 기사 제목 입력" required>
+      <button type="submit" id="verification-submit" aria-label="검증 시작"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span></span></button></div>
+      <div class="workspace-status-line" id="workspace-status-line" hidden aria-live="polite"></div>
+    </form>
+  </section>
+  <aside class="latest-panel">
+    <header><div><h2>최신 뉴스 기사</h2><span>NEWS ARCHIVE</span></div><a class="archive-plus" href="/archive" aria-label="열람실 전체 보기" title="열람실 전체 보기">+</a></header>
+    <div id="home-latest" class="latest-list"></div>
+    <a class="view-all-archive" href="/archive">열람실 전체 보기 <span>→</span></a>
+  </aside>
+</section>
+{% endblock %}

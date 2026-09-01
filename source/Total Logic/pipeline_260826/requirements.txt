@@ -1,0 +1,30 @@
+# [2026-08-24 재작성 - 사용자 요청 "패키지 다 안 담겨있다"] backup/ 제외 전체
+# .py 파일의 import 문을 실측 스캔해서 다시 뽑음(pip freeze가 아니라 코드
+# 안에서 실제로 import하는 서드파티 패키지 이름을 grep으로 확인한 것 -
+# 버전은 안 고정함, 필요하면 로컬에서 pip freeze로 직접 고정할 것).
+# 예전 목록의 `streamlit`은 현재 코드 어디서도 import 안 됨(실측 확인,
+# 제거) - `logging`은 파이썬 표준 라이브러리라 애초에 pip 패키지가 아님
+# (제거).
+
+# --- 핵심 파이프라인(run04_local.py 등)에 필요 ---
+requests            # KOSIS/HCX API 호출(client.py, hcx_client.py)
+python-dotenv        # .env에서 API 키 로드
+
+# --- 보조/진단 스크립트에만 필요(핵심 파이프라인 실행엔 불필요) ---
+pandas               # check.py(KOSIS 원본 응답 진단 스크립트)만 씀
+
+# [2026-08-24 삭제 - vdb 카탈로그 검색 POC 자체를 삭제하기로 함] numpy/
+# apsw/pysqlite3-binary/sqlite-vec는 vdb_discovery.py(+ seed_catalog_vdb.py/
+# probe_sqlite_vec.py/test_catalog_vec_query.py, 전부 삭제됨)에서만 쓰던
+# 의존성이라 이제 필요 없다.
+
+# --- 참고: openpyxl은 p0_load.py/p1_eval.py/p2_eval.py/p3_golden.py가
+#     쓰지만, 이 4개 파일은 `from src import config`로 존재하지 않는 src/
+#     패키지를 참조하고 있어(실측 확인, 이 저장소엔 src/ 폴더 자체가 없음)
+#     이미 이 상태로는 import 자체가 실패하는 고아 스크립트로 보인다 -
+#     핵심 파이프라인과 무관해서 여기선 그대로 두고 손대지 않았다.
+# [2026-08-26 1번 통합 - src/ 패키지 이식] 위 주석의 "고아 스크립트" 문제가
+# 해소됨: run01.py가 참조하는 1번 모듈 전체가 src/ 서브패키지로 들어왔다.
+# openpyxl은 xlsx 입력(p0_load)과 골든 채점(p3_golden 등)에만 쓰이는 지연
+# import라, URL 경로(run01_url.py)·csv/json 입력만 쓰면 없어도 동작한다.
+openpyxl             # xlsx 입력·골든셋 로더(선택 — 지연 import)

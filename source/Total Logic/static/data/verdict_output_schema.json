@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KOSIS 팩트체크 판정 결과",
+  "description": "run04_local.py 실행 결과 파일(예: run04_local_result.json)은 이 스키마를 따르는 객체의 JSON 배열입니다. claim 하나당 원소 하나. [2026-08-24 갱신] 프론트가 STRICT/TOLERANCE/RAW_ONLY 세 mode 결과를 한 번에 받아야 해서, run04_local.py가 adapter.run_pipeline_from_files(all_modes=True)로 실행되도록 바뀌었습니다 - claim 하나당 검색(4번 역할)은 한 번만 하고, 그 위에서 judgment.judge_claim을 세 mode로 반복 계산해 'modes' 아래 함께 담습니다. 생성 코드: run04_local.py -> adapter.run_pipeline_from_files -> run_search_and_judge(all_modes=True) -> judgment.judge_claim - 2026-08-24 기준 실제 코드를 그대로 보고 추출함(추측 없음).",
+  "type": "array",
+  "items": { "$ref": "#/definitions/VerdictResult" },
+  "definitions": {
+    "VerdictResult": {
+      "oneOf": [
+        { "$ref": "#/definitions/MinimalResult" },
+        { "$ref": "#/definitions/ModedResult" }
+      ]
+    },
+    "MinimalResult": {
+      "description": "verdict가 NOT_ELIGIBLE 또는 ERROR일 때. 둘 다 judgment.judge_claim(따라서 mode)에 도달하기 전에 이미 결정되는 상태입니다 - NOT_ELIGIBLE은 1번(claim 추출)이 이미 판단해서 검색/판정 자체를 시도하지 않고, ERROR는 mode와 무관한 예외라 'mode별로 다른 3가지 결과'라는 개념이 성립하지 않습니다. 그래서 이 둘만 예외적으로 modes 중첩 없이 평평한(flat) 구조입니다 - claimed_value/evidence/modes 등 나머지 필드가 아예 없습니다.",
+      "type": "object",
+      "required": ["claim_id", "claim", "verdict", "explanation"],
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "description": "1번(claim 추출) 단계가 부여한 고유 ID. 형식 {article_id}-C{일련번호}.",
+          "examples": ["A82ae9f41-C001"]
+        },
+        "claim": {
+          "type": "string",
+          "description": "기사 원문 문장(claim 텍스트) 그대로."
+        },
+        "verdict": {
+          "type": "string",
+          "enum": ["NOT_ELIGIBLE", "ERROR"],
+          "description": "NOT_ELIGIBLE = 1번이 이미 KOSIS 검증 대상이 아니라고 판단함(kosis_eligible=false). ERROR = 판정 로직 실행 중 예외 발생(조용히 삼키지 않고 명시)."
+        },
+        "explanation": {
+          "type": "string",
+          "description": "사람이 읽는 한국어 사유 설명. NOT_ELIGIBLE은 1번의 exclusion_code(FORECAST/PARTIAL_PERIOD/AMBIGUOUS_METRIC)를 문장에 덧붙임. ERROR는 파이썬 예외 메시지 그대로."
+        }
+      }
+    },
+    "ModedResult": {
+      "description": "그 외 모든 claim - 검색(4번 역할)은 claim당 한 번만 수행되고, 그 결과(evidence) 위에서 판정(5번 역할, judgment.judge_claim)만 STRICT/TOLERANCE/RAW_ONLY 세 mode로 각각 계산되어 modes 아래 동시에 담깁니다. 주의: NOT_FOUND/UNRESOLVED/DERIVED_NEEDED/RECORD_CLAIM류 verdict는 search_log(검색 결과) 하나로만 결정되고 mode를 보지 않으므로, 이 경우 modes.strict/tolerance/raw_only 셋의 verdict가 사실상 동일하게 나옵니다(RAW_ONLY만 예외 - 그 mode 자체가 판정을 안 하므로 항상 RAW_ONLY verdict). 실제로 mode마다 다른 결과가 나올 수 있는 지점은 VERIFIED vs MISMATCH 최종 허용오차 비교뿐입니다(strict가 tolerance보다 허용폭이 좁음).",
+      "type": "object",
+      "required": ["claim_id", "claim", "modes", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": { "type": "string" },
+        "claim": { "type": "string" },
+        "modes": {
+          "type": "object",
+          "required": ["strict", "tolerance", "raw_only"],
+          "additionalProperties": false,
+          "description": "키는 항상 이 세 개뿐입니다. 프론트는 이 객체 하나로 탭/토글 3개를 채우면 됩니다 - 값 각각은 ModeVerdict 참고.",
+          "properties": {
+            "strict": { "$ref": "#/definitions/ModeVerdict" },
+            "tolerance": { "$ref": "#/definitions/ModeVerdict" },
+            "raw_only": { "$ref": "#/definitions/ModeVerdict" }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "required": ["table_org_id", "table_tbl_id", "table_nm", "retrieval_status"],
+          "additionalProperties": false,
+          "description": "세 mode가 공유하는 검색 결과(검색은 claim당 한 번만 하므로 mode마다 다르지 않음).",
+          "properties": {
+            "table_org_id": { "type": ["string", "null"], "description": "KOSIS 기관 코드(예: '101' 통계청)." },
+            "table_tbl_id": { "type": ["string", "null"], "description": "KOSIS 통계표 ID(예: 'DT_1DA7024S')." },
+            "table_nm": { "type": ["string", "null"], "description": "통계표 이름(예: '성/연령별 취업자')." },
+            "retrieval_status": {
+              "type": "string",
+              "enum": ["RESOLVED", "NOT_FOUND", "UNRESOLVED"],
+              "description": "RESOLVED=표/항목/축/시점 전부 확정. NOT_FOUND=관련 표 자체를 못 찾음. UNRESOLVED=표는 찾았지만 그 이하(항목/축/시점)를 확정 못함."
+            }
+          }
+        }
+      }
+    },
+    "ModeVerdict": {
+      "description": "modes.strict / modes.tolerance / modes.raw_only 각각의 값 - 예전 스키마의 FullResult에서 claim_id/claim/evidence/mode 필드를 뺀 것과 같습니다(그 넷은 이제 부모(ModedResult) 레벨에 한 번만 있거나, mode는 이 객체가 들어있는 키 이름 자체로 이미 표현됨).",
+      "type": "object",
+      "required": [
+        "verdict", "explanation", "claimed_value", "actual_value",
+        "hedge_type", "ai_used", "ai_note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "VERIFIED",
+            "MISMATCH",
+            "UNVERIFIED_NOT_FOUND",
+            "UNVERIFIED_UNRESOLVED",
+            "UNVERIFIED_DERIVED_NEEDED",
+            "UNVERIFIED_RECORD_CLAIM",
+            "RAW_ONLY"
+          ],
+          "description": "VERIFIED=claim 수치가 KOSIS 원본값과 허용오차 이내로 일치. MISMATCH=값이 실제로 다름(오탐 아님, 진짜 불일치) - '역대 최고/최저' claim이 실제로는 다른 시점에 기록을 세운 경우도 이 값으로 옴(아래 UNVERIFIED_RECORD_CLAIM 설명 참고). UNVERIFIED_NOT_FOUND=관련 통계표 자체를 못 찾음. UNVERIFIED_UNRESOLVED=표는 찾았지만 항목/축/시점을 확정 못함(동점, 해당 시점 데이터 없음 등 - explanation에 구체 사유). UNVERIFIED_DERIVED_NEEDED=KOSIS가 그대로 준 원본 수치가 아니라 우리가 두 시점 값으로 직접 계산한 파생값이라 '공식 확인'으로 치지 않음(값은 참고용으로 actual_value에 채워짐). UNVERIFIED_RECORD_CLAIM='역대 최고/최저'처럼 과거 전체 기록과의 비교가 필요한 claim 전용(2026-08-24 갱신: 로컬 웨어하우스에 계열별 전체 기간 최댓값/최솟값 요약(records 테이블)이 배선된 이후로는 대부분 VERIFIED/MISMATCH로 직접 판정되고, 이 verdict는 이제 (a) 문장에서 '최고/최대'인지 '최저/최소'인지 방향을 못 정하거나, (b) 그 표/항목이 아직 요약 테이블에 없어 대조 자체를 못 한 잔여 케이스에만 남는다). RAW_ONLY=modes.raw_only 자리에만 나옴 - 허용오차 판정 없이 원본값만 보여줌."
+        },
+        "explanation": { "type": "string" },
+        "claimed_value": {
+          "type": ["number", "null"],
+          "description": "claim이 주장한 수치(1번이 파싱한 값, 필요시 판정 모듈이 재해석)."
+        },
+        "actual_value": {
+          "type": ["number", "null"],
+          "description": "KOSIS 로컬 DB에서 조회(또는 UNVERIFIED_DERIVED_NEEDED의 경우 직접 계산)한 실제값. 못 찾았으면 null."
+        },
+        "hedge_type": {
+          "type": ["string", "null"],
+          "enum": ["exact", "approx", "approx_range", "at_least", "at_most", null],
+          "description": "원문장이 수치를 얼마나 엄밀하게 주장했는지. exact=정확한 수치, approx=대략(약/가량/정도), approx_range=범위형 근사, at_least=이상/초과/돌파, at_most=이하/미만/밑돌. 검색 자체가 안 된 경우(NOT_FOUND 등)나 raw_only에선 null일 수 있음."
+        },
+        "ai_used": {
+          "type": "boolean",
+          "description": "판정 단계(5번 역할)에서 HCX 등 AI 재해석을 실제로 썼는지. 검색 단계(4번 역할)의 HCX 사용 여부(stage1_keywords=llm_table_select 등)와는 다른 신호."
+        },
+        "ai_note": {
+          "type": ["string", "null"],
+          "description": "ai_used=true일 때 AI가 어떻게 재해석했는지 부가 설명. 안 썼으면 null."
+        }
+      }
+    }
+  }
+}
