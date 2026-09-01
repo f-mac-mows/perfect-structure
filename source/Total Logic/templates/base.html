@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KOSIS 기반 기사 통계 검수 도구 FactQ">
+  <title>{% block title %}FactQ{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}?v=20260820-3">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/reference.css') }}?v=20260820-3">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/dashboard-home.css') }}?v=20260826-4">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/result-workspace.css') }}?v=20260820-4">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/premium-theme.css') }}?v=20260827-1">
+</head>
+<body data-page="{{ page }}" data-server-session="{{ server_session_id }}" data-api-base="{{ api_base }}">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <div class="header-left">
+      <a class="brand" href="/" aria-label="FactQ 홈"><span class="brand-mark">FQ</span><span>FactQ</span></a>
+    </div>
+    <nav><a class="nav-link {{ 'active' if page == 'archive' }}" href="/archive">열람실</a></nav>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <div class="modal-backdrop" id="modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-icon" id="modal-icon">!</div>
+      <h2 id="modal-title">알림</h2><p id="modal-message"></p>
+      <div class="modal-actions" id="modal-actions"></div>
+    </section>
+  </div>
+  <script src="{{ url_for('static', path='/js/api.js') }}?v=20260827-3" defer></script>
+  <script src="{{ url_for('static', path='/js/app.js') }}?v=20260828-1" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

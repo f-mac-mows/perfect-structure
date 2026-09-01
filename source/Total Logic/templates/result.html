@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}FactQ · 검증 결과{% endblock %}
+{% block content %}
+<section class="verification-wait-screen" id="verification-wait-screen" aria-live="polite">
+  <div class="verification-wait-content">
+    <i aria-hidden="true"></i>
+    <span>VERIFICATION IN PROGRESS</span>
+    <h1>검증중</h1>
+    <p>검증이 완료되면 결과 화면이 자동으로 표시됩니다.</p>
+  </div>
+</section>
+
+<section class="result-workspace" data-article-id="{{ article_id }}" id="result-root" hidden>
+  <div class="result-nav">
+    <button class="icon-btn" id="previous-result" type="button" aria-label="이전 화면">‹</button>
+    <button class="icon-btn" id="next-result" type="button" aria-label="다음 화면">›</button>
+    <span>검증 결과 저장 완료</span>
+  </div>
+
+  <header class="result-overview">
+    <div class="overview-main">
+      <div class="eyebrow"><span></span>VERIFICATION COMPLETE</div>
+      <h1 id="result-title">결과 불러오는 중</h1>
+      <div class="article-byline" id="article-byline"></div>
+    </div>
+    <a class="source-link" id="result-url" target="_blank" rel="noopener">원문 보기 <span>↗</span></a>
+    <div class="result-summary" aria-label="검증 결과 요약">
+      <span>검증 Claim <b id="count-total">—</b>건</span>
+      <span class="match">✓ 일치 <b id="count-match">—</b></span>
+      <span class="mismatch">✕ 불일치 <b id="count-mismatch">—</b></span>
+      <span class="unknown">? 판단불가 <b id="count-unknown">—</b></span>
+      <span class="error">! 검증 오류 <b id="count-error">—</b></span>
+    </div>
+  </header>
+
+  <div class="verification-layout">
+    <article class="full-article-panel">
+      <header><div><span>ARTICLE</span><h2>뉴스 원문 전체</h2></div><small>하이라이트된 Claim을 선택하세요</small></header>
+      <div class="article-content" id="article-copy"></div>
+    </article>
+
+    <aside class="claim-result-panel" id="claim-panel">
+      <div class="claim-panel-inner" id="claim-panel-content"></div>
+    </aside>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,1364 @@
+[
+  {
+    "claim_id": "A93bfa851-C008",
+    "claim": "빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A93bfa851-C009",
+    "claim": "빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A93bfa851-C010",
+    "claim": "빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A93bfa851-C011",
+    "claim": "빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A93bfa851-C012",
+    "claim": "빵(38.5%), 케이크(31.7%), 떡(25.8%), 라면(25.3%) 등이 크게 오르며 빵 및 곡물(28.0%)도 큰 폭으로 올랐다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A93bfa851-C013",
+    "claim": "과자, 빙과류 및 당류도 27.8% 올랐다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A93bfa851-C001",
+    "claim": "5년간 먹거리 물가가 20% 넘게 상승한 것으로 분석됐다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 20.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 20.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 20.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C002",
+    "claim": "8일 국가데이터처에 따르면 지난달 ‘식료품 및 비주류 음료’ 물가지수는 2020년 9월에 비해 22.9% 올랐다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 22.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 22.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 22.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C004",
+    "claim": "같은 기간 전체 소비자 물가지수 상승률(16.2%)보다 7%포인트 가까이 높은 수치다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 항목/분류값(수출액)은 확정했지만 해당 시점(202509)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 16.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 항목/분류값(수출액)은 확정했지만 해당 시점(202509)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 16.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 항목/분류값(수출액)은 확정했지만 해당 시점(202509)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 16.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C005",
+    "claim": "같은 기간 전체 소비자 물가지수 상승률(16.2%)보다 7%포인트 가까이 높은 수치다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(분기지표)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 7.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(분기지표)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 7.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(분기지표)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 7.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "301",
+      "table_tbl_id": "DT_200Y102",
+      "table_nm": "주요지표(분기지표)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C006",
+    "claim": "과일(35.2%)과 우유·치즈 및 계란(30.7%) 등은 5년 전에 비해 30% 넘게 급등했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 35.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 35.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 35.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C007",
+    "claim": "과일(35.2%)과 우유·치즈 및 계란(30.7%) 등은 5년 전에 비해 30% 넘게 급등했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 30.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 30.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 30.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C014",
+    "claim": "고춧가루, 참깨 등이 포함된 기타 식료품(21.4%), 육류(21.1%), 어류 및 수산(20.0%)은 먹거리 평균보다는 조금 낮았지만 상승률이 20%를 넘겼다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 21.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 21.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 21.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C015",
+    "claim": "고춧가루, 참깨 등이 포함된 기타 식료품(21.4%), 육류(21.1%), 어류 및 수산(20.0%)은 먹거리 평균보다는 조금 낮았지만 상승률이 20%를 넘겼다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 21.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 21.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 21.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C016",
+    "claim": "고춧가루, 참깨 등이 포함된 기타 식료품(21.4%), 육류(21.1%), 어류 및 수산(20.0%)은 먹거리 평균보다는 조금 낮았지만 상승률이 20%를 넘겼다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 20.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 20.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 20.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C017",
+    "claim": "비주류 음료 중에 커피·차 및 코코아가 38.2% 치솟았고, 생수·청량음료·과일주스 및 채소주스도 22.7% 상승했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 38.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 38.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 38.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C018",
+    "claim": "비주류 음료 중에 커피·차 및 코코아가 38.2% 치솟았고, 생수·청량음료·과일주스 및 채소주스도 22.7% 상승했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 22.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 22.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 22.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C019",
+    "claim": "주류 및 담배는 상승률이 5.0%에 그쳤지만 이 중 주류만 보면 13.1%였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 5.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 5.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 5.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C020",
+    "claim": "주류 및 담배는 상승률이 5.0%에 그쳤지만 이 중 주류만 보면 13.1%였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 13.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 13.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 13.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C021",
+    "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(2019) - 추측으로 대체하지 않음",
+        "claimed_value": 4.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(2019) - 추측으로 대체하지 않음",
+        "claimed_value": 4.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(2019) - 추측으로 대체하지 않음",
+        "claimed_value": 4.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C022",
+    "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.9,
+        "actual_value": 54.237518704938104,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.9,
+        "actual_value": 54.237518704938104,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.9,
+        "actual_value": 54.237518704938104,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C023",
+    "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.9,
+        "actual_value": -8.678779326159816,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.9,
+        "actual_value": -8.678779326159816,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.9,
+        "actual_value": -8.678779326159816,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C024",
+    "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.5,
+        "actual_value": -9.07861695962913,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.5,
+        "actual_value": -9.07861695962913,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 5.5,
+        "actual_value": -9.07861695962913,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C025",
+    "claim": "식료품 및 비주류 음료 물가는 연도별로 2020년 4.4%, 2021년 5.9%, 2022년 5.9%, 2023년 5.5%, 2024년 3.9%로 계속 높은 수준의 상승세를 이어갔다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 3.9,
+        "actual_value": 0.9772678988740174,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 3.9,
+        "actual_value": 0.9772678988740174,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: 동점 후보 5개(값으로도 못 가름): 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품 , 수출액 식품 및 산동물 고기및 고기 조제품 달리 명시되지 않은 조제 또는 저장한 고기 및 설육 소시지 및 유사제품 이들 조제식료품  기타(소시지 및 유사제품 이들 조제식료품 ), 수출액 음료 및 담배, 수출액 음료 및 담배 음료 달리 명시되지 않은 비알콜성음료 달리명시되지 않은 비알콜성음료 향미 가당한 물(광천수와 탄산수 포함) 및    기타 비알콜 음료, 수출액 음료 및 담배 음료 알콜성 음료 주정달리 명시되지 않은 리규르 달리 명시되지 않은 주정 및 알콜성 증류   음료",
+        "claimed_value": 3.9,
+        "actual_value": 0.9772678988740174,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C026",
+    "claim": "이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C027",
+    "claim": "이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C028",
+    "claim": "이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 5.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 5.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 5.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C029",
+    "claim": "이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 3.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 3.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 3.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C030",
+    "claim": "이 기간 전체 소비자물가 상승률은 2020년 0.5%, 2021년 2.5%, 2022년 5.1%, 2023년 3.6%, 2024년 2.3%다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C031",
+    "claim": "‘음식 및 숙박’은 24.8%로 가장 크게 상승했고 이 중 외식 비용을 뜻하는 ‘음식 서비스’는 상승률이 25.1%로 더 높았다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 24.8,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 24.8,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 24.8,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C032",
+    "claim": "‘음식 및 숙박’은 24.8%로 가장 크게 상승했고 이 중 외식 비용을 뜻하는 ‘음식 서비스’는 상승률이 25.1%로 더 높았다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(연간지표)), 확정하지 못했습니다: 항목/분류값(주요지표(연간지표))은 확정했지만 해당 시점(202509)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 25.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(연간지표)), 확정하지 못했습니다: 항목/분류값(주요지표(연간지표))은 확정했지만 해당 시점(202509)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 25.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(연간지표)), 확정하지 못했습니다: 항목/분류값(주요지표(연간지표))은 확정했지만 해당 시점(202509)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 25.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "301",
+      "table_tbl_id": "DT_200Y101",
+      "table_nm": "주요지표(연간지표)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C033",
+    "claim": "비누·샴푸·미용료 등이 포함된 ‘기타 상품 및 서비스’는 24.1% 올랐다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(연간지표)), 확정하지 못했습니다: 항목/분류값(주요지표(연간지표))은 확정했지만 해당 시점(202509)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 24.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(연간지표)), 확정하지 못했습니다: 항목/분류값(주요지표(연간지표))은 확정했지만 해당 시점(202509)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 24.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(주요지표(연간지표)), 확정하지 못했습니다: 항목/분류값(주요지표(연간지표))은 확정했지만 해당 시점(202509)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 24.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "301",
+      "table_tbl_id": "DT_200Y101",
+      "table_nm": "주요지표(연간지표)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C034",
+    "claim": "세제, 청소용품 등 살림에 필요한 물품과 세탁·청소 같은 가사 서비스를 포함한 ‘가정용품 및 가사서비스’ 물가는 19.4% 상승했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 19.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 19.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 19.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C035",
+    "claim": "전월세를 포함한 주거비와 각종 공공요금 등이 포함된 ‘주택, 수도, 전기 및 연료’ 물가는 16.7%, ‘의류 및 신발’은 16.2%로 평균 상승률과 거의 유사했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 16.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 16.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 16.7,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C036",
+    "claim": "전월세를 포함한 주거비와 각종 공공요금 등이 포함된 ‘주택, 수도, 전기 및 연료’ 물가는 16.7%, ‘의류 및 신발’은 16.2%로 평균 상승률과 거의 유사했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 16.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 16.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 16.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C037",
+    "claim": "다만 연료비, 차량 유지비, 대중교통 요금 등을 포함한 ‘교통’ 물가는 15.9%로 평균을 하회했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 15.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 15.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 15.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C038",
+    "claim": "오락 및 문화(9.5%), 교육(8.8%), 보건(6.2%)도 상승 폭이 작은 편이었고 통신비는 0.2% 내렸다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 9.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 9.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 수출액, 수입액), 확정하지 못했습니다: claim은 변화율(%)을 주장하지만 매칭된 항목은 원자료값이라 두 시점을 비교해 파생해야 함 - facts에 없는 시점: reference(202009) - 추측으로 대체하지 않음",
+        "claimed_value": 9.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "360",
+      "table_tbl_id": "DT_1R11001_FRM101",
+      "table_nm": "품목별 수출액, 수입액",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C039",
+    "claim": "오락 및 문화(9.5%), 교육(8.8%), 보건(6.2%)도 상승 폭이 작은 편이었고 통신비는 0.2% 내렸다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 8.8,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 8.8,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 8.8,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C040",
+    "claim": "오락 및 문화(9.5%), 교육(8.8%), 보건(6.2%)도 상승 폭이 작은 편이었고 통신비는 0.2% 내렸다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 6.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 6.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 6.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A93bfa851-C041",
+    "claim": "오락 및 문화(9.5%), 교육(8.8%), 보건(6.2%)도 상승 폭이 작은 편이었고 통신비는 0.2% 내렸다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(수출입총괄, 국가별 수출입현황, 대륙별 수출입 현황, 월.분기.연간 인구동향(출생,사망,혼인,이혼), 시군구/성/출산순위별 출생), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.2,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  }
+]

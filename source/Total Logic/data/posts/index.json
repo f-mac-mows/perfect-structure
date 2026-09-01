@@ -1,0 +1,69 @@
+[
+ {
+  "article_id": "A82ae9f41",
+  "title": "제조업 취업자 1년째 내리막에...‘쉬었음’ 20대 5년 만 최대",
+  "posted_date": "2025-07-16",
+  "publisher": "조선일보",
+  "url": "https://www.chosun.com/economy/economy_general/2025/07/16/JJGWFZ2EF5BPZPOLN4O4NQHNLU/",
+  "n_claims": 23,
+  "n_eligible": 23,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "MISMATCH": 16,
+   "UNVERIFIED_DERIVED_NEEDED": 3,
+   "UNVERIFIED_RECORD_CLAIM": 3,
+   "VERIFIED": 1
+  },
+  "analyzed_at": "2026-08-31T14:52:56"
+ },
+ {
+  "article_id": "Aeb3233ab",
+  "title": "작년 11월 출생아 14.6% 증가...2010년 이후 최대폭",
+  "posted_date": "2025-01-22",
+  "publisher": "조선일보",
+  "url": "https://www.chosun.com/economy/economy_general/2025/01/22/HAHTAVPQ75BJXM4GWC4SNRKAZA/",
+  "n_claims": 26,
+  "n_eligible": 25,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "NOT_ELIGIBLE": 1,
+   "UNVERIFIED_UNRESOLVED": 19,
+   "VERIFIED": 5,
+   "UNVERIFIED_DERIVED_NEEDED": 1
+  },
+  "analyzed_at": "2026-08-28T17:28:57"
+ },
+ {
+  "article_id": "A93bfa851",
+  "title": "5년간 먹거리 물가 20% 이상 상승… 과일·빵 상승률 40% 수준",
+  "posted_date": "2025-10-08",
+  "publisher": "조선비즈",
+  "url": "https://biz.chosun.com/distribution/food/2025/10/08/RXZHN5KKIVDYDBTMMCPVRSVQUE/",
+  "n_claims": 40,
+  "n_eligible": 34,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "NOT_ELIGIBLE": 6,
+   "UNVERIFIED_NOT_FOUND": 10,
+   "UNVERIFIED_UNRESOLVED": 24
+  },
+  "analyzed_at": "2026-08-28T15:18:18"
+ },
+ {
+  "article_id": "A1193d6ae",
+  "title": "우리나라 거주 외국인 주민 ‘역대 최다’ 258만명… 전체 인구의 5%",
+  "posted_date": "2025-10-30",
+  "publisher": "조선비즈",
+  "url": "https://biz.chosun.com/topics/topics_social/2025/10/30/QR4AGGYKCBEB3AWOYIWTGTC3LM/",
+  "n_claims": 22,
+  "n_eligible": 22,
+  "verdict_status": "ok",
+  "verdict_counts": {
+   "VERIFIED": 3,
+   "MISMATCH": 6,
+   "UNVERIFIED_UNRESOLVED": 6,
+   "UNVERIFIED_DERIVED_NEEDED": 7
+  },
+  "analyzed_at": "2026-08-28T15:01:59"
+ }
+]

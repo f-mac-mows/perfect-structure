@@ -1,0 +1,1022 @@
+[
+  {
+    "claim_id": "A2e46e4ac-C011",
+    "claim": "휘발유 가격도 7.2% 오르며, 1월(9.2%)에 이어 고공행진을 이어갔다.",
+    "verdict": "NOT_ELIGIBLE",
+    "explanation": "1번 Task가 KOSIS 검증 대상이 아니라고 이미 판단한 claim(kosis_eligible=False) - 재추측하지 않음. 사유: AMBIGUOUS_METRIC."
+  },
+  {
+    "claim_id": "A2e46e4ac-C001",
+    "claim": "지난달 물가 상승률이 2%를 기록하며 지난 1월(2.2%)에 이어 두 달 연속으로 2%대를 기록했다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 2.0% vs 조회값 2.6 (차이 +0.600) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.6,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 2.0% vs 조회값 2.6 (차이 +0.600) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.6,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 2.0% / 조회값 2.6 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.6,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C002",
+    "claim": "지난달 물가 상승률이 2%를 기록하며 지난 1월(2.2%)에 이어 두 달 연속으로 2%대를 기록했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월별 소비자물가 등락률), 확정하지 못했습니다: 동점 후보 3개(값으로도 못 가름): 전월비 생활물가지수, 전년동월비(%) 생활물가지수, 전년누계비(%) 생활물가지수",
+        "claimed_value": 2.2,
+        "actual_value": 1.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월별 소비자물가 등락률), 확정하지 못했습니다: 동점 후보 3개(값으로도 못 가름): 전월비 생활물가지수, 전년동월비(%) 생활물가지수, 전년누계비(%) 생활물가지수",
+        "claimed_value": 2.2,
+        "actual_value": 1.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월별 소비자물가 등락률), 확정하지 못했습니다: 동점 후보 3개(값으로도 못 가름): 전월비 생활물가지수, 전년동월비(%) 생활물가지수, 전년누계비(%) 생활물가지수",
+        "claimed_value": 2.2,
+        "actual_value": 1.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C003",
+    "claim": "6일 통계청이 발표한 ‘2월 소비자물가 동향’에 따르면, 지난달 소비자물가지수는 116.08로 전년 동월 대비 2% 상승했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 116.08,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 116.08,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "0개 후보 표를 넓혀서 찾아봤지만((후보 없음)), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 116.08,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C004",
+    "claim": "6일 통계청이 발표한 ‘2월 소비자물가 동향’에 따르면, 지난달 소비자물가지수는 116.08로 전년 동월 대비 2% 상승했다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2.0% vs 조회값 2.0 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2.0% vs 조회값 2.0 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 2.0% / 조회값 2.0 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C005",
+    "claim": "지난 1월에 비해 상승 폭이 0.2%포인트 줄었지만, 여전히 2%대에 머무른 것이다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 0.2%포인트 vs 조회값 2.5 (차이 +2.300) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 0.2,
+        "actual_value": 2.5,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 0.2%포인트 vs 조회값 2.5 (차이 +2.300) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 0.2,
+        "actual_value": 2.5,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 0.2%포인트 / 조회값 2.5 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 0.2,
+        "actual_value": 2.5,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C006",
+    "claim": "지난 1월에 비해 상승 폭이 0.2%포인트 줄었지만, 여전히 2%대에 머무른 것이다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 2.0% vs 조회값 2.2 (차이 +0.200) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.2,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 2.0% vs 조회값 2.2 (차이 +0.200) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.2,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 2.0% / 조회값 2.2 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2.0,
+        "actual_value": 2.2,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C007",
+    "claim": "물가 상승률은 지난해 9월(1.6%)부터 4개월간 1%대로 가라앉았다가 올해 들어 꾸준히 2%대를 유지하고 있다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 1.6% vs 조회값 1.5 (차이 -0.100) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 1.6,
+        "actual_value": 1.5,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"\"-대\"류 구간형 어림값 주장(자릿수 하나를 통째로 어림잡음 - approx보다 더 넓은 오차 허용폭)\"으로 해석됩니다. 주장값 1.6% vs 조회값 1.5 (차이 -0.100) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 1.6,
+        "actual_value": 1.5,
+        "hedge_type": "approx_range",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 1.6% / 조회값 1.5 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 1.6,
+        "actual_value": 1.5,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C008",
+    "claim": "물가 상승률은 지난해 9월(1.6%)부터 4개월간 1%대로 가라앉았다가 올해 들어 꾸준히 2%대를 유지하고 있다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월별 소비자물가 등락률), 확정하지 못했습니다: 항목/분류값(전년동월비(%))은 확정했지만 해당 시점(2025)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 2.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월별 소비자물가 등락률), 확정하지 못했습니다: 항목/분류값(전년동월비(%))은 확정했지만 해당 시점(2025)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 2.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(월별 소비자물가 등락률), 확정하지 못했습니다: 항목/분류값(전년동월비(%))은 확정했지만 해당 시점(2025)의 주기 자체가 KOSIS에 없음(적재 시점 getMeta로 이미 확인됨, API 재호출 없이 확정) - 추측으로 대체하지 않음.",
+        "claimed_value": 2.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C009",
+    "claim": "지난달 석유류 가격은 전년 동월 대비 6.3% 올라, 1월(7.3%)에 이어 두 달 연속으로 5% 이상의 상승폭을 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 6.3,
+        "actual_value": 6.269362465351376,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 6.3,
+        "actual_value": 6.269362465351376,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 6.3,
+        "actual_value": 6.269362465351376,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C010",
+    "claim": "지난달 석유류 가격은 전년 동월 대비 6.3% 올라, 1월(7.3%)에 이어 두 달 연속으로 5% 이상의 상승폭을 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202501, reference=202401) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 7.3,
+        "actual_value": 7.285487509399282,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202501, reference=202401) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 7.3,
+        "actual_value": 7.285487509399282,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202501, reference=202401) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 7.3,
+        "actual_value": 7.285487509399282,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C012",
+    "claim": "휘발유 가격도 7.2% 오르며, 1월(9.2%)에 이어 고공행진을 이어갔다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202501, reference=202401) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 9.2,
+        "actual_value": 9.233774305247275,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202501, reference=202401) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 9.2,
+        "actual_value": 9.233774305247275,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202501, reference=202401) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 9.2,
+        "actual_value": 9.233774305247275,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C013",
+    "claim": "지난달 식용유지 가격 상승률은 9%로, 지난해 6월(11.6%) 이후 8개월 만에 최대 상승폭을 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 9.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 9.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 9.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C014",
+    "claim": "지난달 식용유지 가격 상승률은 9%로, 지난해 6월(11.6%) 이후 8개월 만에 최대 상승폭을 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 11.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 11.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 11.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C015",
+    "claim": "기름값 부담이 반영된 생활물가지수는 지난달 2.6% 오르며 지난해 7월(3%) 이후 7개월 만에 최대 상승폭을 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2.6% vs 조회값 2.6 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.6,
+        "actual_value": 2.6,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 2.6% vs 조회값 2.6 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2.6,
+        "actual_value": 2.6,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 2.6% / 조회값 2.6 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2.6,
+        "actual_value": 2.6,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C016",
+    "claim": "기름값 부담이 반영된 생활물가지수는 지난달 2.6% 오르며 지난해 7월(3%) 이후 7개월 만에 최대 상승폭을 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 3.0% vs 조회값 3.0 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 3.0,
+        "actual_value": 3.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 3.0% vs 조회값 3.0 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 3.0,
+        "actual_value": 3.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 3.0% / 조회값 3.0 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 3.0,
+        "actual_value": 3.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C017",
+    "claim": "생활물가지수는 지난해 10월(1.2%)을 저점으로 꾸준히 오름세를 보이고 있는데, 소비자들이 실제 체감하는 물가 수준이 높아지고 있음을 시사한다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 1.2% vs 조회값 1.2 (차이 +0.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 1.2,
+        "actual_value": 1.2,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[월별 소비자물가 등락률] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 1.2% vs 조회값 1.2 (차이 +0.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 1.2,
+        "actual_value": 1.2,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[월별 소비자물가 등락률] 주장값 1.2% / 조회값 1.2 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 1.2,
+        "actual_value": 1.2,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22042",
+      "table_nm": "월별 소비자물가 등락률",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C018",
+    "claim": "지난달 가공식품 물가는 전년 동월 대비 2.9% 올랐는데, 지난해 1월(3.2%) 이후 13개월 만에 최대 상승폭이다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 2.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C019",
+    "claim": "지난달 가공식품 물가는 전년 동월 대비 2.9% 올랐는데, 지난해 1월(3.2%) 이후 13개월 만에 최대 상승폭이다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202401, reference=202301) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 3.2,
+        "actual_value": 3.2129211531781894,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202401, reference=202301) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 3.2,
+        "actual_value": 3.2129211531781894,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202401, reference=202301) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 3.2,
+        "actual_value": 3.2129211531781894,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C020",
+    "claim": "마찬가지로 지난달 외식 물가는 전년 동월 대비 3% 상승했는데, 지난해 6월(3%) 이후 8개월 만에 최대 상승폭이다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 3.0,
+        "actual_value": 2.0214448936544183,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 3.0,
+        "actual_value": 2.0214448936544183,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 3.0,
+        "actual_value": 2.0214448936544183,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22001",
+      "table_nm": "지출목적별 소비자물가지수(품목포함, 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C021",
+    "claim": "마찬가지로 지난달 외식 물가는 전년 동월 대비 3% 상승했는데, 지난해 6월(3%) 이후 8개월 만에 최대 상승폭이다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 3.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 3.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 3.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C022",
+    "claim": "다만 토마토(-19.5%)와 딸기(-6.9%), 바나나(-11.4%) 등 과실류 가격이 떨어지면서 농산물 물가는 전년 동월 대비 1.2% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -19.5,
+        "actual_value": -19.52396268896751,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -19.5,
+        "actual_value": -19.52396268896751,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -19.5,
+        "actual_value": -19.52396268896751,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C023",
+    "claim": "다만 토마토(-19.5%)와 딸기(-6.9%), 바나나(-11.4%) 등 과실류 가격이 떨어지면서 농산물 물가는 전년 동월 대비 1.2% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": -6.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": -6.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": -6.9,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C024",
+    "claim": "다만 토마토(-19.5%)와 딸기(-6.9%), 바나나(-11.4%) 등 과실류 가격이 떨어지면서 농산물 물가는 전년 동월 대비 1.2% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": -11.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": -11.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": -11.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C025",
+    "claim": "다만 토마토(-19.5%)와 딸기(-6.9%), 바나나(-11.4%) 등 과실류 가격이 떨어지면서 농산물 물가는 전년 동월 대비 1.2% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 1.2,
+        "actual_value": 2.0214448936544183,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 1.2,
+        "actual_value": 2.0214448936544183,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202502, reference=202402) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 1.2,
+        "actual_value": 2.0214448936544183,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C026",
+    "claim": "이에 따라 신선식품지수는 전년 동월 대비 1.4% 감소했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 1.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 1.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(품목별 소비자물가지수(품목성질별: 2020=100)), 이 개념이 정확히 어느 컬럼/분류값인지 확인하지 못했습니다(표 이름/설명만 보고 고른 추정).",
+        "claimed_value": 1.4,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22112",
+      "table_nm": "품목별 소비자물가지수(품목성질별: 2020=100)",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A2e46e4ac-C027",
+    "claim": "신선식품지수가 감소세를 보인 건 지난 2022년 3월(-2.1%) 이후 34개월 만이다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202203, reference=202103) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -2.1,
+        "actual_value": 0.7220546567955455,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202203, reference=202103) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -2.1,
+        "actual_value": 0.7220546567955455,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(KOSIS 원자료 두 시점(target=202203, reference=202103) 레벨값으로 계산한 파생값 - README 2.8: KOSIS 자체도 이 계산을 원자료가 아니라 파생/근사치로 취급함)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": -2.1,
+        "actual_value": 0.7220546567955455,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1J22002",
+      "table_nm": "품목성질별 소비자물가지수(2020=100)",
+      "retrieval_status": "RESOLVED"
+    }
+  }
+]

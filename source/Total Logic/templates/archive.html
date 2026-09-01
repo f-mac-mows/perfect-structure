@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}FactQ · 열람실{% endblock %}
+{% block content %}
+<section class="page-shell">
+  <div class="page-heading"><div><div class="eyebrow"><span></span>VERIFICATION ARCHIVE</div><h1 class="section-title">열람실</h1></div>
+    <label class="archive-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><input id="archive-search" placeholder="기사 제목 키워드로 검색"></label>
+  </div>
+  <div class="archive-table" id="archive-list">
+    <div class="table-head"><span>기사</span><span>검증 일시</span><span>판정</span><span></span></div>
+    <div id="archive-rows"></div>
+    <div class="empty-state" id="empty-state" hidden><div>∅</div><h2>아직 검증한 기사가 없습니다.</h2><a href="/">첫 기사 검증하기</a></div>
+    <div class="empty-state" id="search-empty" hidden><div>∅</div><h2>검색 결과가 없습니다.</h2></div>
+  </div>
+</section>
+{% endblock %}

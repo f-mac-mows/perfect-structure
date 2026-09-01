@@ -1,0 +1,899 @@
+[
+  {
+    "claim_id": "A82ae9f41-C001",
+    "claim": "16일 통계청이 발표한 ‘2025년 6월 고용동향’에 따르면, 지난달 15세 이상 취업자는 2909만1000명으로 전년 동월 대비 18만3000명 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(취업자)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 29091000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(취업자)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 29091000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(취업자)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 29091000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C002",
+    "claim": "16일 통계청이 발표한 ‘2025년 6월 고용동향’에 따르면, 지난달 15세 이상 취업자는 2909만1000명으로 전년 동월 대비 18만3000명 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(취업자)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 183000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(취업자)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 183000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(취업자)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 183000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C003",
+    "claim": "전체 인구 중 취업자 비율을 뜻하는 고용률은 63.6%로 전년 동월 대비 0.1%포인트 증가하며, 지난 1982년 관련 통계 작성 이래 최고치를 새로 썼다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "실제 역대 최고 기록은 202505에 29159.8(으)로 났습니다 - 주장한 시점(2025-06)과 다릅니다 (웨어하우스 수집 범위 201301~202607).",
+        "claimed_value": 63.6,
+        "actual_value": 29159.8,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "실제 역대 최고 기록은 202505에 29159.8(으)로 났습니다 - 주장한 시점(2025-06)과 다릅니다 (웨어하우스 수집 범위 201301~202607).",
+        "claimed_value": 63.6,
+        "actual_value": 29159.8,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[산업별 취업자] 주장값 63.6% / 조회값 29090600.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 63.6,
+        "actual_value": 29090600.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C004",
+    "claim": "전체 인구 중 취업자 비율을 뜻하는 고용률은 63.6%로 전년 동월 대비 0.1%포인트 증가하며, 지난 1982년 관련 통계 작성 이래 최고치를 새로 썼다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_NOT_FOUND",
+        "explanation": "5개 후보 표를 넓혀서 찾아봤지만(국가채무(D1), 지출목적별 소비자물가지수(품목포함, 2020=100), 품목성질별 소비자물가지수(2020=100), 품목별 소비자물가지수(품목성질별: 2020=100), 월별 소비자물가 등락률), 이 개념과 일치하는 통계표 자체를 찾지 못했습니다. KOSIS 외 다른 데이터 소스가 필요할 수 있습니다.",
+        "claimed_value": 0.1,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": null,
+      "table_tbl_id": null,
+      "table_nm": null,
+      "retrieval_status": "NOT_FOUND"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C005",
+    "claim": "국제 비교 기준인 15~64세 고용률은 70.3%로 마찬가지로 6월 기준 역대 최대치를 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 70.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 70.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 70.3,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C006",
+    "claim": "고령 돌봄 수요 확대 등에 따라 지난달 보건·사회복지서비스업 취업자 수는 323만4000명으로 전년 동월 대비 21만6000명 증가했다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 3234000.0명 vs 조회값 3233900.0명 (차이 -100.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 3234000.0,
+        "actual_value": 3233900.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 3234000.0명 vs 조회값 3233900.0명 (차이 -100.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 3234000.0,
+        "actual_value": 3233900.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[산업별 취업자] 주장값 3234000.0명 / 조회값 3233900.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 3234000.0,
+        "actual_value": 3233900.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C007",
+    "claim": "고령 돌봄 수요 확대 등에 따라 지난달 보건·사회복지서비스업 취업자 수는 323만4000명으로 전년 동월 대비 21만6000명 증가했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.19% 이내로 일치 + phrase 6개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 216000.0,
+        "actual_value": 216400.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.19% 이내로 일치 + phrase 6개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 216000.0,
+        "actual_value": 216400.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.19% 이내로 일치 + phrase 6개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 216000.0,
+        "actual_value": 216400.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C008",
+    "claim": "전문·과학기술서비스업(10만2000명)과 교육서비스업(7만2000명)도 마찬가지로 증가세를 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 6개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 102000.0,
+        "actual_value": 102200.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 6개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 102000.0,
+        "actual_value": 102200.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.20% 이내로 일치 + phrase 6개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 102000.0,
+        "actual_value": 102200.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C009",
+    "claim": "전문·과학기술서비스업(10만2000명)과 교육서비스업(7만2000명)도 마찬가지로 증가세를 보였다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.42% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 72000.0,
+        "actual_value": 71700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.42% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 72000.0,
+        "actual_value": 71700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 0.42% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 72000.0,
+        "actual_value": 71700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C010",
+    "claim": "반면 국내 산업 중 가장 많은 인력을 고용하는 제조업은 지난달 취업자 수가 441만4000명으로 전년 동월 대비 8만3000명 줄었다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 4414000.0명 vs 조회값 4413600.0명 (차이 -400.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 4414000.0,
+        "actual_value": 4413600.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"정확한 수치를 주장\"으로 해석됩니다. 주장값 4414000.0명 vs 조회값 4413600.0명 (차이 -400.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 4414000.0,
+        "actual_value": 4413600.0,
+        "hedge_type": "exact",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[산업별 취업자] 주장값 4414000.0명 / 조회값 4413600.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 4414000.0,
+        "actual_value": 4413600.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C011",
+    "claim": "반면 국내 산업 중 가장 많은 인력을 고용하는 제조업은 지난달 취업자 수가 441만4000명으로 전년 동월 대비 8만3000명 줄었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 1.57% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 83000.0,
+        "actual_value": 81700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 1.57% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 83000.0,
+        "actual_value": 81700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202406->202506 difference 계산값이 claim 값과 1.57% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 83000.0,
+        "actual_value": 81700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C012",
+    "claim": "제조업 취업자 수는 작년 7월(-1만1000명)부터 1년 연속으로 감소세를 이어가고 있다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202307->202407 difference 계산값이 claim 값과 1.82% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 11000.0,
+        "actual_value": -11200.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202307->202407 difference 계산값이 claim 값과 1.82% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 11000.0,
+        "actual_value": -11200.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_DERIVED_NEEDED",
+        "explanation": "이 값은 KOSIS가 그대로 제공한 원본 수치가 아니라, 저희가 두 시점 값으로 직접 계산(값 기반 비교 검색으로 채택 - 202307->202407 difference 계산값이 claim 값과 1.82% 이내로 일치 + phrase 3개 전부 텍스트로도 확인됨)한 참고값입니다. 공식 확인된 값이 아니므로 판정에 포함하지 않습니다.",
+        "claimed_value": 11000.0,
+        "actual_value": -11200.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C013",
+    "claim": "지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 1960000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": "at_most",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 1960000.0명 vs 조회값 1959700.0명 (차이 -300.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 1960000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": "at_most",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[산업별 취업자] 주장값 1960000.0명 / 조회값 1959700.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 1960000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C014",
+    "claim": "지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다.",
+    "modes": {
+      "strict": {
+        "verdict": "MISMATCH",
+        "explanation": "[산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 97000.0명 vs 조회값 1959700.0명 (차이 +1862700.000) - strict 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 97000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": "at_most",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "MISMATCH",
+        "explanation": "[산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 97000.0명 vs 조회값 1959700.0명 (차이 +1862700.000) - tolerance 기준 허용 오차를 벗어났습니다.",
+        "claimed_value": 97000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": "at_most",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[산업별 취업자] 주장값 97000.0명 / 조회값 1959700.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 97000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C015",
+    "claim": "지난달 건설업 취업자 수도 196만명으로 전년 동월 대비 9만7000명 감소하며 200만명을 밑돌았다.",
+    "modes": {
+      "strict": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 2000000.0명 vs 조회값 1959700.0명 (차이 -40300.000) - strict 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2000000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": "at_most",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "VERIFIED",
+        "explanation": "[산업별 취업자] 원문장은 \"이 값 이하라고 주장(이하/미만 판정)\"으로 해석됩니다. 주장값 2000000.0명 vs 조회값 1959700.0명 (차이 -40300.000) - tolerance 기준 허용 오차 이내로 일치합니다.",
+        "claimed_value": 2000000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": "at_most",
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "RAW_ONLY",
+        "explanation": "[산업별 취업자] 주장값 2000000.0명 / 조회값 1959700.0명 - 판정 없이 원자료를 그대로 제공합니다. 최종 판단은 사용자에게 맡깁니다.",
+        "claimed_value": 2000000.0,
+        "actual_value": 1959700.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DA7E06S_NEW",
+      "table_nm": "산업별 취업자",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C016",
+    "claim": "지난달 15~29세 고용률은 45.6%로 전년 동월 대비 1%포인트 하락했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 45.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 45.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 45.6,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C017",
+    "claim": "지난달 15~29세 고용률은 45.6%로 전년 동월 대비 1%포인트 하락했다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 1.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 1.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 1.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C018",
+    "claim": "청년층 고용률은 작년 5월(-0.7%포인트)부터 1년 넘게 감소세를 이어가고 있다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 청년층인구 * 15~29세 전체, 고용률 * 15~29세 전체",
+        "claimed_value": -0.7,
+        "actual_value": 8173400.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 청년층인구 * 15~29세 전체, 고용률 * 15~29세 전체",
+        "claimed_value": -0.7,
+        "actual_value": 8173400.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 동점 후보 2개(값으로도 못 가름): 청년층인구 * 15~29세 전체, 고용률 * 15~29세 전체",
+        "claimed_value": -0.7,
+        "actual_value": 8173400.0,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "RESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C019",
+    "claim": "20대만 떼어놓고 봐도 고용률은 61로 전년 동월 대비 0.5%포인트 떨어졌다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 61.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 61.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 61.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C020",
+    "claim": "20대만 떼어놓고 봐도 고용률은 61로 전년 동월 대비 0.5%포인트 떨어졌다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 0.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 0.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(고용률)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 0.5,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C021",
+    "claim": "지난달 비경제활동인구 중 활동 상태를 ‘쉬었음’이라고 응답한 20대는 39만6000명으로 전년 동월 대비 2000명 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(비경제활동인구)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 396000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(비경제활동인구)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 396000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(비경제활동인구)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 396000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C022",
+    "claim": "지난달 비경제활동인구 중 활동 상태를 ‘쉬었음’이라고 응답한 20대는 39만6000명으로 전년 동월 대비 2000명 늘었다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(비경제활동인구)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 2000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(비경제활동인구)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 2000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(비경제활동인구)은 확정했지만 해당 시점(202506)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 2000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  },
+  {
+    "claim_id": "A82ae9f41-C023",
+    "claim": "이는 같은 6월 기준으로 코로나가 시작된 지난 2020년 6월(41만5000명) 이후 5년 만에 최대 규모다.",
+    "modes": {
+      "strict": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(청년층인구)은 확정했지만 해당 시점(202006)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 415000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "tolerance": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(청년층인구)은 확정했지만 해당 시점(202006)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 415000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      },
+      "raw_only": {
+        "verdict": "UNVERIFIED_UNRESOLVED",
+        "explanation": "관련 통계표는 찾았지만(연령별 경제활동상태), 확정하지 못했습니다: 항목/분류값(청년층인구)은 확정했지만 해당 시점(202006)의 데이터가 KOSIS에도 없음(온디맨드 백필 시도함) - 추측으로 대체하지 않음.",
+        "claimed_value": 415000.0,
+        "actual_value": null,
+        "hedge_type": null,
+        "ai_used": false,
+        "ai_note": null
+      }
+    },
+    "evidence": {
+      "table_org_id": "101",
+      "table_tbl_id": "DT_1DE9046S",
+      "table_nm": "연령별 경제활동상태",
+      "retrieval_status": "UNRESOLVED"
+    }
+  }
+]
