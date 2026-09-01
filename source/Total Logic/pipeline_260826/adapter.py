@@ -255,6 +255,12 @@ def parse_evidence_and_log(payload: JsonLike) -> "tuple":
             table_purpose=_first_present(data, ("table_purpose", "purpose")),
             is_comparison=True,
             values=points,
+            # [2026-08-28 신규 - 목적 검증 게이트] local_db_agent._attach_
+            # purpose_check가 붙인 필드 - 없으면(대부분, 검증 자체를 안 한
+            # 호출부) None으로 남아 judgment._check_purpose_mismatch가
+            # 조용히 통과시킨다(다른 신규 필드들과 동일한 폴백 원칙).
+            purpose_mismatch=_first_present(data, ("purpose_mismatch",)),
+            purpose_mismatch_note=_first_present(data, ("purpose_mismatch_note",)),
         )
     else:
         value = _first_present(data, ("normalized_value", "value", "raw_value"))
@@ -280,6 +286,12 @@ def parse_evidence_and_log(payload: JsonLike) -> "tuple":
             record_period_matches_min=record_info.get("claim_period_matches_min"),
             record_coverage_strt=record_info.get("coverage_strt_prd_de"),
             record_coverage_end=record_info.get("coverage_end_prd_de"),
+            # [2026-08-28 신규 - 목적 검증 게이트] 위 다중 시점 분기와 동일한
+            # 이유 - 단일 시점(단순 원자료 직접 매칭) 경로가 실제로 이
+            # 게이트의 주 대상이다(배추가격 사례처럼 derivation.used=False인
+            # claim).
+            purpose_mismatch=_first_present(data, ("purpose_mismatch",)),
+            purpose_mismatch_note=_first_present(data, ("purpose_mismatch_note",)),
         )
 
     # 판단불가 신호 - status류 필드가 명시적으로 있으면 그걸 우선한다.

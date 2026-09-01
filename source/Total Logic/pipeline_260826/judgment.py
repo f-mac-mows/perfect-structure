@@ -78,6 +78,22 @@ class Verdict(str, Enum):
     # (b) 그 표/항목이 아직 records 계산 대상으로 적재되지 않아 대조할
     # 데이터 자체가 없을 때만 남는다 - _check_record_claim 참고.
     UNVERIFIED_RECORD_CLAIM = "UNVERIFIED_RECORD_CLAIM"
+    # [신규 - 2026-08-28, 배추가격/DT_114054_112 사례로 사용자가 지적한
+    # 아키텍처 갭 대응] 표/축 이름 매칭은 전부 통과했지만, 그 표의 실제
+    # 작성 목적(조사 대상/범위)이 claim이 전제하는 개념과 다른 경우 전용.
+    # UNVERIFIED_UNRESOLVED(개념을 컬럼/분류값으로 확정 못 함)와는 다르다 -
+    # 이건 "확정은 했는데, 확정한 그 표 자체가 claim이 원하는 조사가
+    # 아니다"라는, 더 구체적이고 더 위험한 사유다(값이 있어서 그럴듯하게
+    # VERIFIED/MISMATCH로 보일 수 있다는 게 UNVERIFIED_UNRESOLVED와의 핵심
+    # 차이 - 사용자가 "6700원이라는 수치가 없어서 unverified로 나오긴
+    # 하겠지만, 그건 정확한 설명이 아니다"라고 정확히 지적한 부분).
+    # local_db_agent._attach_purpose_check가 최종 확정된 (org_id, tbl_id)
+    # 1건에 한해서만(비용 절감 - 사용자와 합의된 설계) 1회 hcx_purpose_
+    # resolver로 검증하고, 그 결과(actual.purpose_mismatch)를
+    # _check_purpose_mismatch가 실제 게이트로 사용한다(장식적 RAG 텍스트가
+    # 아니라 판정을 실제로 낮춘다 - Decision 003의 derivation_used 강제
+    # 패턴과 동일한 설계, 사용자가 명시적으로 요구함).
+    UNVERIFIED_PURPOSE_MISMATCH = "UNVERIFIED_PURPOSE_MISMATCH"
     RAW_ONLY = "RAW_ONLY"
 
 
@@ -177,6 +193,18 @@ class ActualEvidence:
     record_period_matches_min: Optional[bool] = None
     record_coverage_strt: Optional[str] = None
     record_coverage_end: Optional[str] = None
+
+    # [2026-08-28 신규 - 목적 검증(purpose verification) 게이트] 4번
+    # (local_db_agent._attach_purpose_check)이 최종 확정된 표 1건에 한해
+    # hcx_purpose_resolver로 "이 표의 작성 목적이 claim의 의도와 맞는가"를
+    # 1회 검증한 결과. None이면(검증을 아예 시도 안 했거나 - 예:
+    # get_stat_explanation 실패 - kosis_client 자체가 없어 애초에 시도할
+    # 수 없는 호출부인 경우) 기존처럼 이 게이트를 건너뛴다(폴백 원칙 -
+    # table_purpose와 마찬가지로 다른 신규 필드들과 동일한 관용).
+    # True면 _check_purpose_mismatch가 판정을 UNVERIFIED_PURPOSE_MISMATCH로
+    # 강제한다.
+    purpose_mismatch: Optional[bool] = None
+    purpose_mismatch_note: Optional[str] = None
 
 
 @dataclass
@@ -777,6 +805,38 @@ def _check_unverified(search_log: SearchLog) -> Optional[VerdictResult]:
 
 
 # ---------------------------------------------------------------------
+# 6.4절: [신규 - 2026-08-28] "목적 불일치(purpose mismatch)" 전용 분기.
+# search_log의 RESOLVED/UNRESOLVED와는 독립적인 사유다 - 표/축 이름
+# 매칭까지는 전부 성공해서 search_log.retrieval_status == "RESOLVED"로
+# 넘어온 뒤에도, 그 표의 실제 작성 목적이 claim의 의도와 다를 수 있다
+# (예: "배추 소매가" claim이 "외식업 식재료 사입가" 표에 걸리는 경우 -
+# 사용자가 실제 KOSIS URL로 확인해 지적한 사례, 2026-08-28). 값이
+# 존재하므로 UNVERIFIED_UNRESOLVED보다 더 그럴듯해 보이지만 실제로는 더
+# 위험한 오탐이라, _check_unverified/_check_record_claim과 별도 우선순위
+# 단계로 분리한다. RAW_ONLY 모드는 원자료만 보여주는 모드라 이 검사에서
+# 제외한다(judge_claim에서 RAW_ONLY 분기 이후, _check_record_claim보다도
+# 먼저 호출하도록 배치 - 목적이 안 맞는 표라면 "역대 기록"류 판정까지 갈
+# 이유가 없으므로).
+# ---------------------------------------------------------------------
+def _check_purpose_mismatch(actual: ActualEvidence) -> Optional[VerdictResult]:
+    """actual.purpose_mismatch가 True일 때만 UNVERIFIED_PURPOSE_MISMATCH를
+    반환한다. None/False면(검증을 안 했거나, 검증했는데 일치) 이 게이트를
+    통과시킨다(None 반환 - judge_claim이 나머지 로직을 계속 진행)."""
+    if actual.purpose_mismatch is not True:
+        return None
+    reason = actual.purpose_mismatch_note or "표의 작성 목적이 이 주장의 의도와 다른 것으로 보입니다."
+    table_desc = f"[{actual.table_nm}] " if actual.table_nm else ""
+    return VerdictResult(
+        verdict=Verdict.UNVERIFIED_PURPOSE_MISMATCH,
+        explanation=(
+            f"{table_desc}표/분류 이름은 이 주장과 일치했지만, 통계표의 실제"
+            f" 작성 목적을 대조한 결과 다른 조사로 판단됐습니다: {reason}"
+            " 값이 조회되더라도 이 주장을 뒷받침하는 근거로 쓰지 않습니다."
+        ),
+    )
+
+
+# ---------------------------------------------------------------------
 # 6.5절: [신규 - 2026-08-10, README 3장 H] "역대 최고/최저" 기록 주장
 # 전용 분기. search_log와 무관한 raw_sentence 자체의 성질이라
 # _check_unverified와 분리했다 - 표를 잘 찾았고 값도 정확히 조회됐어도,
@@ -1082,6 +1142,17 @@ def judge_claim(
             mode=mode,
         )
 
+    # [신규 - 2026-08-28] RAW_ONLY 이후, _check_record_claim보다도 먼저
+    # 배치 - 표의 작성 목적이 애초에 claim의 의도와 다르다면, "역대
+    # 기록"류 대조나 값 비교로 넘어갈 이유가 없다(장식적 텍스트가 아니라
+    # 실제 게이트여야 한다는 사용자 요구 - Decision 003 강제 패턴과 동일).
+    purpose_result = _check_purpose_mismatch(actual)
+    if purpose_result is not None:
+        purpose_result.mode = mode
+        purpose_result.claimed_value = claim.claimed_value
+        purpose_result.actual_value = actual.value
+        return purpose_result
+
     # [신규 - 2026-08-10, README 3장 H] RAW_ONLY 이후, 나머지 판정 로직
     # 이전에 배치 - 원자료 노출은 막지 않되, VERIFIED/MISMATCH 판정은
     # 절대 내리지 않는다.
@@ -1141,6 +1212,50 @@ def judge_claim(
     else:
         actual_value = actual.value
 
+    # [2026-08-28 신규 - 실측 발견, 팀원 110차 DB확장 보고 §3-4번 유형]
+    # is_comparison=False(단일 시점) change_amount/rate claim에서, KOSIS
+    # 원본 컬럼이 이미 부호 있는 증감값으로 적재된 경우(예: "자연증감" -
+    # 감소는 음수로 저장)와 뉴스 claim이 부호 없이 "9124명 감소"처럼
+    # 방향은 별도 단어로, 크기는 항상 양수로 표현하는 관례가 충돌해서
+    # 허위 MISMATCH가 났다(실측: Aeb3233ab-C019 "자연 감소 9124명" vs
+    # 조회값 -9149 - 부호까지 다른 값으로 착각해 18273 차이로 MISMATCH,
+    # 실제로는 절댓값 기준 25명(0.3%) 차이로 사실상 일치).
+    #
+    # is_comparison=True 경로(_resolve_comparison_evidence)는 diff의 부호로
+    # 스스로 방향을 계산하므로 이 문제가 원래 없다 - 이 문제는 "이미 부호가
+    # 실려서 오는 단일 값"에서만 생긴다.
+    #
+    # claim.direction이 있으면(1번 스키마 - change_amount/change_rate에서만
+    # 채워짐, level claim에는 없음) 먼저 부호 자체가 진짜로 반대인지부터
+    # 확인한다 - 방향 반전은 오차 허용과 무관하게 그 자체로 즉시 MISMATCH
+    # 다(_resolve_comparison_evidence의 기존 "방향이 정반대면 무조건
+    # MISMATCH" 패턴과 동일). 부호가 일치하면(또는 actual_value가 0이라
+    # 방향 판단 근거가 없으면) 이후 비교는 절댓값 기준으로 통일한다 -
+    # claimed_value는 추출 관례상 이미 양수로 온다는 전제이므로, 사실상
+    # actual_value 쪽만 부호가 뒤집혀 있던 걸 바로잡는 효과다.
+    if not actual.is_comparison and claim.direction in ("increase", "decrease") and actual_value != 0:
+        actual_sign_direction = "increase" if actual_value > 0 else "decrease"
+        if actual_sign_direction != claim.direction:
+            claimed_desc = "증가" if claim.direction == "increase" else "감소"
+            actual_desc = "증가" if actual_sign_direction == "increase" else "감소"
+            return VerdictResult(
+                verdict=Verdict.MISMATCH,
+                explanation=(
+                    f"[{actual.table_nm}] 실제 조회값({actual_value}{actual.unit or ''})은"
+                    f" {actual_desc} 방향인데, 주장은 \"{claimed_desc}\"라고 해서 방향 자체가"
+                    " 반대입니다."
+                ),
+                claimed_value=claim.claimed_value,
+                actual_value=abs(actual_value),
+                mode=mode,
+            )
+        # 부호 일치 - claimed_value(이미 양수)와 절댓값 기준으로 맞춰서
+        # 비교한다. effective_claim을 통해 흘려보내 이후 비교/설명 코드가
+        # 전부 이 값을 쓰게 한다(멀티플라이어 감지가 이미 쓰는 것과 같은
+        # "정규화는 effective_claim에, 원본 claim은 안 건드림" 패턴).
+        effective_claim = replace(effective_claim, claimed_value=abs(claim.claimed_value))
+        actual_value = abs(actual_value)
+
     # [신규 - 2026-08-10, README 3장 A/B/C] 규칙 기반 hedge_type을 먼저
     # 구하고, 위험 신호(_needs_ai_reinterpretation)가 있을 때만 AI에게
     # 고정 선택지로 재해석을 맡긴다. hcx_client가 없거나 호출/파싱이
@@ -1191,12 +1306,18 @@ def judge_claim(
             ai_note = f"{ai_note}; {confirm_note}" if ai_note else confirm_note
 
     kind, epsilon = _category_tolerance(effective_claim.unit_category, mode, hedge_type)
+    # [2026-08-28 갱신 - 방향 부호 정규화] claim.claimed_value가 아니라
+    # effective_claim.claimed_value를 쓴다 - 대부분의 경우 둘은 같지만,
+    # 위에서 방향 부호 정규화가 적용된 claim(단일 시점 change_amount/rate +
+    # direction 일치)이면 effective_claim.claimed_value가 abs() 적용된
+    # 값이다(원본 claim 객체 자체는 그대로 보존 - 멀티플라이어 감지와
+    # 동일한 "정규화는 effective_claim에" 원칙).
     matched = _compare_with_hedge(
-        claim.claimed_value, actual_value, hedge_type, kind, epsilon
+        effective_claim.claimed_value, actual_value, hedge_type, kind, epsilon
     )
 
     hedge_desc = _HEDGE_DESCRIPTIONS.get(hedge_type, hedge_type)
-    diff = actual_value - claim.claimed_value
+    diff = actual_value - effective_claim.claimed_value
     value_desc = (
         comparison_note
         if comparison_note
@@ -1223,7 +1344,7 @@ def judge_claim(
     if matched:
         explanation = (
             f"[{actual.table_nm}] 원문장은 \"{hedge_desc}\"으로 해석됩니다."
-            f" 주장값 {claim.claimed_value}{claim.claimed_unit or ''} vs"
+            f" 주장값 {effective_claim.claimed_value}{claim.claimed_unit or ''} vs"
             f" {value_desc}"
             f" (차이 {diff:+.3f}) - {mode.value} 기준 허용 오차 이내로 일치합니다."
             f"{record_note}"
@@ -1232,7 +1353,7 @@ def judge_claim(
     else:
         explanation = (
             f"[{actual.table_nm}] 원문장은 \"{hedge_desc}\"으로 해석됩니다."
-            f" 주장값 {claim.claimed_value}{claim.claimed_unit or ''} vs"
+            f" 주장값 {effective_claim.claimed_value}{claim.claimed_unit or ''} vs"
             f" {value_desc}"
             f" (차이 {diff:+.3f}) - {mode.value} 기준 허용 오차를 벗어났습니다."
             f"{record_note}"
@@ -1242,7 +1363,7 @@ def judge_claim(
     return VerdictResult(
         verdict=verdict,
         explanation=explanation,
-        claimed_value=claim.claimed_value,
+        claimed_value=effective_claim.claimed_value,
         actual_value=actual_value,
         hedge_type=hedge_type,
         mode=mode,

@@ -92,9 +92,10 @@
             "UNVERIFIED_UNRESOLVED",
             "UNVERIFIED_DERIVED_NEEDED",
             "UNVERIFIED_RECORD_CLAIM",
+            "UNVERIFIED_PURPOSE_MISMATCH",
             "RAW_ONLY"
           ],
-          "description": "VERIFIED=claim 수치가 KOSIS 원본값과 허용오차 이내로 일치. MISMATCH=값이 실제로 다름(오탐 아님, 진짜 불일치) - '역대 최고/최저' claim이 실제로는 다른 시점에 기록을 세운 경우도 이 값으로 옴(아래 UNVERIFIED_RECORD_CLAIM 설명 참고). UNVERIFIED_NOT_FOUND=관련 통계표 자체를 못 찾음. UNVERIFIED_UNRESOLVED=표는 찾았지만 항목/축/시점을 확정 못함(동점, 해당 시점 데이터 없음 등 - explanation에 구체 사유). UNVERIFIED_DERIVED_NEEDED=KOSIS가 그대로 준 원본 수치가 아니라 우리가 두 시점 값으로 직접 계산한 파생값이라 '공식 확인'으로 치지 않음(값은 참고용으로 actual_value에 채워짐). UNVERIFIED_RECORD_CLAIM='역대 최고/최저'처럼 과거 전체 기록과의 비교가 필요한 claim 전용(2026-08-24 갱신: 로컬 웨어하우스에 계열별 전체 기간 최댓값/최솟값 요약(records 테이블)이 배선된 이후로는 대부분 VERIFIED/MISMATCH로 직접 판정되고, 이 verdict는 이제 (a) 문장에서 '최고/최대'인지 '최저/최소'인지 방향을 못 정하거나, (b) 그 표/항목이 아직 요약 테이블에 없어 대조 자체를 못 한 잔여 케이스에만 남는다). RAW_ONLY=modes.raw_only 자리에만 나옴 - 허용오차 판정 없이 원본값만 보여줌."
+          "description": "VERIFIED=claim 수치가 KOSIS 원본값과 허용오차 이내로 일치. MISMATCH=값이 실제로 다름(오탐 아님, 진짜 불일치) - '역대 최고/최저' claim이 실제로는 다른 시점에 기록을 세운 경우도 이 값으로 옴(아래 UNVERIFIED_RECORD_CLAIM 설명 참고). UNVERIFIED_NOT_FOUND=관련 통계표 자체를 못 찾음. UNVERIFIED_UNRESOLVED=표는 찾았지만 항목/축/시점을 확정 못함(동점, 해당 시점 데이터 없음 등 - explanation에 구체 사유). UNVERIFIED_DERIVED_NEEDED=KOSIS가 그대로 준 원본 수치가 아니라 우리가 두 시점 값으로 직접 계산한 파생값이라 '공식 확인'으로 치지 않음(값은 참고용으로 actual_value에 채워짐). UNVERIFIED_RECORD_CLAIM='역대 최고/최저'처럼 과거 전체 기록과의 비교가 필요한 claim 전용(2026-08-24 갱신: 로컬 웨어하우스에 계열별 전체 기간 최댓값/최솟값 요약(records 테이블)이 배선된 이후로는 대부분 VERIFIED/MISMATCH로 직접 판정되고, 이 verdict는 이제 (a) 문장에서 '최고/최대'인지 '최저/최소'인지 방향을 못 정하거나, (b) 그 표/항목이 아직 요약 테이블에 없어 대조 자체를 못 한 잔여 케이스에만 남는다). UNVERIFIED_PURPOSE_MISMATCH=[2026-08-28 신규] 표/축 이름 매칭은 성공해서 값까지 조회됐지만(예: '배추 가격' claim이 '외식업 식재료 구매금액' 표에 걸리는 경우), 그 표의 공식 작성 목적(KOSIS get_stat_explanation 조회 결과)을 HCX-007로 claim과 대조한 결과 실제로는 다른 조사 목적의 표로 판단됨 - actual_value가 채워져 있어도 이 주장의 근거로 쓰지 않음(explanation에 구체적 불일치 사유). 비용 절감을 위해 최종 확정된 표 1건에만 1회 적용됨(모든 후보를 검증하지 않음) - kosis_client/hcx_purpose_verify_fn을 넘긴 호출부에서만 나타나고, 안 넘겼으면 이 verdict 자체가 나오지 않음. RAW_ONLY=modes.raw_only 자리에만 나옴 - 허용오차 판정 없이 원본값만 보여줌."
         },
         "explanation": { "type": "string" },
         "claimed_value": {

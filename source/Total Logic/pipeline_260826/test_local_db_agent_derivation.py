@@ -1397,6 +1397,300 @@ def test_llm_table_select_mode_isolated_from_default_stage1_keywords():
     conn.close()
 
 
+class _FakeKosisClientForPurposeCheck:
+    """[2026-08-28 신규 - 목적 검증 게이트] get_stat_explanation(org_id,
+    tbl_id)만 흉내내는 최소 가짜 - _attach_purpose_check가 실제로 호출하는
+    유일한 메서드다(_FakeKosisClientForBackfill과 같은 "필요한 메서드만
+    흉내" 패턴, 이 파일이 재사용하지 않고 새로 만드는 이유도 동일)."""
+
+    def __init__(self, explanation=None, raise_on_call=None):
+        self.calls = []
+        self._explanation = explanation if explanation is not None else {}
+        self._raise_on_call = raise_on_call
+
+    def get_stat_explanation(self, org_id, tbl_id):
+        self.calls.append({"org_id": org_id, "tbl_id": tbl_id})
+        if self._raise_on_call is not None:
+            raise self._raise_on_call
+        return self._explanation
+
+
+def test_purpose_check_flags_mismatch_on_final_success_path():
+    """[2026-08-28 신규 - 배추가격/DT_114054_112 사례로 사용자가 지적한
+    아키텍처 갭 대응] kosis_client + hcx_purpose_verify_fn을 둘 다 넘기면,
+    표/축 이름 매칭까지 전부 성공한 claim이라도(derivation.used=False인
+    최종 확정 경로) 표의 작성 목적이 claim과 안 맞는다고 HCX가 판단하면
+    result에 purpose_mismatch=True/purpose_mismatch_note가 붙어야 한다."""
+    conn = wh.get_connection(":memory:")
+    _seed_full_national_debt_table(conn)
+
+    def _fake_hcx_resolve_fn(cell_texts, claim_text, claimed_value, claimed_unit, claimed_period):
+        for i, t in enumerate(cell_texts):
+            if t == "국가채무(D1) 국가채무":
+                return i
+        return None
+
+    fake_client = _FakeKosisClientForPurposeCheck(
+        explanation={"writingPurps": "이 표는 실제로는 전혀 다른 조사 목적을 갖는다(테스트용 불일치)."}
+    )
+
+    def _fake_purpose_verify_fn(claim_text, table_nm, table_purpose_text, claimed_value, claimed_unit, claimed_period):
+        return {"mismatch": True, "reason": "표의 작성 목적이 claim과 다름(테스트용)"}
+
+    claim = {
+        "claim_id": "TEST-PURPOSE-MISMATCH",
+        "claim": "나랏빚이 눈덩이처럼 불어났다.",
+        "value_num": 1200.0,
+        "unit": "조원",
+        "period": "2025",
+    }
+    result = lda.resolve_claim_evidence(
+        conn, claim, keywords=["국가채무"],
+        hcx_resolve_fn=_fake_hcx_resolve_fn,
+        kosis_client=fake_client,
+        hcx_purpose_verify_fn=_fake_purpose_verify_fn,
+    )
+    _check(
+        "값 조회 자체는 여전히 성공(게이트는 judgment.py 몫)",
+        result.get("query_status") == "success" and result.get("normalized_value") == 1200.0,
+        str(result),
+    )
+    _check("purpose_mismatch=True가 붙음", result.get("purpose_mismatch") is True, str(result))
+    _check(
+        "purpose_mismatch_note에 이유가 붙음",
+        result.get("purpose_mismatch_note") == "표의 작성 목적이 claim과 다름(테스트용)",
+        str(result),
+    )
+    _check(
+        "get_stat_explanation이 확정된 (org_id,tbl_id)로 정확히 1번 호출됨",
+        fake_client.calls == [{"org_id": "184", "tbl_id": "DT_102006_001"}],
+        str(fake_client.calls),
+    )
+    conn.close()
+
+
+def test_purpose_check_passes_through_on_match():
+    """HCX가 MATCH(mismatch=False)라고 판단하면 purpose_mismatch=False로
+    붙는다(None이 아니라 명시적 False) - judgment._check_purpose_mismatch는
+    `is not True`만 확인하므로 False든 None이든 게이트를 통과시키지만,
+    "검증을 실제로 했고 일치했다"는 사실 자체는 진단용으로 남아야 한다."""
+    conn = wh.get_connection(":memory:")
+    _seed_full_national_debt_table(conn)
+
+    def _fake_hcx_resolve_fn(cell_texts, claim_text, claimed_value, claimed_unit, claimed_period):
+        for i, t in enumerate(cell_texts):
+            if t == "국가채무(D1) 국가채무":
+                return i
+        return None
+
+    fake_client = _FakeKosisClientForPurposeCheck(
+        explanation={"writingPurps": "이 표는 claim이 말하는 개념을 정확히 다룬다."}
+    )
+
+    def _fake_purpose_verify_fn(claim_text, table_nm, table_purpose_text, claimed_value, claimed_unit, claimed_period):
+        return {"mismatch": False, "reason": "목적이 일치함(테스트용)"}
+
+    claim = {
+        "claim_id": "TEST-PURPOSE-MATCH",
+        "claim": "나랏빚이 눈덩이처럼 불어났다.",
+        "value_num": 1200.0,
+        "unit": "조원",
+        "period": "2025",
+    }
+    result = lda.resolve_claim_evidence(
+        conn, claim, keywords=["국가채무"],
+        hcx_resolve_fn=_fake_hcx_resolve_fn,
+        kosis_client=fake_client,
+        hcx_purpose_verify_fn=_fake_purpose_verify_fn,
+    )
+    _check("purpose_mismatch=False가 명시적으로 붙음", result.get("purpose_mismatch") is False, str(result))
+    conn.close()
+
+
+def test_purpose_check_skipped_without_client_or_verify_fn():
+    """[회귀 방지] kosis_client/hcx_purpose_verify_fn을 둘 다 안 넘기면
+    (기본값 None - 이 프로젝트의 기존 모든 회귀 테스트가 이 상태) 목적
+    검증 자체가 시도되지 않아야 한다 - result에 purpose_mismatch 키 자체가
+    없어야 하고(다른 신규 필드들과 동일한 opt-in 원칙), 기존 동작이
+    이 신규 기능 추가로 전혀 안 바뀐다는 걸 확인한다."""
+    conn = wh.get_connection(":memory:")
+    _seed_full_national_debt_table(conn)
+
+    def _fake_hcx_resolve_fn(cell_texts, claim_text, claimed_value, claimed_unit, claimed_period):
+        for i, t in enumerate(cell_texts):
+            if t == "국가채무(D1) 국가채무":
+                return i
+        return None
+
+    claim = {
+        "claim_id": "TEST-PURPOSE-NOOP",
+        "claim": "나랏빚이 눈덩이처럼 불어났다.",
+        "value_num": 1200.0,
+        "unit": "조원",
+        "period": "2025",
+    }
+    result = lda.resolve_claim_evidence(
+        conn, claim, keywords=["국가채무"], hcx_resolve_fn=_fake_hcx_resolve_fn,
+    )
+    _check("query_status는 기존처럼 success", result.get("query_status") == "success", str(result))
+    _check("purpose_mismatch 키 자체가 안 붙음(opt-in 미사용)", "purpose_mismatch" not in result, str(result))
+    conn.close()
+
+
+def test_purpose_check_swallows_get_stat_explanation_errors():
+    """get_stat_explanation이 예외를 던져도(네트워크 오류 등) 이 claim
+    전체가 죽으면 안 된다 - 조용히 삼키고 기존처럼 성공 result를 그대로
+    돌려준다(다른 opt-in 신규 기능들과 동일한 에러 처리 관례 - embed_fn/
+    hcx_resolve_fn 등)."""
+    conn = wh.get_connection(":memory:")
+    _seed_full_national_debt_table(conn)
+
+    def _fake_hcx_resolve_fn(cell_texts, claim_text, claimed_value, claimed_unit, claimed_period):
+        for i, t in enumerate(cell_texts):
+            if t == "국가채무(D1) 국가채무":
+                return i
+        return None
+
+    fake_client = _FakeKosisClientForPurposeCheck(raise_on_call=RuntimeError("네트워크 오류(재현용 가짜)"))
+
+    def _must_not_be_called(*args, **kwargs):
+        raise AssertionError("get_stat_explanation이 실패하면 hcx_purpose_verify_fn은 호출되면 안 됨")
+
+    claim = {
+        "claim_id": "TEST-PURPOSE-EXPL-ERROR",
+        "claim": "나랏빚이 눈덩이처럼 불어났다.",
+        "value_num": 1200.0,
+        "unit": "조원",
+        "period": "2025",
+    }
+    result = lda.resolve_claim_evidence(
+        conn, claim, keywords=["국가채무"],
+        hcx_resolve_fn=_fake_hcx_resolve_fn,
+        kosis_client=fake_client,
+        hcx_purpose_verify_fn=_must_not_be_called,
+    )
+    _check(
+        "get_stat_explanation 예외에도 claim 전체는 success로 안전하게 끝남",
+        result.get("query_status") == "success" and result.get("normalized_value") == 1200.0,
+        str(result),
+    )
+    _check("purpose_mismatch 키는 안 붙음(검증 자체를 못 했으므로)", "purpose_mismatch" not in result, str(result))
+    conn.close()
+
+
+def _set_cached_purpose(conn, org_id, tbl_id, writing_purps=None, examin_objrange=None, fetched=True):
+    """[2026-08-28 신규 - 표 적재 시점 캐싱 검증용] tables_registry의 신규
+    캐시 컬럼(writing_purps/examin_objrange/purpose_fetched_at)을 직접
+    UPDATE한다 - 실제로는 kosis_warehouse.ingest_table이 register_table을
+    통해 채우는 값이지만, 이 테스트는 그 배관을 다시 타지 않고 "이미
+    캐시돼 있는 상태"를 직접 흉내낸다(다른 픽스처들과 동일한 관례)."""
+    conn.execute(
+        "UPDATE tables_registry SET writing_purps=?, examin_objrange=?, "
+        "purpose_fetched_at=? WHERE org_id=? AND tbl_id=?",
+        (
+            writing_purps, examin_objrange,
+            "2026-08-28T00:00:00+00:00" if fetched else None,
+            org_id, tbl_id,
+        ),
+    )
+    conn.commit()
+
+
+def test_purpose_check_uses_cache_without_calling_kosis_client():
+    """[2026-08-28 신규 - 사용자 결정: "표 적재 시점에 DB 저장"] tables_
+    registry에 이미 목적 설명이 캐시돼 있으면(purpose_fetched_at 설정됨),
+    kosis_client.get_stat_explanation을 아예 호출하지 않고 캐시된 텍스트로
+    바로 HCX 검증을 수행해야 한다 - kosis_client 자체를 안 넘겨도(None)
+    동작해야 캐시 우선 설계의 이점이 실제로 검증된다."""
+    conn = wh.get_connection(":memory:")
+    _seed_full_national_debt_table(conn)
+    _set_cached_purpose(
+        conn, "184", "DT_102006_001",
+        writing_purps="국가채무 총괄 통계를 작성해 재정건전성 관리에 활용",
+        examin_objrange="중앙정부 및 지방정부의 채무",
+    )
+
+    def _fake_hcx_resolve_fn(cell_texts, claim_text, claimed_value, claimed_unit, claimed_period):
+        for i, t in enumerate(cell_texts):
+            if t == "국가채무(D1) 국가채무":
+                return i
+        return None
+
+    received_purpose_text = {}
+
+    def _fake_purpose_verify_fn(claim_text, table_nm, table_purpose_text, claimed_value, claimed_unit, claimed_period):
+        received_purpose_text["value"] = table_purpose_text
+        return {"mismatch": False, "reason": "캐시된 목적 설명과 일치(테스트용)"}
+
+    claim = {
+        "claim_id": "TEST-PURPOSE-CACHE-HIT",
+        "claim": "나랏빚이 눈덩이처럼 불어났다.",
+        "value_num": 1200.0,
+        "unit": "조원",
+        "period": "2025",
+    }
+    result = lda.resolve_claim_evidence(
+        conn, claim, keywords=["국가채무"],
+        hcx_resolve_fn=_fake_hcx_resolve_fn,
+        kosis_client=None,  # 캐시가 있으면 kosis_client 없이도 동작해야 함
+        hcx_purpose_verify_fn=_fake_purpose_verify_fn,
+    )
+    _check("purpose_mismatch=False가 캐시 경로로도 붙음", result.get("purpose_mismatch") is False, str(result))
+    _check(
+        "HCX에 넘어간 목적 설명 텍스트가 캐시된 두 필드를 합친 것",
+        received_purpose_text.get("value") == (
+            "국가채무 총괄 통계를 작성해 재정건전성 관리에 활용\n중앙정부 및 지방정부의 채무"
+        ),
+        str(received_purpose_text),
+    )
+    conn.close()
+
+
+def test_purpose_check_skips_retry_when_cache_says_already_tried_and_empty():
+    """purpose_fetched_at은 있지만(적재 시점에 이미 시도함) writing_purps/
+    examin_objrange가 둘 다 비어 있으면(못 가져왔음), kosis_client가
+    있더라도 재시도하면 안 된다 - 근거 없이 API를 계속 두드리지 않는다는
+    폴백 원칙."""
+    conn = wh.get_connection(":memory:")
+    _seed_full_national_debt_table(conn)
+    _set_cached_purpose(conn, "184", "DT_102006_001", writing_purps=None, examin_objrange=None)
+
+    def _fake_hcx_resolve_fn(cell_texts, claim_text, claimed_value, claimed_unit, claimed_period):
+        for i, t in enumerate(cell_texts):
+            if t == "국가채무(D1) 국가채무":
+                return i
+        return None
+
+    def _must_not_be_called_client_method(org_id, tbl_id):
+        raise AssertionError("캐시가 '이미 시도했지만 없음'을 말하면 라이브 API를 재시도하면 안 됨")
+
+    class _StrictFakeClient:
+        get_stat_explanation = staticmethod(_must_not_be_called_client_method)
+
+    def _must_not_be_called_verify_fn(*args, **kwargs):
+        raise AssertionError("목적 설명 텍스트가 없으면 HCX 검증 자체를 호출하면 안 됨")
+
+    claim = {
+        "claim_id": "TEST-PURPOSE-CACHE-EMPTY",
+        "claim": "나랏빚이 눈덩이처럼 불어났다.",
+        "value_num": 1200.0,
+        "unit": "조원",
+        "period": "2025",
+    }
+    result = lda.resolve_claim_evidence(
+        conn, claim, keywords=["국가채무"],
+        hcx_resolve_fn=_fake_hcx_resolve_fn,
+        kosis_client=_StrictFakeClient(),
+        hcx_purpose_verify_fn=_must_not_be_called_verify_fn,
+    )
+    _check(
+        "값 조회는 정상 성공, 목적 검증만 조용히 스킵됨",
+        result.get("query_status") == "success" and "purpose_mismatch" not in result,
+        str(result),
+    )
+    conn.close()
+
+
 def _seed_cpi_item_diff_fixture(conn):
     """[2026-08-22 신규 - Task #29 Step 3] C003/C004류(item_diff)를 위한
     합성 표 - 조선비즈 2025-10-08 기사 기반이지만 실제 KOSIS 값이 아니라
@@ -1568,6 +1862,12 @@ if __name__ == "__main__":
     test_llm_table_select_mode_none_result_returns_not_found()
     test_llm_table_select_mode_falls_back_to_fts_when_hcx_fails()
     test_llm_table_select_mode_isolated_from_default_stage1_keywords()
+    test_purpose_check_flags_mismatch_on_final_success_path()
+    test_purpose_check_passes_through_on_match()
+    test_purpose_check_skipped_without_client_or_verify_fn()
+    test_purpose_check_swallows_get_stat_explanation_errors()
+    test_purpose_check_uses_cache_without_calling_kosis_client()
+    test_purpose_check_skips_retry_when_cache_says_already_tried_and_empty()
     test_item_diff_hcx_stage3_success_ignores_hcx_reference_period()
     test_item_diff_skipped_without_total_comparison_keyword()
     test_item_diff_hcx_exception_does_not_crash_falls_back()

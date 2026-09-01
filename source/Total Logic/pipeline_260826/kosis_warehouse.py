@@ -79,6 +79,21 @@ CREATE TABLE IF NOT EXISTS tables_registry (
     strt_prd_de TEXT,
     end_prd_de TEXT,
     ingested_at TEXT,
+    -- [2026-08-28 신규 - 목적 검증(purpose verification) 게이트, 표 적재
+    -- 시점 캐싱] client.get_stat_explanation(org_id, tbl_id)이 실제로
+    -- 돌려주는 필드 중 실측 확인된(probe_stat_explanation_field_count.py)
+    -- 두 필드만 원본 그대로 저장한다 - 해석/판단(claim과 맞는지 여부)은
+    -- 여기서 하지 않고 local_db_agent._attach_purpose_check +
+    -- hcx_purpose_resolver가 조회 시점에 한다(다른 원본 컬럼들과 동일한
+    -- "원본은 그대로, 해석은 검색/판정 단계에서" 원칙).
+    writing_purps TEXT,            -- KOSIS 응답의 writingPurps(작성목적) 원문
+    examin_objrange TEXT,          -- KOSIS 응답의 examinObjrange(조사대상범위) 원문
+    -- ingest_table이 get_stat_explanation을 실제로 시도한 시각. NULL이면
+    -- "이 표는 아직 목적 설명 조회 자체를 시도한 적이 없다"(이 기능 이전에
+    -- 적재된 구버전 행 포함) - 이 경우에만 local_db_agent가 라이브 API로
+    -- 폴백한다. NOT NULL인데 writing_purps/examin_objrange가 둘 다 비어
+    -- 있으면 "이미 시도했지만 못 가져왔다"는 뜻이라 재시도하지 않는다.
+    purpose_fetched_at TEXT,
     PRIMARY KEY (org_id, tbl_id)
 );
 
@@ -284,6 +299,10 @@ CREATE INDEX IF NOT EXISTS idx_facts_value_search
 _MIGRATIONS = [
     "ALTER TABLE tables_registry ADD COLUMN full_path_id TEXT",
     "ALTER TABLE tables_registry ADD COLUMN topic_root TEXT",
+    # [2026-08-28 신규 - 목적 검증 게이트 표 적재 시점 캐싱]
+    "ALTER TABLE tables_registry ADD COLUMN writing_purps TEXT",
+    "ALTER TABLE tables_registry ADD COLUMN examin_objrange TEXT",
+    "ALTER TABLE tables_registry ADD COLUMN purpose_fetched_at TEXT",
 ]
 
 _FACTS_UNIQUE_INDEX_SQL = (
@@ -725,18 +744,62 @@ def register_table(
     full_path_id: Optional[str] = None,
     strt_prd_de: Optional[str] = None,
     end_prd_de: Optional[str] = None,
+    writing_purps: Optional[str] = None,
+    examin_objrange: Optional[str] = None,
+    purpose_fetched_at: Optional[str] = None,
 ) -> None:
+    """[2026-08-28 갱신 - 목적 검증 게이트 표 적재 시점 캐싱] writing_purps/
+    examin_objrange/purpose_fetched_at 세 인자는 전부 선택값이다 - 안
+    넘기면(기존 모든 호출부) 그냥 NULL로 저장되고, local_db_agent가 이를
+    "아직 목적 설명을 시도한 적 없음" 신호로 읽어 라이브 API로 폴백한다
+    (기존 동작 완전히 유지, opt-in 원칙)."""
     conn.execute(
         "INSERT OR REPLACE INTO tables_registry "
         "(org_id, tbl_id, tbl_nm, stat_id, stat_nm, vw_cd, "
-        " full_path_id, topic_root, strt_prd_de, end_prd_de, ingested_at) "
-        "VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+        " full_path_id, topic_root, strt_prd_de, end_prd_de, ingested_at, "
+        " writing_purps, examin_objrange, purpose_fetched_at) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
         (
             org_id, tbl_id, tbl_nm, stat_id, stat_nm, vw_cd,
             full_path_id, _topic_root(full_path_id),
             strt_prd_de, end_prd_de, datetime.now(timezone.utc).isoformat(),
+            writing_purps, examin_objrange, purpose_fetched_at,
         ),
     )
+
+
+def get_table_purpose_cached(
+    conn: sqlite3.Connection, org_id: str, tbl_id: str
+) -> Optional[Dict[str, Optional[str]]]:
+    """[2026-08-28 신규 - 목적 검증 게이트 표 적재 시점 캐싱] tables_registry
+    에서 캐시된 writing_purps/examin_objrange/purpose_fetched_at을 그대로
+    읽어온다 - 순수 SELECT라 CLAUDE.md의 "DB 파일에 직접 쓰기/삭제 금지"
+    규칙과 무관하다.
+
+    반환:
+    - None: (org_id, tbl_id) 행 자체가 tables_registry에 없음(표가 아직
+      한 번도 적재된 적 없음 - 이 함수를 부르는 호출부 입장에선 이미 표를
+      확정한 뒤라 사실상 안 생기는 경우지만, 방어적으로 처리).
+    - {"writing_purps": ..., "examin_objrange": ..., "purpose_fetched_at": ...}:
+      셋 다 None이고 purpose_fetched_at도 None이면 "이 표는 이 기능 이전에
+      적재됐거나 아직 목적 설명을 시도한 적이 없다"는 뜻 - 호출부
+      (local_db_agent._attach_purpose_check)가 이 경우 라이브 API로
+      폴백한다. purpose_fetched_at은 있는데 writing_purps/examin_objrange가
+      둘 다 없으면 "이미 시도했지만 못 가져왔다"는 뜻이라 재시도하지
+      않는다(폴백 원칙 - 근거 없이 계속 API를 두드리지 않음).
+    """
+    row = conn.execute(
+        "SELECT writing_purps, examin_objrange, purpose_fetched_at "
+        "FROM tables_registry WHERE org_id=? AND tbl_id=?",
+        (org_id, tbl_id),
+    ).fetchone()
+    if row is None:
+        return None
+    return {
+        "writing_purps": row[0],
+        "examin_objrange": row[1],
+        "purpose_fetched_at": row[2],
+    }
 
 
 def _normalize_kosis_period_bound(raw: Optional[str], prd_se: str) -> Optional[str]:
@@ -1567,6 +1630,38 @@ def ingest_table(
         (search_cand or {}).get("TBL_NM")
         or (item_rows[0].get("TBL_NM") if item_rows else None)
     )
+
+    # [2026-08-28 신규 - 목적 검증(purpose verification) 게이트, 사용자
+    # 결정: "표 적재 시점에 DB 저장"] 표 하나당 이 배치 적재 시점에 딱
+    # 한 번만 get_stat_explanation을 불러 writing_purps/examin_objrange를
+    # tables_registry에 캐시한다 - local_db_agent._attach_purpose_check가
+    # 목적 검증 때마다 매번 라이브 API를 부르는 대신 이 캐시를 먼저 읽는다
+    # (같은 표가 여러 claim에서 반복 채택될 때 특히 유리 - 표 개수는 유한
+    # 하지만 claim 수는 훨씬 많음). getMeta/getList와 달리 이 호출은 실패
+    # 해도 표 적재 자체를 막으면 안 된다(목적 설명은 부가 정보일 뿐, 표
+    # 구조/값 적재의 필수 전제가 아님) - 다른 API 호출들과 같은 관용대로
+    # 실패를 조용히 삼키고 경고만 남긴다. get_stat_explanation은 이미
+    # client.py에서 실측 검증된 읽기 전용 호출이다(probe_stat_explanation_
+    # field_count.py).
+    writing_purps = None
+    examin_objrange = None
+    purpose_fetched_at = None
+    try:
+        explanation = kosis_client.get_stat_explanation(org_id, tbl_id)
+        purpose_fetched_at = datetime.now(timezone.utc).isoformat()
+        if explanation:
+            writing_purps = explanation.get("writingPurps")
+            examin_objrange = explanation.get("examinObjrange")
+    except Exception as e:
+        logger.warning(
+            f"  └─ [목적 설명(get_stat_explanation) 조회 실패 - 조용히 건너뜀] {org_id}_{tbl_id} - {e}"
+        )
+        # purpose_fetched_at을 일부러 None으로 남긴다 - "시도했지만 실패"와
+        # "아직 시도 안 함"을 구분 안 하면, 다음 세션에서 이 표가 실패했다는
+        # 이유로 영영 재시도를 안 하게 될 수 있다(get_table_purpose_cached
+        # docstring 참고) - 네트워크 오류 같은 일시적 실패는 다음 force
+        # 재적재나 라이브 폴백에서 다시 기회를 얻어야 한다.
+
     register_table(
         conn, org_id, tbl_id,
         tbl_nm=tbl_nm,
@@ -1576,6 +1671,9 @@ def ingest_table(
         full_path_id=(search_cand or {}).get("FULL_PATH_ID"),
         strt_prd_de=(search_cand or {}).get("STRT_PRD_DE"),
         end_prd_de=(search_cand or {}).get("END_PRD_DE"),
+        writing_purps=writing_purps,
+        examin_objrange=examin_objrange,
+        purpose_fetched_at=purpose_fetched_at,
     )
     conn.commit()
     logger.info(
