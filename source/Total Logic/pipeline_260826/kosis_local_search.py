@@ -1464,6 +1464,120 @@ def _yoy_reference_period(target_period_digits: str) -> Optional[str]:
     return prev_year + target_period_digits[4:]
 
 
+# =============================================================================
+# [2026-08-28 포팅 - CLAUDE.md "동명표(원지수/계절조정 등) 처리" 결정 참고]
+# "동명표"(같은 조사가 원지수/계절조정지수처럼 계열별로 별도 TBL_ID를 쓰는
+# 경우) 판정 로직. 구 아키텍처(kosis_agent.py, 라이브 KOSIS 검색 기반,
+# `backup/20260815_kosis_refactor/kosis_agent.py`)에서 이미 실측 검증까지
+# 끝낸 설계를 로컬 웨어하우스 조회로 그대로 옮긴 것 - 판정 규칙 자체는
+# 새로 만들지 않는다(실측 우선 원칙 - 검증된 설계를 재사용).
+#
+# 실측 확인됨(2026-08-05, KOSIS 통합검색, 구 세션): "전산업생산지수"는
+# 정확히 2개의 별도 TBL_ID로 나뉜 표다(한 표 안의 분류축이 아니라 진짜
+# 별표) - 101/DT_1JH20201(원지수), 101/DT_1JH20202(계절조정지수).
+#
+# [2026-08-10 실측 수정 - 구 세션에서 사용자 지적] 형제 표 판정에 STAT_ID
+# (같은 조사)를 쓰면 너무 넓다는 게 실측(문화체육관광일자리현황조사)으로
+# 드러났다 - "임금 동향"/"종사상지위별 임금 동향"처럼 축 구조 자체가 다른
+# 표들까지 같은 조사라는 이유로 형제로 묶여버렸다. KOSIS가 실제로 원지수/
+# 계절조정 같은 진짜 형제 표를 만들 때는 예외 없이 "표제목 동일 + 계열
+# 구분만 괄호로 추가"하는 명명 규칙을 쓴다는 게 유일하게 신뢰할 수 있는
+# 신호로 확인됐다 - 그래서 표제목의 계열 접미사만 뗀 뒤 완전히 같은
+# 문자열인 경우로만 형제를 판정한다(STAT_ID 매칭은 아예 안 쓴다).
+# =============================================================================
+_SERIES_SUFFIX_RE = re.compile(
+    r"\s*[\(（]"
+    r"(원지수|계절조정지수|계절조정|추세변동치|추세변동|추세치|추세|원계열|불변|경상)"
+    r"[\)）]\s*$"
+)
+
+# _detect_series_qualifier가 검사하는 순서 그대로 - "계절조정지수"가
+# "계절조정"보다 먼저 검사돼야 복합어가 부분 문자열로 잘못 먼저 안 걸린다.
+_SERIES_QUALIFIER_WORDS = (
+    "원지수", "계절조정지수", "계절조정", "추세변동치", "추세변동",
+    "추세치", "추세", "원계열", "불변", "경상",
+)
+
+
+def _series_stripped_tbl_nm(tbl_nm: Optional[str]) -> Optional[str]:
+    """표제목에서 계열 접미사(괄호로 붙는 원지수/계절조정 등)만 뗀다."""
+    if not tbl_nm:
+        return tbl_nm
+    return _SERIES_SUFFIX_RE.sub("", tbl_nm).strip()
+
+
+def detect_series_qualifier(raw_sentence: str) -> Optional[str]:
+    """claim 원문(raw_sentence)에 계열 명시어(원지수/계절조정 등)가 literal
+    하게 있으면 그 단어를 그대로 반환한다 - 없으면 None. 여러 후보가 겹치면
+    _SERIES_QUALIFIER_WORDS 순서상 먼저 나오는 것을 우선한다(복합어 우선)."""
+    if not raw_sentence:
+        return None
+    for word in _SERIES_QUALIFIER_WORDS:
+        if word in raw_sentence:
+            return word
+    return None
+
+
+def find_sibling_tables(
+    conn: sqlite3.Connection, org_id: str, tbl_id: str, tbl_nm: Optional[str]
+) -> List[Dict[str, Any]]:
+    """확정된 표(org_id/tbl_id/tbl_nm)와 표제목이 계열 접미사만 다르고
+    나머지는 완전히 같은 "형제 표"를 로컬 tables_registry에서 찾는다.
+
+    구 kosis_agent.py의 find_sibling_tables(라이브 KOSIS 검색 기반)와 같은
+    판정 규칙(_SERIES_SUFFIX_RE 기반 표제목 완전일치)을 로컬 DB 전체 스캔
+    으로 옮긴 것 - 로컬 표 개수가 적어(수십 개) 매번 전체 스캔해도 비용이
+    무시할 만하다(라이브 검색처럼 별도 API 호출이 필요 없음 - 오히려 구
+    아키텍처보다 저렴해짐).
+
+    반환 리스트에는 확정된 표 자기 자신도 포함한다(구 코드와 동일한 계약)
+    - 형제가 없으면 길이 1(자기 자신만)인 리스트가 온다."""
+    base_name = _series_stripped_tbl_nm(tbl_nm) or tbl_nm
+    siblings: List[Dict[str, Any]] = [{"org_id": org_id, "tbl_id": tbl_id, "tbl_nm": tbl_nm}]
+    if not base_name:
+        return siblings
+    seen = {(org_id, tbl_id)}
+    rows = conn.execute("SELECT org_id, tbl_id, tbl_nm FROM tables_registry").fetchall()
+    for r_org, r_tbl, r_nm in rows:
+        key = (r_org, r_tbl)
+        if key in seen:
+            continue
+        if _series_stripped_tbl_nm(r_nm) == base_name:
+            seen.add(key)
+            siblings.append({"org_id": r_org, "tbl_id": r_tbl, "tbl_nm": r_nm})
+    return siblings
+
+
+def fetch_cell_value(
+    conn: sqlite3.Connection,
+    org_id: str,
+    tbl_id: str,
+    itm_id: str,
+    axis_codes: Dict[int, str],
+    period_digits: str,
+) -> Optional[Dict[str, Any]]:
+    """(org_id, tbl_id, itm_id, axis_codes, period_digits)로 facts에서 값
+    하나를 직접 조회한다 - resolve_period_change가 이미 쓰는 WHERE절 구성
+    패턴(축 코드는 중간에, prd_de는 맨 끝에)을 그대로 재사용한다. 형제 표
+    disambiguation 전용으로 분리한 얇은 헬퍼 - 다른 곳에서 같은 조회가
+    필요해지면 그때 공용화 여부를 다시 판단한다.
+
+    반환: {"value", "unit"} 또는 해당 시점 데이터가 없으면 None."""
+    where = ["org_id=?", "tbl_id=?", "itm_id=?"]
+    params: List[Any] = [org_id, tbl_id, itm_id]
+    for axis, code in (axis_codes or {}).items():
+        where.append(f"c{axis}=?")
+        params.append(code)
+    where.append("prd_de=?")
+    params.append(period_digits)
+    row = conn.execute(
+        f"SELECT value, unit FROM facts WHERE {' AND '.join(where)}", params
+    ).fetchone()
+    if not row:
+        return None
+    return {"value": row[0], "unit": row[1]}
+
+
 def resolve_period_change(
     conn: sqlite3.Connection,
     org_id: str,

@@ -723,6 +723,224 @@ def _attach_record_extremes(
     return result
 
 
+def _attach_purpose_check(
+    result: Dict[str, Any],
+    conn: sqlite3.Connection,
+    org_id: str,
+    tbl_id: str,
+    claim: Dict[str, Any],
+    raw_sentence: str,
+    kosis_client: Optional[Any],
+    hcx_purpose_verify_fn: Optional[Callable[..., Optional[Dict[str, Any]]]],
+) -> Dict[str, Any]:
+    """[2026-08-28 신규 - 목적 검증(purpose verification) 게이트, 배추가격/
+    DT_114054_112 사례로 사용자가 지적한 아키텍처 갭 대응] _attach_record_
+    extremes와 완전히 같은 위치(derivation.used=False인 "최종 확정" 성공
+    경로 2곳)에서만 호출된다 - derivation.used=True인 경로(파생값)는 이미
+    judgment._check_unverified가 UNVERIFIED_DERIVED_NEEDED로 먼저 가로채서
+    _check_purpose_mismatch까지 도달하지 않으므로, 그 경로들에 이 검증을
+    붙여봐야 어차피 안 쓰인다 - 비용을 아끼려고 일부러 안 붙인다(사용자가
+    합의한 "비용 절감" 절충안의 실제 구현).
+
+    [2026-08-28 갱신 - 사용자 결정: "표 적재 시점에 DB 저장"] 목적 설명
+    조회 우선순위가 바뀌었다:
+    1. 먼저 `wh.get_table_purpose_cached(conn, org_id, tbl_id)`로 tables_
+       registry에 표 적재 시점(`kosis_warehouse.ingest_table`)에 이미
+       캐시된 writing_purps/examin_objrange를 읽는다 - 순수 SELECT라
+       비용이 사실상 0이고, 같은 표가 여러 claim에서 반복 채택돼도 API를
+       중복 호출하지 않는다.
+    2. 캐시 행이 없거나(구버전 DB - 이 기능 이전에 적재된 표) `purpose_
+       fetched_at`이 없으면(적재 당시 get_stat_explanation 자체가
+       실패했었음) `kosis_client`가 있을 때만 라이브 API로 폴백한다(기존
+       동작 - Task #28 온디맨드 백필과 동일한 opt-in 관용).
+    3. 캐시에 `purpose_fetched_at`은 있는데 writing_purps/examin_objrange가
+       둘 다 비어 있으면(적재 당시 이미 시도했지만 못 가져왔음) 재시도
+       하지 않는다 - 근거 없이 API를 계속 두드리지 않는다는 폴백 원칙.
+
+    `hcx_purpose_verify_fn`이 없으면(기본값 - 대부분의 회귀 테스트) 이
+    검증 전체를 시도하지 않는다. `kosis_client`는 이제 "캐시가 없을 때의
+    폴백"에만 필요하다 - 캐시에 이미 텍스트가 있으면 `kosis_client` 없이도
+    (`hcx_purpose_verify_fn`만 있으면) 검증이 동작한다(캐시 우선 설계의
+    핵심 이점).
+
+    실패(캐시 조회 예외, get_stat_explanation 예외, 빈 설명, HCX 호출/파싱
+    실패)는 전부 조용히 삼키고 result를 그대로 돌려준다 - 근거 없이 판정을
+    낮추는 것보다 "검증을 못 했다"는 게 더 안전한 기본값이다(다른 신규
+    필드들과 동일한 폴백 원칙). HCX 호출 자체가 실패한 경우만 진단용
+    purpose_check_error를 남긴다(hcx_fallback_error와 같은 투명성 원칙)."""
+    if hcx_purpose_verify_fn is None:
+        return result
+
+    purpose_text = None
+    cached = None
+    try:
+        cached = wh.get_table_purpose_cached(conn, org_id, tbl_id)
+    except Exception as e:
+        logger.warning(
+            f"[목적 검증 - 캐시(tables_registry) 조회 실패, 조용히 건너뜀] {org_id}/{tbl_id} - {e}"
+        )
+
+    if cached is not None and cached.get("purpose_fetched_at"):
+        # 표 적재 시점에 이미 시도됨(성공이든 실패든) - 재시도하지 않는다.
+        purpose_text = "\n".join(
+            v for v in (cached.get("writing_purps"), cached.get("examin_objrange")) if v
+        ).strip() or None
+    elif kosis_client is not None:
+        # 캐시가 없거나(구버전 DB) 아직 적재 시점에 시도한 적 없음 - 라이브
+        # API로 폴백(기존 동작).
+        try:
+            expl = kosis_client.get_stat_explanation(org_id, tbl_id)
+        except Exception as e:
+            logger.warning(
+                f"[목적 검증 - get_stat_explanation 실패, 조용히 건너뜀] {org_id}/{tbl_id} - {e}"
+            )
+            return result
+        if expl:
+            purpose_text = "\n".join(
+                v for v in (expl.get("writingPurps"), expl.get("examinObjrange")) if v
+            ).strip() or None
+
+    if not purpose_text:
+        return result
+
+    try:
+        verdict = hcx_purpose_verify_fn(
+            raw_sentence,
+            result.get("table_name"),
+            purpose_text,
+            _claimed_value(claim),
+            (claim.get("unit") or "").strip() or None,
+            claim.get("period"),
+        )
+    except Exception as e:
+        logger.warning(
+            f"[목적 검증 HCX 호출 실패 - 조용히 건너뜀] {org_id}/{tbl_id} - {e}"
+        )
+        result["purpose_check_error"] = str(e)
+        return result
+
+    if verdict is None:
+        return result
+    result["purpose_mismatch"] = verdict.get("mismatch")
+    result["purpose_mismatch_note"] = verdict.get("reason")
+    return result
+
+
+def _resolve_series_siblings(
+    conn: sqlite3.Connection,
+    org_id: str,
+    tbl_id: str,
+    tbl_nm: Optional[str],
+    itm_id: str,
+    axis_codes: Dict[int, str],
+    period_digits: str,
+    claim: Dict[str, Any],
+    raw_sentence: str,
+) -> Dict[str, Any]:
+    """[2026-08-28 포팅 - CLAUDE.md "동명표(원지수/계절조정 등) 처리" 결정
+    참고, 사용자가 "구 아키텍처에서 이미 다 해결했는데 자꾸 빠진다"고 지적해
+    포팅함] 구 kosis_agent.py(`backup/20260815_kosis_refactor/kosis_agent.py`)
+    의 `_disambiguate_table_candidates`를 로컬 웨어하우스 조회로 그대로
+    옮긴 것 - 우선순위(추측하지 않는다, Decision 003)까지 동일하게 유지:
+
+    1. `kls.find_sibling_tables`로 표제목이 계열 접미사(원지수/계절조정
+       등)만 다른 형제 표를 찾는다. 형제가 없으면(자기 자신뿐) 바로
+       `{"switched": False}`.
+    2. claim 원문(raw_sentence)에 계열 명시어가 literal하게 있으면
+       (`kls.detect_series_qualifier`), 그 단어가 표제목에 있는 형제로
+       유일하게 좁혀질 때만 그쪽으로 갈아탄다(이미 확정된 표 자체가 그
+       계열이면 갈아탈 필요 없음 - switched=False). 명시어가 없거나
+       여럿에 걸치면(못 좁힘) 3번으로 계속 진행한다.
+    3. claim의 claimed_value와 각 형제 표의 같은 (itm_id, axis_codes,
+       period_digits) 셀 값을 대조한다 - 확정된 표가 아닌 다른 형제가
+       상대오차 5% 이내로 가장 잘 맞고, 그 차이가 차점자와 확실히
+       구분될 때만(동점이면 추측하지 않음) 그쪽으로 갈아탄다.
+    4. 위 어느 것도 명확한 근거를 못 주면 원래 확정된 표를 그대로 둔다
+       (`{"switched": False}`) - 이 함수는 표를 "더 나은 근거가 있을
+       때만" 바꾸지, 애매하면 절대 추측해서 바꾸지 않는다.
+
+    이 함수는 절대 예외를 던지지 않는다 - 어떤 단계에서든 실패하면 조용히
+    `{"switched": False}`로 안전하게 폴백한다(다른 신규 게이트들과 동일한
+    폴백 원칙 - 형제 표 확인 자체가 claim 판정 전체를 죽이면 안 됨)."""
+    try:
+        siblings = kls.find_sibling_tables(conn, org_id, tbl_id, tbl_nm)
+    except Exception as e:
+        logger.warning(f"[동명표 형제 확인 실패 - 조용히 건너뜀] {org_id}/{tbl_id} - {e}")
+        return {"switched": False}
+
+    if len(siblings) <= 1:
+        return {"switched": False}
+
+    try:
+        qualifier = kls.detect_series_qualifier(raw_sentence)
+        candidates_for_value_compare = siblings
+        if qualifier:
+            matching = [s for s in siblings if qualifier in (s.get("tbl_nm") or "")]
+            if len(matching) == 1:
+                target = matching[0]
+                if (target["org_id"], target["tbl_id"]) == (org_id, tbl_id):
+                    return {"switched": False}  # 이미 명시어와 일치하는 표
+                cell = kls.fetch_cell_value(
+                    conn, target["org_id"], target["tbl_id"], itm_id, axis_codes, period_digits
+                )
+                if cell is not None and cell.get("value") is not None:
+                    logger.info(
+                        f"[동명표 형제 확정 - 원문 계열 명시어] {org_id}/{tbl_id} -> "
+                        f"{target['org_id']}/{target['tbl_id']} (명시어 '{qualifier}')"
+                    )
+                    return {
+                        "switched": True,
+                        "org_id": target["org_id"], "tbl_id": target["tbl_id"],
+                        "tbl_nm": target["tbl_nm"],
+                        "value": cell["value"], "unit": cell["unit"],
+                        "note": f"형제 표(동명표) 확정 - claim 원문의 계열 명시어 '{qualifier}'",
+                    }
+                return {"switched": False}
+            if matching:
+                candidates_for_value_compare = matching
+
+        claimed_value = _claimed_value(claim)
+        if claimed_value is None:
+            return {"switched": False}
+
+        scored = []
+        for s in candidates_for_value_compare:
+            cell = kls.fetch_cell_value(
+                conn, s["org_id"], s["tbl_id"], itm_id, axis_codes, period_digits
+            )
+            if cell is None or cell.get("value") is None:
+                continue
+            rel_diff = abs(cell["value"] - claimed_value) / max(abs(claimed_value), 1e-9)
+            scored.append((rel_diff, s, cell))
+        if not scored:
+            return {"switched": False}
+        scored.sort(key=lambda x: x[0])
+        best_rel_diff, best_sibling, best_cell = scored[0]
+        if (best_sibling["org_id"], best_sibling["tbl_id"]) == (org_id, tbl_id):
+            return {"switched": False}
+        if best_rel_diff > 0.05:
+            return {"switched": False}
+        if len(scored) > 1 and scored[1][0] <= best_rel_diff:
+            return {"switched": False}  # 동점/근소한 차이 - 추측하지 않음
+        logger.info(
+            f"[동명표 형제 확정 - 실값 대조] {org_id}/{tbl_id} -> "
+            f"{best_sibling['org_id']}/{best_sibling['tbl_id']} (상대오차 {best_rel_diff*100:.2f}%)"
+        )
+        return {
+            "switched": True,
+            "org_id": best_sibling["org_id"], "tbl_id": best_sibling["tbl_id"],
+            "tbl_nm": best_sibling["tbl_nm"],
+            "value": best_cell["value"], "unit": best_cell["unit"],
+            "note": (
+                f"형제 표(동명표) 확정 - claim 수치와 실값 대조"
+                f"({best_rel_diff*100:.2f}% 이내로 최적 일치)"
+            ),
+        }
+    except Exception as e:
+        logger.warning(f"[동명표 disambiguation 실패 - 조용히 건너뜀] {org_id}/{tbl_id} - {e}")
+        return {"switched": False}
+
+
 def resolve_claim_evidence(
     conn: sqlite3.Connection,
     claim: Dict[str, Any],
@@ -745,6 +963,12 @@ def resolve_claim_evidence(
     write_conn: Optional[sqlite3.Connection] = None,
     hcx_stage3_fn: Optional[
         Callable[[str, str, Optional[float], Optional[str]], Optional[Dict[str, Any]]]
+    ] = None,
+    hcx_purpose_verify_fn: Optional[
+        Callable[
+            [str, Optional[str], str, Optional[float], Optional[str], Optional[str]],
+            Optional[Dict[str, Any]],
+        ]
     ] = None,
 ) -> Dict[str, Any]:
     """claim 하나(run01 형식: claim/claim_id/value/unit/period)와
@@ -911,7 +1135,28 @@ def resolve_claim_evidence(
     참고) 이 함수 자체의 기존 읽기 전용 계약은 안 깨진다. 백필이
     실제로 write_conn에 commit되면, 같은 DB 파일을 보는 conn(read-only)
     으로 재조회해도 그 값이 그대로 보인다(SQLite 표준 동작 - 별도
-    커넥션이어도 커밋된 내용은 공유)."""
+    커넥션이어도 커밋된 내용은 공유).
+
+    hcx_purpose_verify_fn: [2026-08-28 신규 - 목적 검증(purpose
+    verification) 게이트, 사용자가 실제 KOSIS URL 2건(DT_114054_112 -
+    외식업 식재료 구매행태, DT_143002_E002 - 농가경제 소득분석)으로
+    지적한 아키텍처 갭 대응] 표/축 이름 매칭까지 전부 성공해도(예: "배추
+    가격" claim이 이름만 보고 "채소류 월평균 구매금액" 표에 걸리는 경우),
+    그 표의 실제 작성 목적이 claim의 의도(소비자 소매가)와 다를 수 있다.
+    (claim_text, table_nm, table_purpose_text, claimed_value, claimed_unit,
+    claimed_period) -> {"mismatch": bool, "reason": str|None} | None을
+    받는 콜러블(보통 hcx_purpose_resolver.resolve_purpose_with_hcx007)을
+    넘기면, _attach_purpose_check가 derivation.used=False인 "최종 확정"
+    성공 경로 2곳에서만(_attach_record_extremes와 같은 위치 - 비용 절감을
+    위해 표를 이미 확정한 뒤 딱 1번만, 사용자와 합의된 설계) kosis_client.
+    get_stat_explanation(org_id, tbl_id)로 표의 공식 작성 목적을 실제로
+    조회해 claim과 대조한다. kosis_client도 함께 넘겨야 실제로 동작한다
+    (get_stat_explanation 호출에 필요) - 기본값 None이면 이 검증 전체가
+    꺼진 채로 기존 동작과 완전히 동일하다(다른 opt-in 신규 파라미터들과
+    동일한 관용). 결과는 result["purpose_mismatch"]/["purpose_mismatch_note"]
+    로 붙고, judgment.py의 _check_purpose_mismatch가 이를 실제 게이트로
+    써서 UNVERIFIED_PURPOSE_MISMATCH로 판정을 낮춘다(장식적 텍스트가
+    아니라 Decision 003과 동일한 강제 패턴)."""
     raw_sentence = claim.get("claim") or ""
     phrases = [k for k in (keywords or []) if k]
 
@@ -1065,15 +1310,43 @@ def resolve_claim_evidence(
                 "confident": True,
                 "value_search_used": True,
             }
+            # [2026-08-28 신규 - 동명표(원지수/계절조정 등) 확인, CLAUDE.md
+            # 결정 참고] 값 기반 검색이 형제 표 중 잘못된 계열을 골랐을
+            # 수 있으므로, record-claim/목적 검증보다 먼저 확인해서 필요
+            # 하면 표/값 자체를 교체한다.
+            sibling_result = _resolve_series_siblings(
+                conn, winner["org_id"], winner["tbl_id"], winner["tbl_nm"],
+                winner["itm_id"], winner["axis_codes"], period_digits_early,
+                claim, raw_sentence,
+            )
+            if sibling_result.get("switched"):
+                result["org_id"] = sibling_result["org_id"]
+                result["table_id"] = sibling_result["tbl_id"]
+                result["table_name"] = sibling_result["tbl_nm"]
+                result["normalized_value"] = sibling_result["value"]
+                result["normalized_unit"] = sibling_result["unit"]
+                result["derivation"]["note"] += f"; {sibling_result['note']}"
+                winner = {
+                    **winner,
+                    "org_id": sibling_result["org_id"], "tbl_id": sibling_result["tbl_id"],
+                    "tbl_nm": sibling_result["tbl_nm"],
+                }
             # [2026-08-24 신규 - "역대 최고/최저" claim 배선] 이 경로는
             # derivation.used=False(단일 시점 원자료 직접 매칭)라 judgment.py의
             # _check_unverified(DERIVED_NEEDED)에 걸리지 않고 _check_record_claim
             # 까지 도달할 수 있는 경로다 - 역대 claim이면 이미 확정된
             # (org_id,tbl_id,itm_id,axis_codes)로 records 테이블도 같이 조회해
             # 실어 보낸다.
-            return _attach_record_extremes(
+            result = _attach_record_extremes(
                 result, conn, winner["org_id"], winner["tbl_id"], winner["itm_id"],
                 winner["axis_codes"], period_digits_early, raw_sentence,
+            )
+            # [2026-08-28 신규 - 목적 검증 게이트] 같은 이유로 이 경로도
+            # derivation.used=False인 "최종 확정" 성공 경로라 목적 검증
+            # 대상이다 - _attach_purpose_check 문서 참고.
+            return _attach_purpose_check(
+                result, conn, winner["org_id"], winner["tbl_id"], claim, raw_sentence,
+                kosis_client, hcx_purpose_verify_fn,
             )
 
     # [2026-08-18 신규 - search_by_value의 비교판, 같은 이유로 Stage 1/2
@@ -1748,11 +2021,39 @@ def resolve_claim_evidence(
         "hcx_fallback_used": hcx_fallback_used,
         "llm_table_select_fallback_used": llm_table_select_fallback_used,
     }
+    # [2026-08-28 신규 - 동명표(원지수/계절조정 등) 확인, CLAUDE.md 결정
+    # 참고] Stage 1/2/3이 형제 표 중 잘못된 계열을 확정했을 수 있으므로,
+    # record-claim/목적 검증보다 먼저 확인해서 필요하면 표/값 자체를
+    # 교체한다 - 이 경로가 이 검증의 주 대상이다(Stage 1/2/3 전체를 거친
+    # "정통" 성공 경로).
+    sibling_result = _resolve_series_siblings(
+        conn, org_id, tbl_id, tbl_nm, itm_id, axis_codes, period_digits,
+        claim, raw_sentence,
+    )
+    if sibling_result.get("switched"):
+        org_id = sibling_result["org_id"]
+        tbl_id = sibling_result["tbl_id"]
+        tbl_nm = sibling_result["tbl_nm"]
+        result["org_id"] = org_id
+        result["table_id"] = tbl_id
+        result["table_name"] = tbl_nm
+        result["normalized_value"] = sibling_result["value"]
+        result["normalized_unit"] = sibling_result["unit"]
+        result["derivation"]["note"] = (
+            f"{result['derivation']['note']}; {sibling_result['note']}"
+            if result["derivation"]["note"] else sibling_result["note"]
+        )
     # [2026-08-24 신규 - "역대 최고/최저" claim 배선] 위와 같은 이유 -
     # derivation.used=False라 record-claim 판정까지 도달 가능한 마지막
     # 성공 경로(Stage 1/2/3으로 확정된 (org_id,tbl_id,itm_id,axis_codes)).
-    return _attach_record_extremes(
+    result = _attach_record_extremes(
         result, conn, org_id, tbl_id, itm_id, axis_codes, period_digits, raw_sentence,
+    )
+    # [2026-08-28 신규 - 목적 검증 게이트] 같은 이유로 이 경로가 목적 검증의
+    # 주 대상이다(_attach_purpose_check 문서 참고) - 배추가격 사례처럼 순수
+    # 원자료 직접 매칭 claim이 정확히 이 경로를 탄다.
+    return _attach_purpose_check(
+        result, conn, org_id, tbl_id, claim, raw_sentence, kosis_client, hcx_purpose_verify_fn,
     )
 
 
@@ -1806,18 +2107,14 @@ class LocalDbAgent:
         hcx_stage3_fn: Optional[
             Callable[[str, str, Optional[float], Optional[str]], Optional[Dict[str, Any]]]
         ] = None,
+        hcx_purpose_verify_fn: Optional[
+            Callable[
+                [str, Optional[str], str, Optional[float], Optional[str], Optional[str]],
+                Optional[Dict[str, Any]],
+            ]
+        ] = None,
     ):
         self.conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
-        # The verification path repeatedly scans the same read-only warehouse.
-        # Keep temporary work and hot pages in memory so subsequent Claim
-        # lookups do less disk I/O without changing search or verdict results.
-        self.conn.execute("PRAGMA query_only=ON")
-        self.conn.execute("PRAGMA temp_store=MEMORY")
-        self.conn.execute("PRAGMA cache_size=-65536")
-        try:
-            self.conn.execute("PRAGMA mmap_size=268435456")
-        except sqlite3.DatabaseError:
-            pass
         self.db_path = db_path
         # [2026-08-18 신규 - A/B 실험용] resolve_claim_evidence의
         # stage1_keywords 그대로 통과 - "run03"(기본, 프로덕션 동작)
@@ -1864,6 +2161,13 @@ class LocalDbAgent:
         # 회귀 테스트는 계속 kosis_client=None(기존 동작) 또는 fake로 돈다.
         self.kosis_client = kosis_client
         self.write_conn = sqlite3.connect(db_path) if kosis_client is not None else None
+        # [2026-08-28 신규 - 목적 검증(purpose verification) 게이트] 기본값
+        # None - 안 넘기면 이 검증 전체가 꺼진 채로 기존 동작과 완전히
+        # 동일하다. kosis_client도 같이 넘겨야 실제로 동작한다(_attach_
+        # purpose_check가 get_stat_explanation 호출에 kosis_client를 씀) -
+        # 자세한 설명은 resolve_claim_evidence의 hcx_purpose_verify_fn
+        # 문서 참고.
+        self.hcx_purpose_verify_fn = hcx_purpose_verify_fn
 
     def process_claim_group_keywords(
         self,
@@ -1918,6 +2222,7 @@ class LocalDbAgent:
                 kosis_client=self.kosis_client,
                 write_conn=self.write_conn,
                 hcx_stage3_fn=self.hcx_stage3_fn,
+                hcx_purpose_verify_fn=self.hcx_purpose_verify_fn,
             )
 
         # [derived_comparison 조합] new_kosis_agent.NewKosisAgent.
